@@ -1,0 +1,10 @@
+2022-03-13 15:03:56: FTP: Server rejected UTF-8 that it promised us: Unknown command
+2022-03-13 15:03:57: == Rename Conflict Losing File is On, expect some weirdness in auto-resolving Vertical Conflicts
+2022-03-13 15:03:57: -- Analysis Started by On File Change Incremental
+2022-03-13 15:03:58: R: On disk ftp://ftp.lukebennis.com:21 space required for sync is 75.78 KB, free space is unknown
+2022-03-13 15:03:58: Changes: 1, Conflicts: 0, CopyTime: 0, FixState: 0, Errors: 0, All: 1175
+2022-03-13 15:03:58: Left to Right: Copy File: 1 
+2022-03-13 15:03:58: == Sync Started by On File Change Incremental
+2022-03-13 15:03:58: Start only 1 threads, limited by tasks to run
+2022-03-13 15:03:59: Copy Over 'G:/My Drive/Social Pinpoint/Product/Design System/DS Master/MCC-rates.jpg' -> 'ftp://ftp.lukebennis.com:21/public_html/ds-master/MCC-rates.jpg' (221,698)
+2022-03-13 15:04:02: == Sync Complete. Time: 00:00:07, Speed: 44.34 KB/s, OK: 1, Errors: 0

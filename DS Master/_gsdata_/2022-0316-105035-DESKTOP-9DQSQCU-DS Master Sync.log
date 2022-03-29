@@ -1,0 +1,11 @@
+2022-03-16 10:50:36: FTP: Server rejected UTF-8 that it promised us: Unknown command
+2022-03-16 10:50:36: == Rename Conflict Losing File is On, expect some weirdness in auto-resolving Vertical Conflicts
+2022-03-16 10:50:37: -- Analysis Started by On File Change Incremental
+2022-03-16 10:50:38: R: On disk ftp://ftp.lukebennis.com:21 space required for sync is -386.05 KB, free space is unknown
+2022-03-16 10:50:38: Changes: 2, Conflicts: 0, CopyTime: 0, FixState: 0, Errors: 0, All: 1175
+2022-03-16 10:50:38: Left to Right: Delete File: 2 
+2022-03-16 10:50:38: == Sync Started by On File Change Incremental
+2022-03-16 10:50:38: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/MCC-rates.jpg
+2022-03-16 10:50:38: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/mcc-website-page.html
+2022-03-16 10:50:38: Start only 0 threads, limited by tasks to run
+2022-03-16 10:50:41: == Sync Complete. Time: 00:00:06, Speed: 32.77 KB/s, OK: 2, Errors: 0
