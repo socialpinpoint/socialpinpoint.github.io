@@ -1,0 +1,14 @@
+2021-12-20 12:03:55: FTP: Server rejected UTF-8 that it promised us: Unknown command
+2021-12-20 12:03:55: == Rename Conflict Losing File is On, expect some weirdness in auto-resolving Vertical Conflicts
+2021-12-20 12:03:56: -- Analysis Started by On File Change, After Delay
+2021-12-20 12:03:57: R: On disk ftp://ftp.lukebennis.com:21 space required for sync is 66.56 KB, free space is unknown
+2021-12-20 12:03:57: Changes: 3, Conflicts: 0, CopyTime: 0, FixState: 0, Errors: 0, All: 4
+2021-12-20 12:03:57: Left to Right: Copy File: 3 
+2021-12-20 12:03:57: == Sync Started by On File Change, After Delay
+2021-12-20 12:03:57: FTP: Server rejected UTF-8 that it promised us: Unknown command
+2021-12-20 12:03:58: FTP: Server rejected UTF-8 that it promised us: Unknown command
+2021-12-20 12:03:59: FTP: Server rejected UTF-8 that it promised us: Unknown command
+2021-12-20 12:03:59: Copy New 'G:/My Drive/Social Pinpoint/Product/Design System/Master Styles/SPP-DS-PF-styles-master.css' -> 'ftp://ftp.lukebennis.com:21/public_html/sppdsv1/master-styles/SPP-DS-PF-styles-master.css' (20,507)
+2021-12-20 12:03:59: Copy New 'G:/My Drive/Social Pinpoint/Product/Design System/Master Styles/SPP-DS-V1-styles-master.css' -> 'ftp://ftp.lukebennis.com:21/public_html/sppdsv1/master-styles/SPP-DS-V1-styles-master.css' (32,203)
+2021-12-20 12:04:00: Copy New 'G:/My Drive/Social Pinpoint/Product/Design System/Master Styles/SPP-iw-master-styles.css' -> 'ftp://ftp.lukebennis.com:21/public_html/sppdsv1/master-styles/SPP-iw-master-styles.css' (11,779)
+2021-12-20 12:04:01: == Sync Complete. Time: 00:00:07, Speed: 23.81 KB/s, OK: 3, Errors: 0

@@ -1,0 +1,6 @@
+2021-12-21 10:16:16: FTP: Server rejected UTF-8 that it promised us: Unknown command
+2021-12-21 10:16:17: -- Analysis Started by On File Change, After Delay
+2021-12-21 10:16:18: R: On disk ftp://ftp.lukebennis.com:21 space required for sync is -3.95 MB, free space is unknown
+2021-12-21 10:16:18: Changes: 190, Conflicts: 0, CopyTime: 0, FixState: 0, Errors: 0, All: 209
+2021-12-21 10:16:18: Left to Right: Copy File: 1 Delete File: 189 
+2021-12-21 10:16:18: 98% (190 / 193) files have changed (excluding renames), more than a threshold of 50%. So the job will not synchronize automatically.

@@ -1,0 +1,5 @@
+2021-12-21 10:09:11: FTP: Server rejected UTF-8 that it promised us: Unknown command
+2021-12-21 10:09:12: Stop requested by Stop By User: #1
+2021-12-21 10:09:12: FTP: MLSD/MLST is broken, so turn it off: Listing one file is not supported (returns nothing): stopped by Stop By User
+2021-12-21 10:09:12: FTP: MLSD is broken, so turn it off: stopped by Stop By User
+2021-12-21 10:09:12: listing folder with LIST: stopped by Stop By User

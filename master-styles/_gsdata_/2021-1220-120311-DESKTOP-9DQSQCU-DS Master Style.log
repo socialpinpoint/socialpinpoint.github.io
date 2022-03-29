@@ -1,0 +1,8 @@
+2021-12-20 12:03:13: FTP: Server rejected UTF-8 that it promised us: Unknown command
+2021-12-20 12:03:13: == Rename Conflict Losing File is On, expect some weirdness in auto-resolving Vertical Conflicts
+2021-12-20 12:03:13: -- Analysis Started by On File Change First Full Analyze Upon Folder Connect
+2021-12-20 12:03:13: L: State file does not exist: G:/My Drive/Social Pinpoint/Product/Design System/Master Styles/_gsdata_/_file_state_v4._gs
+2021-12-20 12:03:16: R: State file does not exist: ftp://ftp.lukebennis.com:21/public_html/sppdsv1/master-styles/_gsdata_/_file_state_v4._gs
+2021-12-20 12:03:16: R: On disk ftp://ftp.lukebennis.com:21 space required for sync is 0.00, free space is unknown
+2021-12-20 12:03:16: Changes: 0, Conflicts: 0, CopyTime: 0, FixState: 0, Errors: 0, All: 1
+2021-12-20 12:03:16: -- Analysis Complete. Time 00:00:03, Speed: 0 files/s

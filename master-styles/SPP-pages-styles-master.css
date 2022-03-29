@@ -1,0 +1,286 @@
+/*
+  Name: SPP DS PF Master Styles
+  Description: SPP Public Facing Design System master CSS styles
+
+----------------------*/
+
+@import url('https://fonts.googleapis.com/css2?family=Sanchez:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,300;1,700&family=Sanchez:ital@0;1&display=swap');
+
+
+
+/*----  VARIABLES  --------------------------------------------*/
+
+body
+{
+  --shadow-sml: 0px 2px 3px rgba(60, 60, 120, 0.1),
+                0px 2px 6px rgba(60, 60, 120, 0.1);
+
+  --shadow-med: 0px 2px 6px rgba(60, 60, 120, 0.06),
+                0px 0px 12px rgba(60, 60, 120, 0.04),
+                0px 6px 12px rgba(60, 60, 120, 0.04);
+
+
+  --shadow-lrg: 0px 2px 12px rgba(60, 60, 120, 0.06),
+                0px 2px 18px rgba(60, 60, 120, 0.04),
+                0px 12px 30px rgba(60, 60, 120, 0.06);
+
+}
+
+
+.page-global-styles
+{
+  --space-xsml: 1.2rem;
+  --space-sml: 1.8rem;
+  --space-med: 2.4rem;
+  --space-lrg: 3.6rem;
+  --space-xlrg: 4.8rem; 
+}
+
+
+.page-type-default
+{
+  --page-h1: calc(var(--page-p) * 2.33);
+  --page-h2: calc(var(--page-p) * 2.0);
+  --page-h3: calc(var(--page-p) * 1.66);
+  --page-h4: calc(var(--page-p) * 1.33);
+
+  --page-p: 1.6rem;
+}
+
+
+
+
+/*----  UTILITY STYLES  --------------------------------------------*/
+.space-xsml
+{
+  padding: var(--space-xsml);
+}
+
+.space-sml
+{
+  padding: var(--space-sml);
+}
+
+.space-med
+{
+  padding: var(--space-med);
+}
+
+.space-lrg
+{
+  padding: var(--space-lrg);
+}
+
+.space-xlrg
+{
+  padding: var(--space-xlrg);
+}
+
+.padding-xsml
+{
+  padding: 3rem;
+}
+
+.padding-sml
+{
+  padding: 6rem;
+}
+
+.padding-med
+{
+  padding: 12rem;
+}
+
+.padding-lrg
+{
+  padding: 24rem;
+}
+
+.padding-xlrg
+{
+  padding: 30rem;
+}
+
+
+/*----  BASE TYPE  --------------------------------------------*/
+
+h1, h2, h3, h4, p, ul, ol
+{
+  margin-block-start: 0rem !important;
+  margin-block-end: 1.33rem !important;
+  margin-inline-start: 0rem !important;
+  margin-inline-end: 0rem !important;
+}
+
+button h1,
+button h2,
+button h3,
+button h4,
+button p
+{
+  margin-block-end: 0rem !important;
+}
+
+p, ul, ol, blockquote, tr, td, th
+{
+  font-size: var(--page-p);
+  font-family: var(--theme-content);
+  line-height: var(--line-height-default);
+  color: var(--pf-text);
+}
+
+hr
+{
+  border-color: var(--pf-op-light);
+  margin: 2.4rem 0;
+}
+
+
+h1, h2, h3, h4
+{
+  font-family: var(--theme-heading);
+  line-height: 1.4;
+}
+
+h1
+{
+  font-size: var(--page-h1) !important;
+  color: var(--theme-primary);
+}
+
+h2
+{
+  font-size: var(--page-h2) !important;
+  color: var(--pf-text-light);
+}
+
+h3
+{
+  font-size: var(--page-h3) !important;
+  color: var(--theme-primary);
+}
+
+h4
+{
+  font-size: var(--page-h4) !important;
+  color: var(--pf-text);
+}
+
+.p-lrg
+{
+  font-size: 1.33em;
+}
+
+
+.p-sml
+{
+  font-size: 0.9em;
+}
+
+
+.content-wrapper img, 
+.content-wrapper svg
+{
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 2000px; /* This size is to be reviewed based on the auto scaling on uploaded images/assets */
+  margin-bottom: 1.6rem;
+}
+
+
+
+/*----  SECTIONS & COLUMNS  --------------------------------------------*/
+
+section
+{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background: var(--accent);
+  position: relative;
+  padding-left: 2.4rem !important;
+  padding-right: 2.4rem !important;
+}
+
+.content-wrapper
+{
+  display: grid;
+  grid-template-columns: 100%;
+  width: 100fr;
+  max-width: 120rem;
+  margin: 0 auto;
+  z-index: 2;
+}
+
+.content-wrapper.col-2
+{
+  grid-template-columns: 50fr 50fr;
+}
+
+.content-wrapper.col-3
+{
+  grid-template-columns: 33fr 33fr 33fr;
+}
+
+.content-wrapper.col-sidebar-left
+{
+  grid-template-columns: 33fr 67fr;
+}
+
+.content-wrapper.col-sidebar-right
+{
+  grid-template-columns: 67fr 33fr;
+}
+
+        @media screen and (max-width: 80rem){
+
+                .content-wrapper.col-2,
+                .content-wrapper.col-3,
+                .content-wrapper.col-sidebar-left,
+                .content-wrapper.col-sidebar-right
+                {
+                  grid-template-columns: 50fr 50fr;
+                }
+
+        }
+
+        @media screen and (max-width: 40rem){
+
+                .content-wrapper.col-2,
+                .content-wrapper.col-3,
+                .content-wrapper.col-sidebar-left,
+                .content-wrapper.col-sidebar-right
+                {
+                  grid-template-columns: 100fr;
+                }
+
+        }
+
+
+/*---  BLOCKQUOTE STYLES ----------------------------------------------------------------- */
+
+
+
+
+
+
+/*---  TABLE STYLES ----------------------------------------------------------------- */
+
+
+.tg  
+{border-collapse:collapse;border-spacing:0;}
+
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+
+.tg .tg-0lax{text-align:left;vertical-align:top}
+
+
+  .tg {width: auto !important;}.tg col {width: auto !important;}
+
+  .tg-wrap {overflow-x: auto;-webkit-overflow-scrolling: touch;}

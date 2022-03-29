@@ -1,0 +1,648 @@
+<head>
+
+  <link rel="stylesheet" type="text/css" href="https://lukebennis.com/ds-master/master-styles/SPP-DS-PF-styles-master.css">
+  <link rel="stylesheet" type="text/css" href="https://lukebennis.com/ds-master/master-styles/SPP-theme-styles-master.css">
+  <link rel="stylesheet" type="text/css" href="https://lukebennis.com/ds-master/master-styles/SPP-pages-styles-master.css">
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+
+
+<style type="text/css">
+
+body
+{
+  --accent: var(--theme-primary);
+}
+
+.btn.active
+{
+  border-color: var(--blue-500);
+  color: var(--blue-500);
+}
+
+body
+{
+  max-width: 120rem;
+  margin: 3rem auto;
+  background: #f7f7f7;
+}
+
+/* TABS MAIN WRAPPER + LAYOUT --------------------------------------------------------------------- */
+
+.tabs
+{
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+     @media only screen and (max-width: 800px) {
+          .tabs
+          {
+              padding: var(--space-med);
+          }
+      }
+
+.layout-stacked
+{
+  flex-direction: column;
+}
+
+.layout-stacked .style-modern
+{
+  justify-content: center;
+}
+
+.layout-sidebar
+{
+  flex-direction: row;
+}
+
+      @media only screen and (min-width: 800px) {
+          .layout-sidebar .tabs-wrapper
+          {
+            min-width: 36ch;
+            max-width: 36ch;
+          }
+      }
+
+      @media only screen and (max-width: 800px) {
+        .layout-sidebar
+        {
+          flex-direction: column;
+          max-width: 100%;
+        }
+      }
+
+.tabs-wrapper
+{
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+}
+
+button.widget-tab
+{
+  cursor: pointer;
+}
+
+.tabs-wrapper.align-center
+{
+  justify-content: center;
+}
+
+.style-boxed.layout-stacked .tabs-wrapper.align-center
+{
+  margin: 0 auto;
+}
+
+.style-boxed.layout-sidebar .tabs-wrapper,
+.style-boxed.layout-stacked .tabs-wrapper
+{
+  border: 2px solid var(--pf-op-light);
+  gap: 0;
+}
+
+.style-boxed.layout-sidebar .tabs-wrapper
+{
+
+  border-width: 2px 0 2px 2px;
+  border-radius: var(--radius) 0 0 var(--radius);
+}
+
+.style-boxed.layout-stacked .tabs-wrapper
+{
+  border-width: 2px 2px 0 2px;
+  border-radius: var(--radius) var(--radius) 0 0;
+  width: fit-content;
+}
+
+
+
+
+
+/* STYLE DEFAULT --------------------------------------------------------------------- */
+
+.style-default button.widget-tab
+{
+  padding: var(--space-xsml) var(--space-sml);
+  color: var(--pf-text-light);
+  border-bottom: 2px solid var(--pf-op-medium);
+}
+
+.style-default button.widget-tab p
+{
+  color: var(--pf-text-light);
+}
+
+.style-default button.widget-tab:hover p
+{
+  color: var(--pf-text);
+}
+
+
+
+/* STYLE MODERN --------------------------------------------------------------------- */
+
+.style-modern button.widget-tab
+{
+  padding: var(--space-med);
+  color: var(--pf-text);
+  border-radius: var(--radius-curved);
+  border: 2px solid transparent;
+}
+
+.layout-stacked .tabs-wrapper
+{
+  align-items: flex-start;
+}
+
+
+    
+.layout-stacked.style-modern .tabs-wrapper
+{
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  align-items: stretch;
+}
+
+.layout-stacked.style-modern button.widget-tab
+{
+  flex-grow: 1;
+  flex-basis: 0;
+}
+          
+.style-modern button.widget-tab:hover
+{
+  background: var(--pf-op-light);
+}
+
+.style-modern button.widget-tab.active
+{
+  background: white;
+  box-shadow: var(--shadow-sml);
+  border: 2px solid transparent;
+}
+
+.style-default button.widget-tab.active
+{
+  border-bottom: 2px solid var(--accent);
+}
+
+.style-default button.widget-tab.active p
+{
+  color: var(--pf-text);
+}
+
+.style-boxed button.widget-tab
+{
+  padding: var(--space-sml) var(--space-med);
+  border: 2px solid transparent;
+  position: relative;
+}
+
+.layout-stacked.style-boxed button.widget-tab
+{
+  border-bottom-width: 0px;
+}
+
+.layout-stacked.style-boxed .tabs-wrapper button.widget-tab:first-child
+{
+  border-left-width: 0px !important;
+}
+
+.layout-stacked.style-boxed .tabs-wrapper button.widget-tab:last-child
+{
+  border-right-width: 0px !important;
+}
+
+.layout-sidebar.style-boxed .tabs-wrapper button.widget-tab:first-child
+{
+  border-top-width: 0px !important;
+}
+
+.layout-sidebar.style-boxed .tabs-wrapper button.widget-tab:last-child
+{
+  border-bottom-width: 0px !important;
+}
+
+
+.layout-sidebar.style-boxed button.widget-tab
+{
+  width: 100%;
+}
+
+.style-boxed button.widget-tab p
+{
+  color: var(--pf-text-light);
+}
+
+
+.style-boxed button.widget-tab:hover p
+{
+  color: var(--pf-text);
+}
+
+.style-boxed button.active:before
+{
+  content: '';
+  position: absolute;
+  background: var(--accent);
+}
+
+.layout-stacked.style-boxed button.active:before
+{
+  top: -4px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+}
+
+.layout-sidebar.style-boxed button.active:before
+{
+  top: 0;
+  left: -2px;
+  width: 4px;
+  height: 100%;
+}
+
+.style-boxed button.active:after
+{
+  content: '';
+  position: absolute;
+  background: white;
+  z-index: 999;
+}
+
+.layout-stacked.style-boxed button.active:after
+{
+  bottom: -4px;
+  left: 0px;
+  width: 100%;
+  height: 4px;
+}
+
+.layout-sidebar.style-boxed button.active:after
+{
+  top: 0px;
+  right: -4px;
+  width: 4px;
+  height: 100%;
+}
+
+.layout-stacked.style-boxed button.active
+{
+  background: white;
+  border: solid var(--pf-op-light);
+  border-width: 2px 2px 0 2px;
+}
+
+.layout-sidebar.style-boxed button.active
+{
+  background: white;
+  border: solid var(--pf-op-light);
+  border-width: 2px 0 2px 0;
+}
+
+.style-boxed button.active p
+{
+  color: var(--pf-text);
+}
+
+      @media only screen and (min-width: 800px) {
+          .layout-sidebar.style-default button.widget-tab
+          {
+            width: 100%;
+            text-align: left;
+            padding: var(--space-xsml) 0;
+          }
+      }
+
+      @media only screen and (min-width: 800px) {
+          .layout-sidebar.style-modern button.widget-tab
+          {
+            width: 100%;
+            text-align: left;
+          }
+      }
+
+      @media only screen and (max-width: 800px) {
+          .tabs-wrapper
+          {
+            gap: 0;
+          }
+
+          .style-default button.widget-tab,
+          .style-modern button.widget-tab
+          {
+            flex-basis: 50%;
+          }
+          .style-modern button.widget-tab
+          {
+            flex-basis: 100%;
+          }
+      }
+
+      @media only screen and (max-width: 600px) {
+          .style-default button.widget-tab
+          {
+            flex-basis: 100%;
+          }
+      }
+
+
+.icon-placeholder
+{
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 3rem;
+  height: 3rem;
+  color: white;
+  font-size: 0.8rem;
+  background: var(--accent);
+  border-radius: 999rem;
+  margin-right: 0.6rem;
+  vertical-align: middle;
+}
+
+        @media only screen and (min-width: 800px) {
+                .layout-stacked.style-modern .icon-placeholder
+                {
+                  display: flex;
+                  margin: 0 auto 0.6rem auto;
+                  width: 4.2rem;
+                  height: 4.2rem;
+                }
+        }
+
+
+.no-icon .icon-placeholder
+{
+  display: none !important;
+}
+
+.style-default button.widget-tab p:nth-child(2),
+.style-boxed button.widget-tab p:nth-child(2),
+.style-default button.widget-tab .icon-placeholder,
+.style-boxed button.widget-tab .icon-placeholder
+{
+  display: none;
+}
+
+
+
+
+/* DESCRIPTION --------------------------------------------------------------------- */
+
+.style-modern button.widget-tab p:nth-child(1)
+{
+  font-size: 1.4em;
+}
+
+.style-modern button.widget-tab.active p:nth-child(1)
+{
+  color: var(--accent);
+}
+
+.layout-sidebar.style-modern button.widget-tab p:nth-child(2)
+{
+  opacity: 0;
+  height: 0;
+}
+
+.layout-stacked.style-modern button.widget-tab p:nth-child(2)
+{
+  opacity: 0;
+}
+
+.style-modern button.widget-tab.active p:nth-child(2)
+{
+  height: auto;
+  opacity: 1;
+  margin-block-start: 1.2rem !important;
+}
+
+.layout-stacked.style-modern button.widget-tab.active 
+{
+  flex-grow: 1;
+}
+
+.no-desc button.widget-tab p:nth-child(2)
+{
+  display: none !important;
+}
+
+
+
+/* CONTENT STYLES --------------------------------------------------------------------- */
+
+.content-wrapper
+{
+  padding: var(--space-lrg) 0;
+  width: 100%;
+}
+
+.style-boxed.layout-stacked .content-wrapper,
+.style-boxed.layout-sidebar .content-wrapper
+{
+  background: white;
+  border: 2px solid var(--pf-op-light);
+  padding: var(--space-lrg);
+}
+
+.style-boxed.layout-stacked .content-wrapper
+{
+  border-width: 2px;
+  border-radius: 0 0 var(--radius) var(--radius);
+}
+
+.style-boxed.layout-sidebar .content-wrapper
+{
+  border-width: 2px;
+  border-radius: 0 var(--radius) var(--radius) 0;
+  min-height: 40rem;
+}
+
+        @media only screen and (min-width: 800px) {
+            .layout-sidebar .content-wrapper
+            {
+              padding: 0 0 0 var(--space-xlrg);
+            }
+        }
+
+	
+
+</style>
+
+
+<body class="spp-pf-ui demo-brand-a page-type-default page-spacing-default page-global-styles">
+
+
+
+  <p>Pages Widget Mockup - Tabs</p>
+
+  <button class="btn options-layout">Stacked / Sidebar</button> 
+  <button class="btn options-style-default">Style: Default</button>
+  <button class="btn options-style-modern">Style: Modern</button>
+  <button class="btn options-style-boxed">Style: Boxed</button>
+  <button class="btn options-center">Stacked: Left / Center</button>
+  <button class="btn options-desc">Description On/Off</button>
+  <button class="btn options-icon">Icon On/Off</button>
+  <br>
+  <hr>
+  <br>
+
+
+  <div id="tabs" class="tabs layout-sidebar style-modern">
+
+  <div class="tabs-wrapper">
+    <button class="widget-tab active" onclick="openTab('alpha')"><p><span class="icon-placeholder">ICON</span>Tab Title Alpha</p>
+    <p>I'm a small description for this tab. I can be about this long for some quick and useful info.</p></button>
+
+    <button class="widget-tab" onclick="openTab('beta')"><p><span class="icon-placeholder">ICON</span>Tab Title Name Beta</p>
+    <p>I'm a small description for this tab. I can be about this long for some quick and useful info.</p></button>
+
+    <button class="widget-tab" onclick="openTab('charlie')"><p><span class="icon-placeholder">ICON</span>Tab Charlie</p>
+    <p>I'm a small description for this tab. I can be about this long for some quick and useful info.</p></button>
+
+    <button class="widget-tab" onclick="openTab('delta')"><p><span class="icon-placeholder">ICON</span>Tab Title Name is Delta</p>
+    <p>I'm a small description for this tab. I can be about this long for some quick and useful info.</p></button>
+    <button class="widget-tab" onclick="openTab('echo')"><p><span class="icon-placeholder">ICON</span>Tab Title Echo</p>
+    <p>I'm a small description for this tab. I can be about this long for some quick and useful info.</p></button>
+  </div>
+
+  <div class="content-wrapper">
+
+    <div id="alpha" class="tab-content">
+      <h2>Heading</h2>
+      <p>I am the content for the first tab. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et pulvinar est. Sed in eros ut magna iaculis scelerisque. Morbi non sem id libero elementum venenatis sit amet eget neque. Proin consequat nibh eu turpis scelerisque, volutpat aliquam metus venenatis. Ut imperdiet tempor ligula. Proin porta sapien vulputate, gravida quam eu, vulputate enim. Mauris sodales massa at eros interdum, eu porta odio blandit. Mauris varius sapien sit amet finibus vehicula. Nunc ullamcorper pharetra dui eget blandit. Proin augue risus, varius quis urna nec, vestibulum tempus massa.
+      </p>
+
+      <h3>Heading</h3>
+      <p>Donec condimentum turpis eros, in bibendum eros gravida at. Integer tempor ultrices velit in semper. Nam convallis, tortor nec pulvinar pellentesque, tortor quam ultrices leo, at aliquet justo erat consequat metus. Suspendisse ornare enim vitae urna euismod, nec congue urna iaculis. Duis accumsan in augue vitae porttitor. Ut lectus nisi, condimentum in nisi sed, gravida scelerisque nibh. Phasellus sit amet nisi nulla. Duis imperdiet facilisis lectus eget lacinia.
+      </p>
+    </div>
+
+    <div id="beta" class="tab-content" style="display:none">
+      <h1>Heading</h1>
+      <p>This is the content fo tab Beta.</p>
+    </div>
+
+    <div id="charlie" class="tab-content" style="display:none">
+      <h2>Heading</h2>
+      <p>This is the content fo tab charlie.</p>
+      <img src="https://lukebennis.com/ds-master/demo-brand-master/demo-brand-image-3.jpg">
+    </div>
+
+    <div id="delta" class="tab-content" style="display:none">
+      <h1>Heading</h1>
+      <p>This is the content fo tab Delta. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget metus a nunc fermentum malesuada. Curabitur sed egestas est. Aenean a tristique mauris, rutrum sagittis mi. Morbi feugiat ultrices ligula ut iaculis. Sed porta ornare sapien, vel sodales tortor elementum et. Etiam posuere, eros eu malesuada finibus, ante lacus porttitor turpis, nec vehicula elit nisi quis odio. Phasellus rutrum risus a nisl semper, non tristique purus commodo. Suspendisse at erat nec mi lobortis dignissim at non erat. Maecenas sed augue aliquet, pulvinar eros nec, volutpat ipsum. Nam id lacus pharetra, malesuada enim sed, suscipit erat. Morbi mauris est, vehicula nec orci non, cursus fermentum mi. Donec ultrices convallis massa vitae accumsan. Fusce sapien enim, ornare sed elit non, molestie condimentum sem. Suspendisse facilisis ante sed tortor semper sagittis. Curabitur gravida mi ut lectus vulputate consectetur.
+      </p>
+
+      <p>In aliquam vehicula mauris at tincidunt. Ut et lacinia libero. Fusce tristique iaculis bibendum. Aenean eu tristique metus, sit amet ultricies neque. Etiam ac nibh vitae ante cursus commodo. Nunc sit amet enim cursus nisi tincidunt suscipit. Nunc porta nibh vel nisl feugiat tincidunt. Nulla ac facilisis enim. Morbi mattis diam non mauris bibendum, eu tincidunt felis dictum. Donec mollis lectus at ligula aliquet, non posuere odio ornare. In volutpat hendrerit maximus. Nulla et neque condimentum, suscipit lorem vitae, faucibus tellus. Vivamus varius, elit in elementum pellentesque, justo justo dictum turpis, quis iaculis felis augue id lacus. Nulla facilisi. Suspendisse suscipit vitae augue vitae imperdiet.
+
+      </p>
+
+      <p>Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec et orci id urna dapibus vestibulum feugiat a lectus. Quisque pharetra gravida sagittis. Aliquam quis malesuada tellus. Suspendisse sodales massa nec nunc tempus, eu varius velit ultrices. Aenean gravida sodales nunc. In hac habitasse platea dictumst. Donec imperdiet purus vitae commodo vulputate. Pellentesque egestas lectus ullamcorper quam interdum, at ultrices neque vulputate. Donec eu mi et risus eleifend fermentum. In tristique mattis molestie. Mauris et eleifend dui. Fusce non magna sit amet neque pharetra imperdiet. Curabitur lacus elit, vehicula sit amet lectus nec, tincidunt posuere lacus.
+      </p>
+    </div>
+
+    <div id="echo" class="tab-content" style="display:none">
+      <h1>Heading</h1>
+      <p>This is the content fo tab Echo.
+          <ul>
+                <li>Unordered List item one
+                  <ul>
+                    <li>Nested list item
+                      <ul>
+                        <li>Level 3, item one</li>
+                        <li>Level 3, item two</li>
+                        <li>Level 3, item three</li>
+                        <li>Level 3, item four</li>
+                      </ul>
+                    </li>
+                    <li>List item two</li>
+                    <li>List item three</li>
+                    <li>List item four</li>
+                  </ul>
+                </li>
+                <li>List item two</li>
+                <li>List item three</li>
+                <li>List item four</li>
+              </ul>
+      </p>
+    </div>
+
+  </div>
+
+</div>
+
+</body>
+
+
+
+
+<script>
+
+function openTab(tabName) {
+  var i;
+  var x = document.getElementsByClassName("tab-content");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  document.getElementById(tabName).style.display = "block";
+}
+
+$('.tabs-wrapper').on('click', 'button', function() {
+  $(this).addClass('active').siblings().removeClass('active').addClass('');
+});
+
+
+$(document).ready(function(){
+
+    $(".btn").click(function(){
+  $(this).toggleClass("active");
+  });
+
+  $(".options-layout").click(function(){
+  $("#tabs").toggleClass("layout-stacked layout-sidebar");
+  });
+
+  $(".options-style-default").click(function(){
+  $("#tabs").addClass("style-default").removeClass("style-modern style-boxed");
+  });
+
+  $(".options-style-modern").click(function(){
+  $("#tabs").addClass("style-modern").removeClass("style-boxed style-default");
+  });
+
+  $(".options-style-boxed").click(function(){
+  $("#tabs").addClass("style-boxed").removeClass("style-modern style-default");
+  });
+
+  $(".options-center").click(function(){
+  $(".tabs-wrapper").toggleClass("align-center");
+  });
+
+  $(".options-desc").click(function(){
+  $("#tabs").toggleClass("no-desc");
+  });
+
+  $(".options-icon").click(function(){
+  $("#tabs").toggleClass("no-icon");
+  });
+  
+});
+
+
+</script>
+
+

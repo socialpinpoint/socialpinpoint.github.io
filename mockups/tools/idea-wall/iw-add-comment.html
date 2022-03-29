@@ -1,0 +1,519 @@
+<head>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" type="text/css" href="https://lukebennis.com/ds-master/master-styles/SPP-DS-PF-styles-master.css">
+  <link rel="stylesheet" type="text/css" href="https://lukebennis.com/ds-master/master-styles/SPP-iw-styles-master.css">
+  <link rel="stylesheet" type="text/css" href="https://lukebennis.com/ds-master/master-styles/SPP-theme-styles-master.css">
+
+<style>
+
+	body
+	{
+		background: var(--pf-op-light);
+		margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height:  100%;
+	}
+
+
+
+*
+{
+	transition: var(--transition);
+}
+
+
+
+
+/*----  ADD COMMENT UI --------------------------------------------*/
+
+
+.add-comment.content-wrapper
+{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  position: relative;
+  padding: 4.8rem;
+  border-radius: var(--border-radius);
+  max-width: calc(50rem + 10rem);
+  width: 100%;
+  background: white;
+  border-radius: 1.8rem;
+  margin: 2.4rem 0;
+  min-height: 66vh;
+  z-index: 1;
+}
+
+
+.footer
+{
+  display: none !important;
+}
+
+.form-view .footer
+{
+  display: flex !important;
+}
+
+.content-header
+{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.8rem;
+}
+
+.question
+{
+  text-align: center;
+  color: var(--theme-primary);
+  padding: 0 3rem;
+}
+
+hr
+{
+  border-color: var(--pf-op-light);
+}
+
+.category-selector
+{
+  border-radius: 4.2rem;
+  border: 2px solid transparent;
+  padding: 1.2rem 1.8rem;
+  width: 100%;
+  margin: 1.8rem 0;
+}
+
+.category-selector.not-active
+{
+  border: 2px solid var(--pf-op-light);
+  padding: 0.6rem 1.2rem 0.6rem 0;
+}
+
+.category-selector.not-active:hover
+{
+  border: 2px solid var(--pf-op-medium);
+}
+
+.category-selector label
+{
+  margin: 1.2rem 0;
+}
+
+.category-items
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 40vh;
+  transition: 0.6s;
+}
+
+.category-selected .item,
+.category-items .item
+{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem;
+  cursor: pointer;
+}
+
+.category-items .item:nth-child(2)
+{
+  margin-top: 1.8rem;
+}
+
+.category-items .item:nth-child(7)
+{
+  margin-bottom: 1.8rem;
+}
+
+.category-items .item:hover .icon
+{
+  margin-left: 1.2rem;
+}
+
+.category-items .item:nth-child(1) .icon
+{
+  background: teal;
+}
+
+.category-items .item-selected .icon,
+.category-items .item:nth-child(2) .icon
+{
+  background: orchid;
+}
+
+.category-items .item:nth-child(3) .icon
+{
+  background: skyblue;
+}
+
+.category-items .item:nth-child(4) .icon
+{
+  background: indianred;
+}
+
+.category-items .item:nth-child(5) .icon
+{
+  background: darkseagreen;
+}
+
+.category-items .item:nth-child(6) .icon
+{
+  background: coral;
+}
+
+.category-selected .item .icon,
+.category-items .item .icon
+{
+  display: inline-block;
+  width: 4.8rem;
+  height: 4.8rem;
+  min-width: 4.8rem;
+  background: lightgray;
+  border-radius: var(--border-radius-rounded);  
+  margin-right: 1.2rem;
+}
+
+.category-selected .item .title,
+.category-items .item .title
+{
+  flex-grow: 2;
+  font-size: var(--fontSizes-xl);
+  font-family: var(--theme-content);
+}
+
+.category-selected .item 
+{
+  padding: 0;
+}
+
+.category-selected .item label
+{
+  margin: 0 0 0.3rem 0;
+}
+
+.category-selected .item .icon
+{
+  background: skyblue;
+  width: 6.4rem;
+  height: 6.4rem;
+  min-width: 6.4remrem;
+  margin-top: -0.6rem;
+  margin-bottom: -0.6rem;
+}
+
+.category-selected .item .btn
+{
+  border-color: transparent;
+}
+
+.category-selected
+{
+  display: none;
+}
+
+.category-selected.active
+{
+  display: block;
+}
+
+
+.category-items.not-active
+{
+  height: 0;
+  padding: 0;
+  overflow: hidden;
+  opacity: 0;
+  min-height: 0;
+}
+
+.subline
+{
+  text-align: center;
+  padding: 1.8rem;
+}
+
+.form-content.not-active
+{
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+  padding: 0;
+  min-height: 0;
+  transition-delay: 0s;
+}
+
+.form-content
+{
+  transition-delay: 0.3s;
+  min-height: 20rem;
+}
+
+.form-content label,
+.form-content .footer
+{
+  margin-top: 1.8rem;
+}
+
+.form-content img
+{
+  width: 100%;
+}
+
+.footer
+{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2.4rem 1.8rem 0 1.8rem;
+  margin-top: 3.6rem;
+  background: white;
+  border-top: 2px solid var(--pf-op-light);
+}
+
+  .footer:before
+  {
+    content: '';
+    position: absolute;
+    top: -1.2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 2.4rem;
+    border-radius: 100%;
+    background: radial-gradient(var(--pf-op-light) 0%, white 66%);
+    z-index: -1;
+  }
+
+.footer .terms
+{
+  max-width: 50%;
+}
+
+@media screen and (max-width:  600px){
+
+  .question
+  {
+    font-size: var(--fontSizes-xl);
+  }
+
+	.add-comment.content-wrapper
+	{
+	  padding: 2.4rem;
+	  width: 100vw;
+    height: 100vh;
+    margin: 0;
+	}
+
+	.category-selector
+	{
+	  margin: 1.8rem 0;
+	}
+
+	.category-items .item
+	{
+		padding: 1.2rem 0;
+	}
+
+	.category-selected .item .title,
+	.category-items .item .title
+	{
+	  font-size: var(--fontSizes-lg);
+	}
+
+  .footer
+  {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer .terms
+  {
+    max-width: 80%;
+    margin-bottom: 1.2rem;
+  }
+
+}
+
+
+</style>
+
+</head>
+
+<script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+<script src="https://unpkg.com/feather-icons"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script>
+
+$(document).ready(function(){
+
+
+  $("#water, #water-active").click(function(){
+    $(".content-wrapper").toggleClass("form-view");
+  });
+
+  $("#water, #water-active").click(function(){
+    $(".category-items").toggleClass("not-active");
+  });
+
+  $("#water, #water-active").click(function(){
+    $(".category-selected").toggleClass("active");
+  });
+
+
+  $("#water, #water-active").click(function(){
+    $(".form-content").toggleClass("not-active");
+  });
+
+  $("#water, #water-active").click(function(){
+    $(".category-selector").toggleClass("not-active");
+  });
+
+  
+});
+
+</script>
+
+
+
+<body class="demo-brand-a spp-pf-ui">
+
+<div class="add-comment content-wrapper not-active shadow-lrg">
+
+  <div class="content-header">
+
+    <div class="p p-18">New Comment</div>
+    <button class="btn close-btn">Close</button>
+
+  </div>
+
+  <div class="content-wrapper">
+
+	<div class="question line-height heading p-24">Tell us about your thoughts for the former landing site?</div>
+
+  <hr>
+
+	<div class="category-selector" tabindex="1">
+  	  <div class="category-selected">
+  	  	      <div id="water-active" class="item">
+              <span class="icon"></span>
+              <span class="title"><label>category</label>Water</span>
+              <div>
+<button class="btn" tabindex="-1">Change</button>
+</div>
+
+        	</div>
+  	  </div>
+      <div class="category-items">
+
+      	<label>select a category</label>
+
+      		<div class="item">
+              <span class="icon"></span>
+              <span class="title">Green Spaces</span>
+              <button class="btn">Select</button>
+        	</div>	
+
+        	<div id="water" class="item">
+              <span class="icon"></span>
+              <span class="title">Water</span>
+              <button class="btn">Select</button>
+        	</div>
+
+        	<div class="item">
+              <span class="icon"></span>
+              <span class="title">Art & Cultural Events</span>
+              <button class="btn">Select</button>
+        	</div>
+
+        	<div class="item">
+              <span class="icon"></span>
+              <span class="title p">Education</span>
+              <button class="btn">Select</button>
+        	</div>
+
+        	<div class="item">
+              <span class="icon"></span>
+              <span class="title">Commerce & Business</span>
+              <button class="btn">Select</button>
+        	</div>
+
+        	<div class="item">
+              <span class="icon"></span>
+              <span class="title">Transportaiton & Parking</span>
+              <button class="btn">Select</button>
+        	</div>
+
+        	<div class="subline p p-14">You can change this category before submitting.</div>
+
+
+      </div>
+	</div>
+
+    	<div class="form-content not-active">
+
+          <label>your commment<span class="required-text">Required</span></label>
+          <textarea rows="6" placeholder="Add your comment here..."></textarea>
+
+          <label>Name</label>
+          <input [type="text"] placeholder="Your name...">
+
+          <label>Email<span class="required-text">Required</span></label>
+          <input [type="text"] placeholder="Your email...">
+
+
+          <label>upload image</label>
+          <div class="image-input-wrapper">
+            <div class="empty-state info-wrapper">
+              <button class="btn btn-full blue">Add Image</button>
+                <button id="info-button" class="btn btn-icon-only info-button">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M8.00001 1.02278C4.1127 1.02278 1.0228 4.11269 1.0228 7.99999C1.0228 11.8873 4.1127 14.9772 8.00001 14.9772C11.8873 14.9772 14.9772 11.8873 14.9772 7.99999C14.9772 4.11269 11.7876 1.02278 8.00001 1.02278ZM8.00001 13.4821C5.00978 13.4821 2.51791 10.9902 2.51791 7.99999C2.51791 5.00976 5.00978 2.5179 8.00001 2.5179C10.9902 2.5179 13.4821 5.00976 13.4821 7.99999C13.4821 10.9902 10.9902 13.4821 8.00001 13.4821Z"/>
+        <path d="M8.87799 10.2943V7.91869C8.78063 7.52928 8.48857 7.23721 8.09915 7.23721H7.32031C6.93089 7.23721 6.63882 7.52928 6.63882 7.91869C6.63882 8.30811 6.93089 8.60018 7.32031 8.69753V10.2943C6.93089 10.2943 6.63882 10.5863 6.63882 10.9757C6.63882 11.3652 6.93089 11.7546 7.41766 11.7546H8.87799C9.26741 11.7546 9.65682 11.4625 9.65682 10.9757C9.65682 10.489 9.26741 10.2943 8.87799 10.2943Z"/>
+        <circle cx="8.00952" cy="5.29944" r="1.05405"/>
+        </svg></button>
+              <div class="p p-14 info-section hide">This input accepts JPG, PNG, HEIC nad PDF file formats. </div>
+            </div>
+          </div>
+
+    </div>
+
+</div>
+
+<div class="content-footer">
+
+      <div class="footer">
+        <div class="terms">
+          <span class="p p-13 line-height-sml">I agree my comment will be used as <a gref="#">indicated in the terms and conditions</a></span>
+        </div>
+        <div>
+          <button class="btn btn-outline"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M11 3.5C11.8 3.5 12.5 4.2 12.5 5V11C12.5 11.8 11.8 12.5 11 12.5H5C4.2 12.5 3.5 11.8 3.5 11V5C3.5 4.2 4.2 3.5 5 3.5H11ZM11 2H5C3.3 2 2 3.4 2 5V11C2 12.7 3.3 14 5 14H11C12.7 14 14 12.7 14 11V5C14 3.4 12.7 2 11 2Z" fill="var(--pf-blue)"/></svg>Agree</button>
+          <button class="btn btn-full">Submit</button>
+        </div>
+      </div>
+
+	</div>
+
+</div>
+
+
+</div>
+
+	
+</body>

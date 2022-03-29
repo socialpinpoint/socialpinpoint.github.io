@@ -1,0 +1,782 @@
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
+
+<link rel="stylesheet" type="text/css" href="https://lukebennis.com/ds-master/master-styles/CM-DS-styles-master.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+
+<style>
+
+body
+{
+  margin: 0;
+  position: relative;
+  padding-bottom: 25vh;
+}
+
+.card-white
+{
+  box-shadow: var(--shadow-subtle) !important;
+  transition: var(--transition-slow);
+}
+
+.card-white:hover
+{
+  box-shadow: var(--shadow-md) !important;
+}
+
+.page-content-wrapper
+{
+  max-width: 1800px;
+  margin: 0 auto;
+}
+
+.card-white
+{
+  background: white;
+  box-shadow: var(--shadow-md);
+  border-radius: var(--radius-md);
+}
+
+.record-tabs-wrapper
+{
+  padding: var(--spacing-md) var(--spacing-lg);
+  background: var(--blue-100);
+  margin-bottom: var(--spacing-md);
+  text-align: center;
+}
+
+.record-tabs-wrapper button
+{
+  margin-right: var(--spacing-sm);
+  border-radius: var(--radius-rounded);
+  font-size: var(--fontSizes-md);
+  padding: var(--spacing-sm) var(--spacing-md);
+  gap: var(--spacing-md);
+  outline: none;
+}
+
+.record-tabs-wrapper:hover .btn-ghost
+{
+  opacity: 1;
+}
+
+.record-tabs-wrapper .btn-white
+{
+  font-weight: bold;
+}
+
+.record-tabs-wrapper button .cm-icon:first-child
+{
+  font-size: var(--fontSizes-xl);
+}
+
+.record-tabs-wrapper button .cm-icon:last-child
+{
+  font-size: var(--fontSizes-xs);
+  padding: var(--spacing-xs);
+  border-radius: var(--radius-rounded);
+  opacity: 0;
+}
+
+.record-tabs-wrapper button:hover .cm-icon:last-child
+{
+  opacity: 0.33;
+  width: auto;
+}
+
+.record-tabs-wrapper button .cm-icon:last-child:hover
+{
+  opacity: 1;
+  background: var(--red-100);
+  color: var(--red-700);
+}
+
+
+.page-content-wrapper
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 0 var(--spacing-lg);
+  gap: var(--spacing-4xl);
+  margin-bottom: 25vh;
+}
+
+.page-content-wrapper.layout-sidebar .sidebar-column
+{
+  flex-basis: 40%;
+  min-width: 350px;
+}
+
+.page-content-wrapper.layout-equal .sidebar-column,
+.page-content-wrapper.layout-equal .main-content
+{
+  flex-basis: 50% !important;
+}
+
+.page-content-wrapper.layout-collapse .sidebar-column
+{
+    flex-basis: 0%;
+}
+
+.page-content-wrapper.layout-collapse .sidebar-column
+{
+  border-radius: var(--radius-md);
+  background: var(--white);
+  box-shadow: var(--shadow-subtle);
+  padding: var(--spacing-md);
+}
+
+.page-content-wrapper.layout-collapse .sidebar-column .details-wrapper,
+.page-content-wrapper.layout-collapse .sidebar-column .content-header .p
+{
+    display: none;
+}
+
+.page-content-wrapper.layout-collapse .sidebar-column .content-header .title
+{
+  writing-mode: tb-rl;
+  margin-bottom: var(--spacing-md);
+}
+
+.page-content-wrapper.layout-collapse .sidebar-column .content-header
+{
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+
+
+
+.main-content
+{
+  flex-basis: 100%;
+}
+
+.content-header
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-md);
+}
+
+.details-wrapper
+{
+  padding: var(--spacing-lg);
+  min-height: 75vh;
+}
+
+.record-header-nav
+{
+  margin-bottom: var(--spacing-md);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.record-header
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-md);
+}
+
+.record
+{
+  padding: var(--spacing-md) var(--spacing-lg);
+  margin-bottom: var(--spacing-lg);
+}
+
+.mobile-only
+{
+  display: none;
+}
+
+.mobile-only.toggle-btn-wrapper
+{
+  margin: 0 auto;
+}
+
+      @media only screen and (max-width: 1000px) {
+
+          .mobile-only
+          {
+            display: block;
+          }
+          .page-content-wrapper
+          {
+            flex-direction: column;
+            gap: var(--spacing-md);
+          }
+
+        .page-content-wrapper .sidebar-column,
+        .page-content-wrapper .main-content
+        {
+          flex-basis: 100%;
+        }
+
+        .page-content-wrapper .sidebar-column .content-wrapper,
+        .page-content-wrapper .record-header-nav
+        {
+          display: none;
+        }
+      }
+
+
+</style>
+
+
+
+
+</head>
+
+<body>
+  <div class="texture"></div>
+
+  <div id="import-header"></div>
+
+  <div class="record-tabs-wrapper">
+
+    <button class="btn btn-ghost">
+      <span class="cm-icon cmico-person"></span>
+      John Smithington
+      <span class="cm-icon cmico-cross"></span>
+    </button>
+
+    <button class="btn btn-white">
+      <span class="cm-icon cmico-person"></span>
+      Alison Kensington
+      <span class="cm-icon cmico-cross"></span>
+    </button>
+
+    <button class="btn btn-ghost">
+      <span class="cm-icon cmico-person"></span>
+      Kerry-Anne Bellamy
+      <span class="cm-icon cmico-cross"></span>
+    </button>
+    
+  </div>
+
+  <div class="page-content-wrapper layout-sidebar">
+
+      <div class="sidebar-column">
+
+                  <div class="mobile-only toggle-btn-wrapper">
+                    <button class="btn btn-clear">Details</button>
+                    <button class="btn btn-white">Relationships</button>
+                    <button class="btn btn-clear">History</button>
+                  </div>
+
+          <div class="content-wrapper">
+              <div class="content-header">
+                <div>
+                  <div class="title title-md">Details</div>
+                  <div class="p">Alison Kensington <bold>ID: 381</bold></div>
+                </div>
+                <div>
+                  <button class="btn btn-ghost btn-icon-only"><span class="cm-icon cmico-share"></span></button>
+                  <button class="btn btn-ghost btn-icon-only"><span class="cm-icon cmico-more-options"></span></button>
+                </div>
+              </div>
+              <div class="details-wrapper card-white">
+
+                        <div class="input-wrapper">
+                          <label>Visibility</label>
+                        <div class="dropdown-select">
+                          <select>
+                            <option selected>Global (all projects visible)</option>
+                            <option>Private (selected project only)</option>
+                          </select>
+                        </div>
+                        </div>
+
+                              <div class="input-wrapper">
+                                <label>stakeholder groups</label>
+                                <div class="input-options-wrapper option-right">
+                                  <div class="input multi-select-content-wrapper">
+                                    <ul>
+                                      <li>Government and Agency</li>
+                                      <li>Federal Government</li>
+                                      <li>State Government and Agency</li>
+                                      <li>Local Government and Agency</li>
+                                    </ul>
+                                    <ul>
+                                      <li>Health</li>
+                                      <li>Private Health</li>
+                                      <li>Publich Health</li>
+                                    </ul>
+                                    </div>
+                                <button id="tag-btn" class="btn btn-white btn-icon-only"><span class="cm-icon cmico-tags"></span></button>
+                                </div>
+                                
+                                <div class="options-wrapper">
+                                  <div class="options-header">
+                                    <button id="done-btn" class="btn btn-ghost">Close</button>
+                                    <button id="done-btn" class="btn btn-primary">Update</button>
+                                  </div>
+                                  <div class="options-content project-list">
+                                   
+                                    <input type="search" placeholder="Search...">
+                                    
+                                    <div class="with-child-wrapper">
+                                      <div class="list-item">Community</div>
+                                    </div>
+                                    
+                                     <div class="with-child-wrapper">
+                                      <div class="list-item open">Education</div>
+                                            <div class="with-child-wrapper">
+                                              <div class="list-item open">Public Education</div>
+                                              <div class="list-item">Early Childhood</div>  
+                                              <div class="list-item">Primary</div>
+                                              <div class="list-item">Senior</div>
+                                            </div>
+                                      <div class="with-child-wrapper">
+                                      <div class="list-item">Private Education</div>
+                                      </div>
+                                    </div>
+                                    
+                                    <div class="with-child-wrapper">
+                                      <div class="list-item open checked">Governmanet And Agency</div>
+                                        <div class="list-item checked">Federal government</div>
+                                        <div class="list-item checked">Stategovernment</div>
+                                        <div class="list-item checked">Local government</div>
+                                    </div>
+                                    
+                                    <div class="with-child-wrapper">
+                                    <div class="list-item open checked">Health</div>
+                                      <div class="list-item checked">Private Health</div>
+                                      <div class="list-item checked">Public Health</div>
+                                    </div>
+                                    
+                                    <div class="list-item">Union</div>
+                                   
+                                  </div>
+                                </div>
+                              </div>
+
+
+
+                              <div class="input-wrapper">
+                                <label>Distrobution lists</label>
+                                  <div class="input-options-wrapper option-right">
+                                  <input type="text">
+                                  <button class="btn btn-white btn-icon-only"><span class="cm-icon cmico-tags"></span></button>
+                                  </div>
+                              </div>
+
+
+                         <div class="collapse-inputs">         
+
+                        <div class="input-wrapper">
+                          <label>Title</label><input type="text">
+                        </div>
+
+                        <div class="input-wrapper">
+                          <label>First Name</label><input type="text">
+                        </div>
+
+                        <div class="input-wrapper">
+                          <label>Last Name</label><input type="text">
+                        </div>
+
+                        <div class="input-wrapper">
+                          <label>Suffix</label><input type="text">
+                        </div>
+
+                        <div class="input-wrapper">
+                          <label>Salutation</label><input type="text">
+                        </div>
+
+                        <div class="input-wrapper">
+                          <label>Role</label><input type="text">
+                        </div>
+
+                        <div class="input-wrapper">
+                          <label>Organisation</label><input type="text">
+                        </div>
+
+                        <div class="input-wrapper">
+                          <label>Mobile</label><input type="text">
+                        </div>
+
+                        <div class="input-wrapper">
+                          <label>BH Phone</label><input type="text">
+                        </div>
+
+                        <div class="input-wrapper">
+                          <label>AH Phone</label><input type="text">
+                        </div>
+
+                        <div class="input-wrapper">
+                          <label>Fax</label><input type="text">
+                        </div>
+
+                        <div class="input-wrapper">
+                          <label>Email</label><input type="text">
+                        </div>
+
+                        <div class="input-wrapper">
+                          <label>Web Address</label><input type="text">
+                        </div>
+
+                        <div class="input-wrapper">
+                          <label>Event Notes</label><textarea cols="200" row="90"></textarea>
+                        </div>
+
+                        <div class="input-set-wrapper">
+                          <label>Address Information</label>
+
+                              <div class="input-wrapper">
+                                <label>Address</label><input type="text">
+                              </div>
+
+                              <div class="input-wrapper">
+                                <label>Post Code</label><input type="text">
+                              </div>
+
+                              <div class="input-wrapper">
+                                <label>Suburb</label><input type="text">
+                              </div>
+
+                              <div class="input-wrapper">
+                                <label>County</label><input type="text">
+                              </div>
+                          
+                        </div>
+
+                        <div class="input-wrapper">
+                          <label>Consultant ID</label><input type="text">
+                        </div>
+
+
+                          
+              
+              </div>
+          </div>
+          </div><!-- End collapse wrapper -->
+        
+      </div>
+
+      <div class="main-content">
+
+          <div class="content-wrapper">
+              <div class="record-header-nav">
+                  <div class="toggle-btn-wrapper">
+                    <button class="btn btn-white">Relationships</button>
+                    <button class="btn btn-clear">History</button>
+                  </div>
+                  <div>
+                    <button id="col-toggle-btn" class="btn btn-ghost btn-icon-only"><span class="cm-icon cmico-workspace"></span></button>
+                  </div>
+              </div>
+              <div class="records-wrapper">
+
+                <div class="record card-white">
+                  <div class="record-header">
+
+                    <div class="title title-sm">Events</div>
+                    <div>
+                      <button class="btn btn-ghost btn-icon-only"><span class="cm-icon cmico-chevron-up"></span></button>
+                      <button class="btn btn-ghost btn-icon-only"><span class="cm-icon cmico-search"></span></button>
+                      <button class="btn btn-light btn-icon-only"><span class="cm-icon cmico-plus"></span></button>
+                    </div>
+                  </div>
+                  <div>Record Data here <br></div>
+                </div>
+
+                <div class="record card-white">
+                  <div class="record-header">
+
+                    <div class="title title-sm">Events</div>
+                    <div>
+                      <button class="btn btn-ghost btn-icon-only"><span class="cm-icon cmico-chevron-up"></span></button>
+                      <button class="btn btn-ghost btn-icon-only"><span class="cm-icon cmico-search"></span></button>
+                      <button class="btn btn-light btn-icon-only"><span class="cm-icon cmico-plus"></span></button>
+                    </div>
+                  </div>
+                  <div>
+
+
+
+
+                        <div class="table-wrapper">
+                          
+                          <div class="header-wrapper">
+                            <div class="tr">
+                              <div class="td">Heading Cell</div>
+                              <div class="td">Heading Cell
+                                <div class="options">
+                                  <button class="btn btn-ghost btn-icon-only"><span class="cm-icon cmico-sort"></span></button><button class="btn btn-ghost btn-icon-only"><span class="cm-icon cmico-filter"></span></button></div>
+                            </div>
+                              <div class="td">Heading Cell</div>
+                              <div class="td">Heading Cell</div>
+                              <div class="td">Heading Cell With Long title Content</div>
+                              <div class="td">Heading Cell</div>
+                            </div>
+                          </div>
+                          
+                          <div class="body-wrapper">
+                            <div class="tr">
+                              <div class="td">Table Cell</div>
+                              <div class="td">Table Cell</div>
+                              <div class="td">Table Cell</div>
+                              <div class="td">Table Cell</div>
+                              <div class="td">Table Cell</div>
+                              <div class="td">Table Cell</div>
+                            </div>
+                            <div class="tr">
+                              <div class="td">Table Cell</div>
+                              <div class="td">Table Cell</div>
+                              <div class="td">Table Cell</div>
+                              <div class="td">Table Cell</div>
+                              <div class="td">Table Cell</div>
+                              <div class="td">Table Cell</div>
+                            </div>
+                            <div class="tr">
+                              <div class="td">Table Cell</div>
+                              <div class="td">Table Cell</div>
+                              <div class="td">Table Cell</div>
+                              <div class="td">Table Cell</div>
+                              <div class="td">Table Cell</div>
+                              <div class="td">Table Cell</div>
+                            </div>
+                            <div class="tr">
+                              <div class="td">Table Cell</div>
+                              <div class="td">Table Cell</div>
+                              <div class="td">Table Cell</div>
+                              <div class="td">Table Cell</div>
+                              <div class="td">Table Cell</div>
+                              <div class="td">Table Cell</div>
+                            </div>
+                            <div class="tr">
+                              <div class="td">Table Cell</div>
+                              <div class="td">Table Cell</div>
+                              <div class="td">Table Cell</div>
+                              <div class="td">Table Cell</div>
+                              <div class="td">Table Cell</div>
+                              <div class="td">Table Cell</div>
+                            </div>
+                            <div class="tr">
+                              <div class="td">Table Cell</div>
+                              <div class="td">Table Cell</div>
+                              <div class="td">Table Cell</div>
+                              <div class="td">Table Cell</div>
+                              <div class="td">Table Cell</div>
+                              <div class="td">Table Cell</div>
+                            </div>
+                          </div>
+                          
+                        </div>
+
+
+
+
+
+                  </div>
+                </div>
+
+                <div class="record card-white">
+                  <div class="record-header">
+
+                    <div class="title title-sm">Events</div>
+                    <div>
+                      <button class="btn btn-ghost btn-icon-only"><span class="cm-icon cmico-chevron-up"></span></button>
+                      <button class="btn btn-ghost btn-icon-only"><span class="cm-icon cmico-search"></span></button>
+                      <button class="btn btn-light btn-icon-only"><span class="cm-icon cmico-plus"></span></button>
+                    </div>
+                  </div>
+                  <div>No Records available...</div>
+                </div>
+
+                <div class="record card-white">
+                  <div class="record-header">
+
+                    <div class="title title-sm">Users</div>
+                    <div>
+                      <button class="btn btn-ghost btn-icon-only"><span class="cm-icon cmico-chevron-up"></span></button>
+                      <button class="btn btn-ghost btn-icon-only"><span class="cm-icon cmico-search"></span></button>
+                      <button class="btn btn-light btn-icon-only"><span class="cm-icon cmico-plus"></span></button>
+                    </div>
+                  </div>
+                  <div>
+
+                    <div class="table-wrapper">
+                          
+                          <div class="header-wrapper">
+                            <div class="tr">
+                              <div class="td">Heading Cell</div>
+                              <div class="td">Heading Cell
+                                <div class="options">
+                                  <button class="btn btn-ghost btn-icon-only"><span class="cm-icon cmico-sort"></span></button><button class="btn btn-ghost btn-icon-only"><span class="cm-icon cmico-filter"></span></button></div>
+                            </div>
+                              <div class="td">Heading Cell</div>
+                              <div class="td">Heading Cell</div>
+                              <div class="td">Heading Cell With Long title Content</div>
+                              <div class="td">Heading Cell</div>
+                            </div>
+                          </div>
+                          
+                          <div class="body-wrapper">
+                            <div class="tr">
+                              <div class="td">Table Cell</div>
+                              <div class="td">Table Cell</div>
+                              <div class="td">Table Cell</div>
+                              <div class="td">Table Cell</div>
+                              <div class="td">Table Cell</div>
+                              <div class="td">Table Cell</div>
+                            </div>
+                            <div class="tr">
+                              <div class="td">Table Cell</div>
+                              <div class="td">Table Cell</div>
+                              <div class="td">Table Cell</div>
+                              <div class="td">Table Cell</div>
+                              <div class="td">Table Cell</div>
+                              <div class="td">Table Cell</div>
+                            </div>
+                            <div class="tr">
+                              <div class="td">Table Cell</div>
+                              <div class="td">Table Cell</div>
+                              <div class="td">Table Cell</div>
+                              <div class="td">Table Cell</div>
+                              <div class="td">Table Cell</div>
+                              <div class="td">Table Cell</div>
+                            </div>
+                            <div class="tr">
+                              <div class="td">Table Cell</div>
+                              <div class="td">Table Cell</div>
+                              <div class="td">Table Cell</div>
+                              <div class="td">Table Cell</div>
+                              <div class="td">Table Cell</div>
+                              <div class="td">Table Cell</div>
+                            </div>
+                            <div class="tr">
+                              <div class="td">Table Cell</div>
+                              <div class="td">Table Cell</div>
+                              <div class="td">Table Cell</div>
+                              <div class="td">Table Cell</div>
+                              <div class="td">Table Cell</div>
+                              <div class="td">Table Cell</div>
+                            </div>
+                          </div>
+                          
+                        </div>
+
+
+                  </div>
+                </div>
+
+                <div class="record card-white">
+                  <div class="record-header">
+
+                    <div class="title title-sm">Documents</div>
+                    <div>
+                      <button class="btn btn-ghost btn-icon-only"><span class="cm-icon cmico-chevron-up"></span></button>
+                      <button class="btn btn-ghost btn-icon-only"><span class="cm-icon cmico-search"></span></button>
+                      <button class="btn btn-light btn-icon-only"><span class="cm-icon cmico-plus"></span></button>
+                    </div>
+                  </div>
+                  <div>No Records available...</div>
+                </div>
+
+              </div>
+          </div>
+
+      </div>
+
+  </div>
+
+</body>
+
+<script type="text/javascript">
+
+$(document).ready(function(){
+
+  $('#import-header').load("cm-header.html");
+
+  $(".record-tabs-wrapper button").click(function(){
+  $(".record-tabs-wrapper button").removeClass("btn-white");
+  $(".record-tabs-wrapper button").addClass("btn-ghost");
+  $(this).removeClass("btn-ghost");
+  $(this).addClass("btn-white");
+  });
+
+  $(".record-tabs-wrapper button .cmico-cross").click(function() {
+  $(this).parent(".record-tabs-wrapper button").hide().fade();
+  });
+
+});
+
+$(document).ready(function(){
+
+  $(".input-wrapper").click(function(){
+  $(this).toggleClass("active");
+  $(this).find('input, textarea').toggleClass("active");
+  $(this).find('label').toggleClass("active");
+  });
+  
+});
+
+$(document).ready(function(){
+  
+    $('input, textarea').blur(function(){
+        if(!$(this).val()) { 
+          $(this).removeClass("has-value").parent(".input-wrapper").removeClass("has-value");; } 
+      else{ 
+        $(this).addClass("has-value").parent(".input-wrapper").addClass("has-value"); }
+    });
+  
+});
+
+
+$(document).ready(function(){
+  
+  $("#tag-btn, #done-btn").click(function(){
+  $(".input-options-wrapper").slideToggle(400);
+  $(".options-wrapper").slideToggle(400);
+  });
+  
+  $(".project-list .list-item").prepend("<input type='checkbox'>");
+  
+  $(".checked input").attr( 'checked', true );
+ 
+});
+
+$(document).ready(function(){
+
+$('#col-toggle-btn').on('click',function() {     
+  if ($(".page-content-wrapper").hasClass('layout-collapse'))
+  {
+    $(".page-content-wrapper").removeClass('layout-collapse');
+    $(".page-content-wrapper").addClass('layout-sidebar'); 
+  }
+
+  else if ($(".page-content-wrapper").hasClass('layout-sidebar'))
+  {
+    $(".page-content-wrapper").removeClass('layout-sidebar');
+    $(".page-content-wrapper").addClass('layout-equal');
+  }
+
+  else if ($(".page-content-wrapper").hasClass('layout-equal'))
+  {
+    $(".page-content-wrapper").removeClass('layout-equal');
+    $(".page-content-wrapper").addClass('layout-collapse'); 
+  }  
+});
+});
+  
+
+
+
+
+
+
+</script>
+
+

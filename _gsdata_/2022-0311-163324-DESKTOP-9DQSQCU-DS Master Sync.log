@@ -1,0 +1,10 @@
+2022-03-11 16:33:26: FTP: Server rejected UTF-8 that it promised us: Unknown command
+2022-03-11 16:33:26: == Rename Conflict Losing File is On, expect some weirdness in auto-resolving Vertical Conflicts
+2022-03-11 16:33:26: -- Analysis Started by On File Change Incremental
+2022-03-11 16:33:27: R: On disk ftp://ftp.lukebennis.com:21 space required for sync is 0.00, free space is unknown
+2022-03-11 16:33:27: Changes: 1, Conflicts: 0, CopyTime: 0, FixState: 0, Errors: 0, All: 1174
+2022-03-11 16:33:27: Left to Right: Copy File: 1 
+2022-03-11 16:33:27: == Sync Started by On File Change Incremental
+2022-03-11 16:33:27: Start only 1 threads, limited by tasks to run
+2022-03-11 16:33:28: Copy Over 'G:/My Drive/Social Pinpoint/Product/Design System/DS Master/master-styles/CM-DS-styles-master.css' -> 'ftp://ftp.lukebennis.com:21/public_html/ds-master/master-styles/CM-DS-styles-master.css' (49,509)
+2022-03-11 16:33:30: == Sync Complete. Time: 00:00:06, Speed: 12.38 KB/s, OK: 1, Errors: 0

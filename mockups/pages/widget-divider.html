@@ -1,0 +1,177 @@
+<head>
+
+  <link rel="stylesheet" type="text/css" href="https://lukebennis.com/ds-master/master-styles/SPP-DS-PF-styles-master.css">
+  <link rel="stylesheet" type="text/css" href="https://lukebennis.com/ds-master/master-styles/SPP-theme-styles-master.css">
+  <link rel="stylesheet" type="text/css" href="https://lukebennis.com/ds-master/master-styles/SPP-pages-styles-master.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+
+
+<style type="text/css">
+
+body
+{
+  --accent: var(--theme-primary);
+}
+
+body
+{
+  max-width: 120rem;
+  margin: 3rem auto;
+  background: #f7f7f7;
+}
+
+.btn.active
+{
+  border-color: var(--blue-500);
+  color: var(--blue-500);
+}
+
+.divider-wrapper
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1.8rem;
+  width: 100%;
+}
+
+.divider-wrapper.align-center
+{
+  justify-content: center;
+}
+
+.divider-wrapper.align-left
+{
+  justify-content: flex-start;
+}
+
+.divider-wrapper.align-left .line-left
+{
+  display: none;
+}
+
+.divider-wrapper.align-left h4
+{
+  text-align: left;
+}
+
+.divider-wrapper.align-center h4
+{
+  text-align: center;
+}
+
+.divider-wrapper .line-left,
+.divider-wrapper .line-right
+{
+  height: 2px;
+  flex-grow: 1;
+  background: var(--pf-op-medium);
+  border-radius: var(--radius);
+  min-width: 10rem;
+} 
+
+
+        @media screen and (max-width: 40rem){
+              .divider-wrapper
+              {
+                flex-direction: column;
+                gap: 0.6rem;
+              }
+              .line-left
+              { 
+                display: none;
+              }
+              .line-right
+              {
+                width: 100%;
+              }
+
+        }
+
+.divider-title h1,
+.divider-title h2,
+.divider-title h3,
+.divider-title h3,
+.divider-title p
+{
+  margin: 0 !important;
+  margin-block-end: 0 !important;
+}
+
+.no-title .divider-title
+{
+  display: none;
+}
+
+.no-title.divider-wrapper
+{
+  gap: 0;
+}
+
+
+</style>
+
+
+<body class="spp-pf-ui demo-brand-a page-global-styles page-type-default page-spacing-default page-border-curved">
+
+  <p>Pages Widget Mockup - Tabs</p>
+
+  <button class="btn options-align">Align</button>
+  <button class="btn options-title">Show Title</button>
+  <button class="btn options-pad-sml">Pad Sml</button>
+  <button class="btn options-pad-med">Pad Med</button>
+  <button class="btn options-pad-lrg">Pad Lrg</button>
+  <br>
+  <hr>
+  <br>
+
+  <div id="divider" class="divider-wrapper align-center pad-none">
+    <div class="line-left"></div>
+    <div class="divider-title"><h3>Divider Heading</h3></div>
+    <div class="line-right"></div>
+  </div>
+
+
+</body>
+
+
+
+<script>
+
+$(document).ready(function(){
+
+    $(".btn").click(function(){
+  $(this).toggleClass("active");
+  });
+
+  $(".options-pad-sml").click(function(){
+  $("#divider").toggleClass("space-sml");
+  });
+
+  $(".options-pad-med").click(function(){
+  $("#divider").toggleClass("space-med");
+  });
+
+  $(".options-pad-lrg").click(function(){
+  $("#divider").toggleClass("space-xlrg");
+  });
+
+  $(".options-align").click(function(){
+  $("#divider").toggleClass("align-left align-center");
+  });
+
+  $(".options-title").click(function(){
+  $("#divider").toggleClass("no-title");
+  });
+
+  
+});
+
+
+</script>
+
+

@@ -1,0 +1,137 @@
+<head>
+	<link rel="stylesheet" type="text/css" href="https://lukebennis.com/ds-master/master-styles/SPP-DS-V1-styles-master.css">
+</head>
+
+<script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function(event) {
+
+    $('.wrap-full').on('click', function() {
+    $('.modal-wrapper').removeClass('wrapper-lrg wrapper-med wrapper-sml').addClass('wrapper-full');
+    });
+
+    $('.wrap-lrg').on('click', function() {
+    $('.modal-wrapper').removeClass('wrapper-full wrapper-med wrapper-sml').addClass('wrapper-lrg');
+    });
+
+    $('.wrap-med').on('click', function() {
+    $('.modal-wrapper').removeClass('wrapper-full wrapper-lrg wrapper-sml').addClass('wrapper-med');
+    });
+
+    $('.wrap-sml').on('click', function() {
+    $('.modal-wrapper').removeClass('wrapper-full wrapper-lrg wrapper-med').addClass('wrapper-sml');
+    });
+
+    $('.cont-full').on('click', function() {
+    $('.modal-content').removeClass('content-lrg content-med content-sml').addClass('content-full');
+    });
+
+    $('.cont-lrg').on('click', function() {
+    $('.modal-content').removeClass('content-full content-med content-sml').addClass('content-lrg');
+    });
+
+    $('.cont-med').on('click', function() {
+    $('.modal-content').removeClass('content-full content-lrg content-sml').addClass('content-med');
+    });
+
+    $('.cont-sml').on('click', function() {
+    $('.modal-content').removeClass('content-full content-lrg content-med').addClass('content-sml');
+    });
+
+    
+  });
+
+</script>
+
+<style type="text/css">
+
+body
+{
+  background: var(--grey-600);
+}
+
+.controls
+{
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 13px;
+  color: #fff;
+  z-index: 999;
+}
+
+.controls span
+{
+  color: #fff;
+  font-size: 13px;
+  padding: 0 3px;
+  cursor: pointer;
+}
+
+</style>
+
+
+<body>
+
+  <div class="controls">
+    WRAPPER:
+    <span class="wrap-full">Full</span>
+    <span class="wrap-lrg">Lrg</span>
+    <span class="wrap-med">Med</span>
+    <span class="wrap-sml">Sml</span>
+    <span style="width: 60px; display: inline-block;"></span>
+    CONTENT:
+    <span class="cont-full">Full</span>
+    <span class="cont-lrg">Lrg</span>
+    <span class="cont-med">Med</span>
+    <span class="cont-sml">Sml</span>
+  </div>
+
+  <div class="modal-overaly">
+  
+    <div class="modal-wrapper wrapper-full shadow-lrg">
+
+          <div class="modal-header">
+          <div>
+            <svg class="icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7.8 5.5C6.6 5.5 5.5 6.5 5.5 7.8C5.5 9.1 6.5 10 7.8 10C9.1 10 10 9 10 7.8C10 6.6 9 5.5 7.8 5.5ZM7.8 8.5C7.4 8.5 7 8.2 7 7.8C7 7.4 7.4 7 7.8 7C8.2 7 8.6 7.3 8.6 7.8C8.6 8.3 8.2 8.5 7.8 8.5Z"/>
+            <path d="M14.1 6.2L12.8 5.7L13.4 4.5C13.5 4.2 13.5 3.9 13.2 3.7L11.9 2.4C11.7 2.2 11.3 2.1 11.1 2.2L9.9 2.7L9.4 1.5C9.3 1.2 9 1 8.7 1H6.9C6.6 1 6.3 1.2 6.2 1.5L5.7 2.7L4.5 2.2C4.2 2.1 3.9 2.1 3.6 2.3L2.3 3.6C2.1 3.9 2.1 4.2 2.2 4.5L2.8 5.7L1.5 6.2C1.2 6.3 1 6.6 1 6.9V8.7C1 9 1.2 9.3 1.5 9.4L2.8 9.9L2.2 11.1C2.1 11.4 2.1 11.7 2.4 11.9L3.7 13.2C3.9 13.4 4.3 13.5 4.5 13.4L5.7 12.8L6.2 14.1C6.3 14.4 6.6 14.6 6.9 14.6H8.7C9 14.6 9.3 14.4 9.4 14.1L9.9 12.8L11.1 13.4C11.4 13.5 11.7 13.5 11.9 13.2L13.2 11.9C13.4 11.7 13.5 11.3 13.4 11.1L12.8 9.9L14.1 9.4C14.4 9.3 14.6 9 14.6 8.7V6.9C14.6 6.6 14.4 6.3 14.1 6.2ZM13.1 8.2L11.6 8.8C11.4 8.9 11.2 9 11.2 9.2C11.2 9.4 11.1 9.6 11.2 9.8L11.9 11.3L11.3 11.9L9.8 11.2C9.6 11.1 9.4 11.1 9.2 11.2C9 11.3 8.9 11.4 8.8 11.6L8.2 13.1H7.4L6.8 11.6C6.7 11.4 6.6 11.2 6.4 11.2C6.2 11 6 11 5.8 11.1L4.3 11.8L3.7 11.2L4.4 9.7C4.5 9.5 4.5 9.3 4.4 9.1C4.3 8.9 4.2 8.8 4 8.7L2.5 8.2V7.4L4 6.8C4.2 6.7 4.4 6.6 4.4 6.4C4.4 6.2 4.5 6 4.4 5.8L3.8 4.3L4.4 3.7L5.9 4.4C6.1 4.5 6.3 4.5 6.5 4.4C6.6 4.4 6.7 4.2 6.8 4L7.4 2.5H8.2L8.7 4C8.8 4.2 9 4.4 9.2 4.5C9.4 4.6 9.6 4.6 9.8 4.5L11.3 3.8L11.9 4.4L11.2 5.9C11 6 11 6.2 11.1 6.4C11.2 6.6 11.3 6.7 11.5 6.8L13 7.4V8.2H13.1Z">
+            </svg>
+            <span class="p p-24">Modal Title</span>
+          </div>
+          <div>
+            <button class="btn btn-clear btn-icon-only"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.0896 3.91044C11.4837 3.30457 10.5749 3.30457 9.96905 3.91044L8 5.87949L6.03094 3.91044C5.42508 3.30457 4.51628 3.30457 3.91042 3.91044C3.30456 4.5163 3.30456 5.42509 3.91042 6.03096L5.87948 8.00001L3.91042 9.96907C3.30456 10.5749 3.30456 11.4837 3.91042 12.0896C4.21335 12.3925 4.51628 12.544 4.97068 12.544C5.42508 12.544 5.72801 12.3925 6.03094 12.0896L8 10.1205L9.96905 12.0896C10.272 12.3925 10.5749 12.544 11.0293 12.544C11.4837 12.544 11.7866 12.3925 12.0896 12.0896C12.6954 11.4837 12.6954 10.5749 12.0896 9.96907L10.1205 8.00001L12.0896 6.03096C12.6954 5.42509 12.6954 4.5163 12.0896 3.91044Z"></svg></button>
+          </div>
+        </div>
+
+
+      <div class="modal-content content-sml">
+
+        <div class="content">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+          <button class="btn btn-clear">Cancel</button>
+          <button class="btn btn-primary">Publish</button>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </div>
+
+</body>
+
+
+
+

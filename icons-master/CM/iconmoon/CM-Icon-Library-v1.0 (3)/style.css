@@ -1,0 +1,238 @@
+@font-face {
+  font-family: 'CM-Icon-Library';
+  src:  url('fonts/CM-Icon-Library.eot?nscik0');
+  src:  url('fonts/CM-Icon-Library.eot?nscik0#iefix') format('embedded-opentype'),
+    url('fonts/CM-Icon-Library.woff2?nscik0') format('woff2'),
+    url('fonts/CM-Icon-Library.ttf?nscik0') format('truetype'),
+    url('fonts/CM-Icon-Library.woff?nscik0') format('woff'),
+    url('fonts/CM-Icon-Library.svg?nscik0#CM-Icon-Library') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+.cm-icon {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'CM-Icon-Library' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.cmico-alert:before {
+  content: "\e900";
+}
+.cmico-arrow-down:before {
+  content: "\e901";
+}
+.cmico-arrow-left:before {
+  content: "\e902";
+}
+.cmico-arrow-right:before {
+  content: "\e903";
+}
+.cmico-arrow-right-double:before {
+  content: "\e904";
+}
+.cmico-arrow-up:before {
+  content: "\e905";
+}
+.cmico-bounce:before {
+  content: "\e906";
+}
+.cmico-check-false:before {
+  content: "\e907";
+}
+.cmico-check-true:before {
+  content: "\e908";
+}
+.cmico-chevron-down:before {
+  content: "\e909";
+}
+.cmico-chevron-left:before {
+  content: "\e90a";
+}
+.cmico-chevron-right:before {
+  content: "\e90b";
+}
+.cmico-chevron-up:before {
+  content: "\e90c";
+}
+.cmico-cog:before {
+  content: "\e90d";
+}
+.cmico-comms:before {
+  content: "\e90e";
+}
+.cmico-compress:before {
+  content: "\e90f";
+}
+.cmico-copy:before {
+  content: "\e910";
+}
+.cmico-cross:before {
+  content: "\e911";
+}
+.cmico-cross-square:before {
+  content: "\e912";
+}
+.cmico-delete:before {
+  content: "\e913";
+}
+.cmico-document:before {
+  content: "\e914";
+}
+.cmico-download-cloud:before {
+  content: "\e915";
+}
+.cmico-duplicate:before {
+  content: "\e916";
+}
+.cmico-edit:before {
+  content: "\e917";
+}
+.cmico-email:before {
+  content: "\e918";
+}
+.cmico-etreet-view:before {
+  content: "\e919";
+}
+.cmico-exclamation-mark:before {
+  content: "\e91a";
+}
+.cmico-expand-verticle:before {
+  content: "\e91b";
+}
+.cmico-filter:before {
+  content: "\e91c";
+}
+.cmico-grid-table:before {
+  content: "\e91d";
+}
+.cmico-history:before {
+  content: "\e91e";
+}
+.cmico-inbox:before {
+  content: "\e91f";
+}
+.cmico-info:before {
+  content: "\e920";
+}
+.cmico-interactions:before {
+  content: "\e921";
+}
+.cmico-link:before {
+  content: "\e922";
+}
+.cmico-male:before {
+  content: "\e923";
+}
+.cmico-map:before {
+  content: "\e924";
+}
+.cmico-merge:before {
+  content: "\e925";
+}
+.cmico-more-options:before {
+  content: "\e926";
+}
+.cmico-mouse:before {
+  content: "\e927";
+}
+.cmico-mouse-opens:before {
+  content: "\e928";
+}
+.cmico-mouse-unique:before {
+  content: "\e929";
+}
+.cmico-opened:before {
+  content: "\e92a";
+}
+.cmico-opened-unique:before {
+  content: "\e92b";
+}
+.cmico-open-internally:before {
+  content: "\e92c";
+}
+.cmico-options:before {
+  content: "\e92d";
+}
+.cmico-organisation:before {
+  content: "\e92e";
+}
+.cmico-person:before {
+  content: "\e92f";
+}
+.cmico-phone:before {
+  content: "\e930";
+}
+.cmico-pie-chart:before {
+  content: "\e931";
+}
+.cmico-pin:before {
+  content: "\e932";
+}
+.cmico-plus:before {
+  content: "\e933";
+}
+.cmico-property:before {
+  content: "\e934";
+}
+.cmico-question:before {
+  content: "\e935";
+}
+.cmico-radio-false:before {
+  content: "\e936";
+}
+.cmico-radio-true:before {
+  content: "\e937";
+}
+.cmico-refresh:before {
+  content: "\e938";
+}
+.cmico-report:before {
+  content: "\e939";
+}
+.cmico-search:before {
+  content: "\e93a";
+}
+.cmico-send:before {
+  content: "\e93b";
+}
+.cmico-share:before {
+  content: "\e93c";
+}
+.cmico-sms:before {
+  content: "\e93d";
+}
+.cmico-sort:before {
+  content: "\e93e";
+}
+.cmico-tags:before {
+  content: "\e93f";
+}
+.cmico-tick:before {
+  content: "\e940";
+}
+.cmico-time:before {
+  content: "\e941";
+}
+.cmico-tools:before {
+  content: "\e942";
+}
+.cmico-unlink:before {
+  content: "\e943";
+}
+.cmico-unsubscribe:before {
+  content: "\e944";
+}
+.cmico-workspace:before {
+  content: "\e945";
+}

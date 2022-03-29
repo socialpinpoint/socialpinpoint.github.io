@@ -1,0 +1,272 @@
+<head>
+	<link rel="stylesheet" type="text/css" href="https://lukebennis.com/ds-master/master-styles/SPP-DS-V1-styles-master.css">
+</head>
+
+<script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+<script src="https://unpkg.com/feather-icons"></script>
+
+
+<style type="text/css">
+
+body
+{
+  margin: 0;
+  font-size: 10px;
+  background: var(--grey-100) !important;
+}
+	
+.body
+{
+  display:  flex;
+}
+
+.sidebar-wrapper
+{
+  width: 37rem;
+  height: 90vh;
+  padding: 30px;
+  background: white;
+  margin: 30px 0px;
+  border-radius: 0 12px 12px 0;
+}
+
+label
+{
+  display: block;
+  margin-bottom: 1.2rem;
+}
+
+.widgets-wrapper
+{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.widget-card
+{
+  position: relative;
+  background: white;
+  border: 2px solid white;
+  border-radius: 6px;
+  padding: 1.8rem 0.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: calc(50% - 0.3rem);
+  margin-bottom: 0.6rem;
+  cursor: move;
+}
+
+.deafult .widget-card
+{
+  cursor: move;
+}
+
+.widget-card:hover
+{
+  border: 2px solid var(--grey-200);
+}
+
+.default .widget-card:hover .title
+{
+  color: var(--action-blue);
+}
+
+.widget-card .p
+{
+  color: var(--grey-600);
+}
+
+.widget-card .icon svg
+{
+    width: 3rem;
+    height: 3rem;
+    stroke: var(--grey-600);
+}
+
+.widget-card .title
+{
+  padding: var(--btn-spacing);
+  min-height: 4.2rem;
+}
+
+.active-area .widget-card:hover .title
+{
+  display: none;
+}
+
+.btn
+{
+  display: none;
+}
+
+
+.active-area .widget-card:hover .btn
+{
+  display: block;
+}
+
+.preview-wrapper
+{
+  position: absolute;
+  top: 20%;
+  left: 60%;
+  display: block;
+  width: 275px;
+  height: auto;
+  opacity: 0.5;
+  z-index: 999;
+  background: white;
+  padding: 1.8rem;
+  visibility: hidden;
+  overflow: hidden;
+}
+
+.preview-render
+{
+  
+}
+
+.preview-render img
+{
+  display: block;
+  width: 100%;
+}
+
+.widget-card:hover .preview-wrapper
+{
+  opacity: 1;
+  left: 90%;
+  visibility: visible;
+}
+
+
+</style>
+
+
+<div class="body">
+
+  <div class="sidebar-wrapper shadow-med">
+
+    <label>Default Drag & Drop</label>
+
+    <div class="widgets-wrapper default">
+
+  
+      <div class="widget-card">
+        <i class="icon" data-feather="dribbble"></i>
+        <div class="title p">Widget Name</div>
+      </div>
+
+      <div class="widget-card">
+        <i class="icon" data-feather="dribbble"></i>
+        <div class="title p">Widget Name</div>
+      </div>
+
+      <div class="widget-card">
+        <i class="icon" data-feather="dribbble"></i>
+        <div class="title p">Saved Section</div>
+          <div class="preview-wrapper shadow-med border-med transition">
+            <label>preview</label>
+            <div class="preview-render">
+              <img src="assets/saved-widget-preview-img.png">
+            </div>
+          </div>
+      </div>
+
+      <div class="widget-card">
+        <i class="icon" data-feather="dribbble"></i>
+        <div class="title p">Widget Name</div>
+      </div>
+
+      <div class="widget-card">
+        <i class="icon" data-feather="dribbble"></i>
+        <div class="title p">Widget Name</div>
+      </div>
+
+      <div class="widget-card">
+        <i class="icon" data-feather="dribbble"></i>
+        <div class="title p">Widget Name</div>
+      </div>
+
+    </div>
+
+      <label><br>With widget area selected</label>
+
+      <div class="widgets-wrapper active-area">
+  
+      <div class="widget-card transition">
+        <i class="icon" data-feather="dribbble"></i>
+        <div class="title p">Widget Name</div>
+        <span class="btn btn-clear">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8 2C4.67568 2 2 4.67568 2 8C2 11.3243 4.67568 14 8 14C11.3243 14 14 11.3243 14 8C14 4.67568 11.2432 2 8 2ZM8 12.7838C5.40541 12.7838 3.21622 10.6757 3.21622 8C3.21622 5.32432 5.32432 3.21622 8 3.21622C10.6757 3.21622 12.7838 5.32432 12.7838 8C12.7838 10.6757 10.5946 12.7838 8 12.7838Z"/>
+            <path d="M10.7568 7.35134H8.56758V5.16215C8.56758 4.83783 8.32433 4.5135 7.91893 4.5135C7.51352 4.5135 7.35136 4.83783 7.35136 5.16215V7.35134H5.16217C4.83785 7.35134 4.5946 7.67567 4.5946 7.99999C4.5946 8.32431 4.83785 8.64864 5.24325 8.64864H7.43244V10.8378C7.43244 11.1622 7.67569 11.4865 8.08109 11.4865C8.4865 11.4865 8.72974 11.2432 8.72974 10.8378V8.56756H10.9189C11.2433 8.56756 11.5676 8.32431 11.5676 7.91891C11.5676 7.5135 11.0811 7.35134 10.7568 7.35134Z"/>
+            </svg>Add</span>
+      </div>
+
+      <div class="widget-card transition">
+        <i class="icon" data-feather="dribbble"></i>
+        <div class="title p">Widget Name</div>
+        <span class="btn btn-clear">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8 2C4.67568 2 2 4.67568 2 8C2 11.3243 4.67568 14 8 14C11.3243 14 14 11.3243 14 8C14 4.67568 11.2432 2 8 2ZM8 12.7838C5.40541 12.7838 3.21622 10.6757 3.21622 8C3.21622 5.32432 5.32432 3.21622 8 3.21622C10.6757 3.21622 12.7838 5.32432 12.7838 8C12.7838 10.6757 10.5946 12.7838 8 12.7838Z"/>
+            <path d="M10.7568 7.35134H8.56758V5.16215C8.56758 4.83783 8.32433 4.5135 7.91893 4.5135C7.51352 4.5135 7.35136 4.83783 7.35136 5.16215V7.35134H5.16217C4.83785 7.35134 4.5946 7.67567 4.5946 7.99999C4.5946 8.32431 4.83785 8.64864 5.24325 8.64864H7.43244V10.8378C7.43244 11.1622 7.67569 11.4865 8.08109 11.4865C8.4865 11.4865 8.72974 11.2432 8.72974 10.8378V8.56756H10.9189C11.2433 8.56756 11.5676 8.32431 11.5676 7.91891C11.5676 7.5135 11.0811 7.35134 10.7568 7.35134Z"/>
+            </svg>Add</span>
+      </div>
+
+      <div class="widget-card transition">
+        <i class="icon" data-feather="dribbble"></i>
+        <div class="title p">Saved Section</div>
+        <span class="btn btn-clear">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8 2C4.67568 2 2 4.67568 2 8C2 11.3243 4.67568 14 8 14C11.3243 14 14 11.3243 14 8C14 4.67568 11.2432 2 8 2ZM8 12.7838C5.40541 12.7838 3.21622 10.6757 3.21622 8C3.21622 5.32432 5.32432 3.21622 8 3.21622C10.6757 3.21622 12.7838 5.32432 12.7838 8C12.7838 10.6757 10.5946 12.7838 8 12.7838Z"/>
+            <path d="M10.7568 7.35134H8.56758V5.16215C8.56758 4.83783 8.32433 4.5135 7.91893 4.5135C7.51352 4.5135 7.35136 4.83783 7.35136 5.16215V7.35134H5.16217C4.83785 7.35134 4.5946 7.67567 4.5946 7.99999C4.5946 8.32431 4.83785 8.64864 5.24325 8.64864H7.43244V10.8378C7.43244 11.1622 7.67569 11.4865 8.08109 11.4865C8.4865 11.4865 8.72974 11.2432 8.72974 10.8378V8.56756H10.9189C11.2433 8.56756 11.5676 8.32431 11.5676 7.91891C11.5676 7.5135 11.0811 7.35134 10.7568 7.35134Z"/>
+            </svg>Add</span>
+                      <div class="preview-wrapper shadow-med border-med transition">
+            <label>preview</label>
+            <div class="preview-render">
+              <img src="assets/saved-widget-preview-img.png">
+            </div>
+          </div>
+      </div>
+
+      <div class="widget-card transition">
+        <i class="icon" data-feather="dribbble"></i>
+        <div class="title p">Widget Name</div>
+        <span class="btn btn-clear">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8 2C4.67568 2 2 4.67568 2 8C2 11.3243 4.67568 14 8 14C11.3243 14 14 11.3243 14 8C14 4.67568 11.2432 2 8 2ZM8 12.7838C5.40541 12.7838 3.21622 10.6757 3.21622 8C3.21622 5.32432 5.32432 3.21622 8 3.21622C10.6757 3.21622 12.7838 5.32432 12.7838 8C12.7838 10.6757 10.5946 12.7838 8 12.7838Z"/>
+            <path d="M10.7568 7.35134H8.56758V5.16215C8.56758 4.83783 8.32433 4.5135 7.91893 4.5135C7.51352 4.5135 7.35136 4.83783 7.35136 5.16215V7.35134H5.16217C4.83785 7.35134 4.5946 7.67567 4.5946 7.99999C4.5946 8.32431 4.83785 8.64864 5.24325 8.64864H7.43244V10.8378C7.43244 11.1622 7.67569 11.4865 8.08109 11.4865C8.4865 11.4865 8.72974 11.2432 8.72974 10.8378V8.56756H10.9189C11.2433 8.56756 11.5676 8.32431 11.5676 7.91891C11.5676 7.5135 11.0811 7.35134 10.7568 7.35134Z"/>
+            </svg>Add</span>
+      </div>
+
+      <div class="widget-card transition">
+        <i class="icon" data-feather="dribbble"></i>
+        <div class="title p">Widget Name</div>
+        <span class="btn btn-clear">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8 2C4.67568 2 2 4.67568 2 8C2 11.3243 4.67568 14 8 14C11.3243 14 14 11.3243 14 8C14 4.67568 11.2432 2 8 2ZM8 12.7838C5.40541 12.7838 3.21622 10.6757 3.21622 8C3.21622 5.32432 5.32432 3.21622 8 3.21622C10.6757 3.21622 12.7838 5.32432 12.7838 8C12.7838 10.6757 10.5946 12.7838 8 12.7838Z"/>
+            <path d="M10.7568 7.35134H8.56758V5.16215C8.56758 4.83783 8.32433 4.5135 7.91893 4.5135C7.51352 4.5135 7.35136 4.83783 7.35136 5.16215V7.35134H5.16217C4.83785 7.35134 4.5946 7.67567 4.5946 7.99999C4.5946 8.32431 4.83785 8.64864 5.24325 8.64864H7.43244V10.8378C7.43244 11.1622 7.67569 11.4865 8.08109 11.4865C8.4865 11.4865 8.72974 11.2432 8.72974 10.8378V8.56756H10.9189C11.2433 8.56756 11.5676 8.32431 11.5676 7.91891C11.5676 7.5135 11.0811 7.35134 10.7568 7.35134Z"/>
+            </svg>Add</span>
+      </div>
+
+
+
+    </div>
+
+</div>
+
+</div>
+
+
+
+<script>
+ feather.replace()
+</script>

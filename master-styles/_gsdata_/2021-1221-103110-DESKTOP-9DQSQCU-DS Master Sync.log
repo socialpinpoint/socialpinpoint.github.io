@@ -1,0 +1,6 @@
+2021-12-21 10:31:12: FTP: Server rejected UTF-8 that it promised us: Unknown command
+2021-12-21 10:31:12: == Rename Conflict Losing File is On, expect some weirdness in auto-resolving Vertical Conflicts
+2021-12-21 10:31:13: -- Analysis Started by On File Change First Full Analyze Upon Folder Connect
+2021-12-21 10:31:14: R: On disk ftp://ftp.lukebennis.com:21 space required for sync is 0.00, free space is unknown
+2021-12-21 10:31:14: Changes: 0, Conflicts: 0, CopyTime: 0, FixState: 0, Errors: 0, All: 195
+2021-12-21 10:31:14: -- Analysis Complete. Time 00:00:01, Speed: 4 files/s

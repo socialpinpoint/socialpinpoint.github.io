@@ -1,0 +1,360 @@
+<head>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta charset="UTF-8">
+
+	<link rel="stylesheet" type="text/css" href="SPP-DS-PF-styles-master.css">
+	<link rel="stylesheet" type="text/css" href="SPP-iw-master-styles.css">
+
+<style>
+
+	body
+	{
+		background: var(--pf-op-light);
+		margin: 0;
+	}
+
+*
+{
+	transition: var(--transition);
+}
+
+
+.add-comment.content-wrapper
+{
+  border: 2px solid var(--pf-op-light);
+  padding: 4.8rem;
+  border-radius: var(--border-radius);
+  max-width: calc(50rem + 10rem);
+  width: 100%;
+  background: white;
+  border-radius: 1.8rem;
+  margin: 2.4rem 0;
+}
+
+.question
+{
+  text-align: center;
+  color: var(--theme-primary);
+  padding: 0 3rem 1.8rem 3rem;
+}
+
+.category-selector
+{
+  border-radius: 3rem;
+  border: 2px solid transparent;
+  padding: 1.2rem 0;
+  width: 100%;
+  margin: 0 0 2.4rem 0;
+}
+
+.category-selector.not-active
+{
+  padding: 1.2rem 1.8rem;
+  border: 2px solid var(--pf-op-light);
+}
+
+hr
+{
+  border-color: var(--pf-op-light);
+}
+
+.category-selector label
+{
+  margin: 1.2rem 0;
+}
+
+.category-items
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  transition: 0.6s;
+  gap: 0.6rem;
+}
+
+.category-items.active
+{
+  gap: 0;
+}
+
+.category-items .item
+{
+  width: calc(50% - 0.6rem);
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6rem 1.2rem;
+  cursor: pointer;
+  border: 2px solid var(--pf-op-light);
+  border-radius: var(--border-radius-rounded);
+}
+
+@media screen and (max-width:  600px){
+
+  .category-items .item
+  {
+    width: 100%;
+  }
+}
+
+.category-items .item .btn
+{
+  border-radius: var(--border-radius-rounded);
+}
+
+.category-items .item:nth-child(2)
+{
+  margin-top: 1.8rem;
+}
+
+.category-items .item:nth-child(7)
+{
+  margin-bottom: 1.8rem;
+}
+
+.category-items .item:nth-child(1) .icon
+{
+  background: teal;
+}
+
+.category-items .item-selected .icon,
+.category-items .item:nth-child(2) .icon
+{
+  background: skyblue;
+}
+
+.category-items .item:nth-child(3) .icon
+{
+  background: orchid;
+}
+
+.category-items .item:nth-child(4) .icon
+{
+  background: indianred;
+}
+
+.category-items .item:nth-child(5) .icon
+{
+  background: darkseagreen;
+}
+
+.category-items .item:nth-child(6) .icon
+{
+  background: coral;
+}
+
+.category-selected .item .icon,
+.category-items .item .icon
+{
+  display: inline-block;
+  width: 3rem;
+  height: 3rem;
+  min-width: 3rem;
+  background: lightgray;
+  border-radius: var(--border-radius-rounded);  
+  margin-right: 1.2rem;
+}
+
+.category-items .item .title
+{
+  flex-grow: 2;
+  font-family: var(--theme-content);
+}
+
+
+.category-items .item.not-active
+{
+  height: 0;
+  padding: 0;
+  overflow: hidden;
+  opacity: 0;
+  min-height: 0;
+  border-width: 0;
+}
+
+#water
+{
+  display: flex !important;
+  height: auto;
+  opacity: 1;
+  margin: 0 !important;
+}
+
+.category-items.active #water
+{
+  width: 100%;
+  border: 2px solid transparent;
+}
+
+.category-items.active #water button
+{
+  display: none;
+}
+
+.category-items.active #water .icon
+{
+  width: 3rem;
+  height: 3rem;
+  min-width: 3rem;
+}
+
+#water svg
+{
+  fill: var(--pf-op-medium);
+}
+
+
+.category-items #water svg
+{
+  display: none;
+}
+
+.category-items.active #water svg
+{
+  display: block;
+  margin: 0 1.2rem;
+}
+
+
+.subline
+{
+  text-align: center;
+  padding: 1.8rem;
+}
+
+.form-content
+{
+  min-height: 20rem;
+}
+
+.form-content img
+{
+  width: 100%;
+}
+
+@media screen and (max-width:  600px){
+
+	.add-comment.content-wrapper
+	{
+	  padding: 2.4rem;
+	  width: 90%;
+	}
+
+	.category-selector
+	{
+	  margin: 1.8rem 0;
+	}
+
+
+}
+
+
+</style>
+
+</head>
+
+<script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+<script src="https://unpkg.com/feather-icons"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script>
+
+$(document).ready(function(){
+ 
+
+  $("#water").click(function(){
+    $("#water").toggleClass("active");
+  });
+
+  $("#water").click(function(){
+    $(".item, .category-selector").toggleClass("not-active");
+  });
+
+  $("#water").click(function(){
+    $(".category-items").toggleClass("active");
+  });
+
+  
+});
+
+</script>
+
+
+
+<body class="demo-brand-a spp-pf-ui">
+
+<div class="add-comment content-wrapper not-active">
+
+	<div class="question line-height heading p-24">Tell us about your thoughts for the former landing site?</div>
+
+  <hr>
+
+  <label style="text-align: center; width: 100%;"><br>select a category</label>
+
+	<div class="category-selector">
+
+
+      <div class="category-items">
+
+
+      		<div class="item">
+              <span class="icon"></span>
+              <span class="title">Green Spaces</span>
+              <button class="btn">◯</button>
+        	</div>	
+
+        	<div id="water" class="item">
+              <span class="icon"></span>
+              <span class="title">Water</span>
+              <button class="btn">◯</button>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M2.11612 5.11612C2.60427 4.62796 3.39573 4.62796 3.88388 5.11612L8 9.23223L12.1161 5.11612C12.6043 4.62796 13.3957 4.62796 13.8839 5.11612C14.372 5.60427 14.372 6.39573 13.8839 6.88388L8.88388 11.8839C8.39573 12.372 7.60427 12.372 7.11612 11.8839L2.11612 6.88388C1.62796 6.39573 1.62796 5.60427 2.11612 5.11612Z" />
+</svg>
+        	</div>
+
+        	<div class="item">
+              <span class="icon"></span>
+              <span class="title">Art & Cultural Events</span>
+              <button class="btn">◯</button>
+        	</div>
+
+        	<div class="item">
+              <span class="icon"></span>
+              <span class="title p">Education</span>
+              <button class="btn">◯</button>
+        	</div>
+
+        	<div class="item">
+              <span class="icon"></span>
+              <span class="title">Commerce & Business</span>
+              <button class="btn">◯</button>
+        	</div>
+
+        	<div class="item">
+              <span class="icon"></span>
+              <span class="title">Transportaiton & Parking</span>
+              <button class="btn">◯</button>
+        	</div>
+
+
+      </div>
+	</div>
+
+	<div class="form-content">
+		<img src="form-inputs.png">
+		<br>
+		<br>
+		<img src="form-footer.png">
+	</div>
+
+
+</div>
+
+	
+</body>

@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script type="text/javascript" src="https://lukebennis.com/ds-master/mockups/cm/cm-master-js.js"></script>
+
+<link rel="stylesheet" type="text/css" href="https://lukebennis.com/ds-master/master-styles/CM-DS-styles-master.css">
+
+</head>
+
+
+<style>
+
+body
+{
+  margin: 0;
+}
+
+.card-white
+{
+  border: 1px solid var(--grey-200);
+  border-radius: var(--radius-md);
+}
+
+
+.record-tabs-wrapper
+{
+  padding: var(--spacing-md) var(--spacing-lg);
+  max-width: 1830px;
+  margin: 0 auto;
+}
+
+.record-tabs-wrapper button
+{
+  margin-right: var(--spacing-sm);
+  border-radius: var(--radius-rounded);
+  font-size: var(--fontSizes-md);
+  padding: var(--spacing-sm) var(--spacing-md);
+  gap: var(--spacing-md);
+  outline: none;
+}
+
+.record-tabs-wrapper:hover .btn-ghost
+{
+  opacity: 1;
+}
+
+.record-tabs-wrapper .btn-white
+{
+  font-weight: bold;
+}
+
+.record-tabs-wrapper button .cm-icon:first-child
+{
+  font-size: var(--fontSizes-xl);
+}
+
+.record-tabs-wrapper button .cm-icon:last-child
+{
+  font-size: var(--fontSizes-xs);
+  padding: var(--spacing-xs);
+  border-radius: var(--radius-rounded);
+  opacity: 0;
+}
+
+.record-tabs-wrapper button:hover .cm-icon:last-child
+{
+  opacity: 0.33;
+  width: auto;
+}
+
+.record-tabs-wrapper button .cm-icon:last-child:hover
+{
+  opacity: 1;
+  background: var(--red-100);
+  color: var(--red-700);
+}
+
+
+.page-content-wrapper
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: var(--spacing-lg);
+  gap: var(--spacing-4xl);
+  margin-bottom: 25vh;
+  min-height: 66vh;
+  border-radius: var(--radius-lg);
+  background: var(--white);
+  box-shadow: var(--shadow-subtle);
+}
+
+
+.main-content
+{
+  flex-basis: 100%;
+}
+
+.content-header
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-md);
+}
+
+.mobile-only
+{
+  display: none;
+}
+
+.max-width-wrapper
+{
+  max-width: 1830px;
+  margin: 0 auto;
+}
+
+.search-header
+{
+  padding: var(--spacing-lg) 0;
+}
+
+.search-area-wrapper
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  border: 1px solid var(--white);
+  background: var(--white);
+  border-radius: 10rem var(--radius-lg) var(--radius-lg) 10rem;
+  transition: var(--transition-slow);
+  box-shadow: var(--shadow-subtle);
+}
+
+.search-area-wrapper:hover
+{
+  border-color: var(--blue-250);
+}
+
+
+.search-area-wrapper.filter-active,
+.search-area-wrapper.query-active
+{
+  border-radius: var(--radius-lg);
+}
+
+.filter-active .search-wrapper,
+.query-active .search-wrapper
+{
+  margin-bottom: var(--spacing-md);
+}
+
+.search-wrapper
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--spacing-md);
+  width: 100%;
+  padding-right: var(--spacing-sm);
+  transition: var(--transition-slow);
+}
+
+.search-tray-wrapper
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--spacing-md);
+  width: 100%;
+  transition: var(--transition-slow);
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+}
+
+.search-tray-wrapper > div
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.filter-active .search-tray-wrapper
+{
+  height: auto;
+  padding: var(--spacing-md);
+  border-top: 1px solid var(--grey-300);
+  opacity: 1;
+}
+
+
+.search-tray-wrapper label
+{
+  width: fit-content;
+  margin: 0;
+}
+
+.search-wrapper .search-icon
+{
+  font-size: var(--fontSizes-xl);
+  color: var(--white);
+  background: var(--blue-400);
+  padding: var(--spacing-md);
+  border-radius: var(--radius-rounded);
+  margin-left: var(--spacing-xs);
+}
+
+.search-wrapper .divider-icon
+{
+  font-size: var(--fontSizes-xs);
+  color: var(--green-800);
+  background: var(--green-100);
+  padding: var(--spacing-sm);
+  border-radius: var(--radius-rounded);
+}
+
+.search-wrapper .dropdown-wrapper .btn
+{
+  justify-content: space-between;
+}
+
+.search-wrapper .input-options-wrapper
+{
+  width: fit-content;
+  flex-grow: 1;
+}
+
+.search-wrapper input
+{
+  background: transparent;
+  border: none;
+  font-size: var(--fontSizes-lg);
+}
+
+.search-wrapper .input-options-wrapper .btn
+{
+  opacity: 0;
+}
+
+.search-wrapper .input-options-wrapper:hover .btn
+{
+  opacity: 1;
+}
+
+.results-header
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-lg);
+}
+
+.search-query-wrapper
+{
+  display: inline-flex;
+  width: 100%;
+  padding: 0;
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: var(--transition-slow);
+}
+
+.query-active .search-query-wrapper
+{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--spacing-sm);
+  border-top: 1px solid var(--grey-300);
+  padding: var(--spacing-md);
+  height: auto;
+  opacity: 1;
+}
+
+.query-iteration
+{
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-xs) var(--spacing-lg);
+  border: 1px solid var(--blue-200);
+  border-radius: var(--radius-rounded);
+  transition: var(--transition);
+}
+
+.query-iteration .btn-delete
+{
+  border-radius: var(--radius-rounded);
+}
+
+.query-iteration:hover
+{
+  border-color: var(--blue-300);
+}
+
+.query-modifier
+{
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  padding: var(--spacing-xs) var(--spacing-lg);
+  min-height: var(--spacing-3xl);
+  border: 1px solid transparent;
+  background: var(--blue-50);
+  border-radius: var(--radius-rounded);
+  cursor: pointer;
+}
+
+.query-modifier:hover
+{
+  border-color: var(--blue-300);
+}
+
+.mod-and,
+.mod-or
+{
+  font-weight: bold;
+  font-size: var(--fontSizes-lg);
+  text-transform: uppercase;
+  color: var(--blue-500);
+  transition: var(--transition-slow);
+}
+
+
+.and-active .mod-or,
+.or-active .mod-and
+{
+  font-size: var(--fontSizes-xs);
+  opacity: 0.5;
+  color: var(--blue-300);
+}
+
+.search-compounder
+{
+  font-size: 0;
+}
+
+.query-active .search-compounder
+{
+  font-size: var(--fontsizes-md);
+}
+
+.td input[type=checkbox]
+{
+  margin-bottom: 0;
+}
+
+
+    @media only screen and (max-width: 1830px) {
+
+          .max-width-wrapper
+          {
+            max-width: 94%;
+          }
+      }
+
+    @media only screen and (max-width: 800px) {
+
+        .mobile-only
+        {
+          display: block;
+        }
+  
+    }
+
+</style>
+
+
+
+</head>
+
+<body>
+  <div class="texture"></div>
+
+  
+
+<div class="header-nav-wrapper text-white">
+
+  <div class="header-logo-wrapper">
+    <div class="header-logo">
+      <img src="https://lukebennis.com/ds-master/mockups/assets/cm-logo-inverted.png">
+    </div>
+
+    <span class="seperator"></span>
+
+      <div class="client-logo">
+        <img src="https://www.queenslandrail.com.au/Style%20Library/queensland%20rail/images/qr-logo-main.png">
+    </div>
+
+    <div class="dropdown-wrapper">
+<button class="btn btn-ghost project-button"><span class="cm-icon cmico-organisation"></span>Projects<span class="indicator green">9</span><span class="cm-icon cmico-chevron-down"></span>
+</button>
+  <div class="dropdown-content-wrapper project-list">
+    
+    <div class="content">
+    
+ <input type="search" placeholder="Search...">
+      
+      <div class="with-child-wrapper">
+        <div class="list-item">Community</div>
+      </div>
+      
+       <div class="with-child-wrapper">
+        <div class="list-item open">Education</div>
+              <div class="with-child-wrapper">
+                <div class="list-item open">Public Education</div>
+                <div class="list-item">Early Childhood</div>  
+                <div class="list-item">Primary</div>
+                <div class="list-item">Senior</div>
+              </div>
+        <div class="with-child-wrapper">
+        <div class="list-item">Private Education</div>
+        </div>
+      </div>
+      
+      <div class="with-child-wrapper">
+        <div class="list-item open checked">Governmanet And Agency</div>
+          <div class="list-item checked">Federal government</div>
+          <div class="list-item checked">Stategovernment</div>
+          <div class="list-item checked">Local government</div>
+      </div>
+      
+      <div class="with-child-wrapper">
+      <div class="list-item open checked">Health</div>
+        <div class="list-item checked">Private Health</div>
+        <div class="list-item checked">Public Health</div>
+      </div>
+      
+      <div class="list-item">Union</div>
+     
+    </div>
+    
+    <div class="footer">
+      <div>
+        <button class="btn btn-clear">Close</button>
+      </div>
+      <div>
+        <button class="btn btn-primary">Update</button>
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
+
+  <div class="header-navigation">
+    <button class="btn btn-white active"><span class="cm-icon cmico-search"></span>Search</button>
+    <button class="btn btn-ghost"><span class="cm-icon cmico-workspace"></span>Workspace<span class="indicator green">3</span></button>
+    <button class="btn btn-ghost"><span class="cm-icon cmico-map"></span>Maps</button>
+    <button class="btn btn-ghost"><span class="cm-icon cmico-report"></span>Reports</button>
+    <button class="btn btn-ghost"><span class="cm-icon cmico-comms"></span>Comms</button>
+    <button class="btn btn-ghost"><span class="cm-icon cmico-tools"></span>Tools</button>
+  </div>
+
+  <div class="header-options">
+    <div class="desktop-options">
+      <button class="btn btn-primary"><span class="cm-icon cmico-plus"></span>New</button>
+      <button class="btn btn-ghost btn-icon-only"><span class="cm-icon cmico-email"></span></button>
+      <button class="btn btn-ghost"><span class="cm-icon cmico-person"></span>Alison<span class="cm-icon cmico-chevron-down"></span></button>
+      <button class="btn btn-ghost btn-icon-only"><span class="cm-icon cmico-cog"></span></button>
+      <button class="btn btn-ghost btn-icon-only help-button"><span class="cm-icon cmico-question"></span></button>
+    </div>
+
+    <div class="mob-options">
+      <div class="dropdown-wrapper">
+      <button class="btn btn-ghost btn-icon-only"><span class="cm-icon cmico-more-options"></span></button>
+      <div class="dropdown-content-wrapper">
+          <button class="btn btn-primary"><span class="cm-icon cmico-plus"></span>New</button>
+          <button class="btn btn-ghost"><span class="cm-icon cmico-email"></span>Notifications</button>
+          <button class="btn btn-ghost"><span class="cm-icon cmico-person"></span>Alison<span class="cm-icon cmico-chevron-down"></span></button>
+          <button class="btn btn-ghost"><span class="cm-icon cmico-cog"></span>Settings</button>
+          <button class="btn btn-ghost help-button"><span class="cm-icon cmico-question"></span>Help</button>
+  </div>
+    </div>
+  </div>
+  
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  <div class="max-width-wrapper search-header">
+    
+    <div class="search-area-wrapper">
+
+      <div class="search-wrapper">
+
+          <span class="search-icon cm-icon cmico-search"></span>
+
+          <div class="dropdown-wrapper">
+            <button class="btn btn-light">Stakeholder<span class="cm-icon cmico-chevron-down"></span></button>
+            <div class="dropdown-content-wrapper">
+              <ul>
+                <li class="selected">Stakeholder</li>
+                <li>Events</li>
+                <li>Properties</li>
+                <li>Actions</li>
+                <li>Documents</li>
+                <li>Drafts</li>
+                <li>Organisations</li>
+                <li>Users</li>
+                <li>Projects </li>
+                <li>Teams</li>
+              </ul>
+            </div>
+          </div>
+        
+          <div class="dropdown-wrapper">
+            <button class="btn btn-ghost">First Name<span class="cm-icon cmico-chevron-down"></span></button>
+            <div class="dropdown-content-wrapper">
+              <ul>
+                <li>ID</li> 
+                <li>Stakeholder Groups</li>
+                <li>Distrobution List</li>
+                <li>Title</li>
+                <li class="selected">First Name</li>
+                <li>Last NAme</li>
+                <li>Role</li>
+                <li>Organisation</li>
+                <li>Mobile</li>
+                <li>Email</li>
+                <li>Website URL</li>
+                <li>Address</li>
+                <li>Suburb</li>
+                <li>State</li>
+                <li>Country</li>
+                <li>Auto Geocode</li>
+              </ul>
+            </div>
+          </div>
+
+          <span class="divider-icon cm-icon cmico-plus"></span>
+
+          <div class="dropdown-wrapper">
+            <button class="btn btn-ghost">Contains<span class="cm-icon cmico-chevron-down"></span></button>
+            <div class="dropdown-content-wrapper">
+              <ul>
+                <li class="selected">Contains</li>
+                <li>Equals</li>
+                <li>Not Equals</li>
+                <li>Greater Than</li>
+                <li>Greater Than Equal To</li>
+                <li>Less Than</li>
+                <li>Less Than Equal To</li>
+                <li>Is Blank</li>
+                <li>Is Not Blank</li>
+              </ul>
+            </div>
+          </div>
+
+          <span class="divider-icon cm-icon cmico-plus"></span>
+
+            <div class="input-options-wrapper option-right">
+            <input type="text" placeholder="Search...">
+            <button class="btn btn-ghost btn-delete btn-icon-only"><span class="cm-icon cmico-cross"></span></button>
+            </div>
+
+          <div>
+          <button class="btn btn-primary query-toggle"><span class="cm-icon cmico-search"></span><span class="search-compounder">Add To</span>Search</button>
+          
+            <div class="dropdown-wrapper from-right">
+            <button class="btn btn-ghost btn-icon-only"><span class="cm-icon cmico-more-options"></span></button>
+            <div class="dropdown-content-wrapper">
+              
+                <div class="dd-item">
+                <div class="checkbox-wrapper">
+                    <input type="checkbox" id="checkbox-a" class="filter-toggle">
+                    <label for="checkbox-a">Show Filters</label>
+                </div>
+              </div>
+              <div class="dd-item"><span class="cm-icon cmico-search"></span>Save Search</div>
+            </div>
+          </div>
+          </div>
+
+      </div>
+
+      <div class="search-query-wrapper">
+
+        <div class="query-iteration">
+          First Name <span class="query-condition badge badge-light green">Contains</span>Liam
+          <button class="btn btn-ghost btn-delete btn-sm btn-icon-only"><span class="cm-icon cmico-cross"></span></button>
+        </div>
+
+        <div class="query-modifier and-active">
+          <span class="mod-and">and</span>
+          <span class="mod-or">or</span>
+        </div>
+
+        <div class="query-iteration">
+          Organisation <span class="query-condition badge badge-light green">End With</span>Manager
+          <button class="btn btn-ghost btn-delete btn-sm btn-icon-only"><span class="cm-icon cmico-cross"></span></button>
+        </div>
+
+      </div>
+
+      <div class="search-tray-wrapper">
+        <div>
+            <label>Filter<br> Duplicates</label>
+            <div class="checkbox-wrapper">
+                <input type="checkbox" id="checkbox-a">
+                <label for="checkbox-a">Name</label>
+            </div>
+            <div class="checkbox-wrapper">
+                <input type="checkbox" id="checkbox-a">
+                <label for="checkbox-a">Organisation</label>
+            </div>
+            <div class="checkbox-wrapper">
+                <input type="checkbox" id="checkbox-a">
+                <label for="checkbox-a">Email</label>
+            </div>
+        </div>
+
+      <div>
+          <label>Deleted<br>Records</label>
+          <div class="checkbox-wrapper">
+              <input type="checkbox" id="checkbox-a">
+              <label for="checkbox-a">Show Deleted</label>
+          </div>
+          <div class="checkbox-wrapper">
+              <input type="checkbox" id="checkbox-a">
+              <label for="checkbox-a">Show Only Deleted</label>
+          </div>
+      </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+  <div class="max-width-wrapper page-content-wrapper">
+
+      <div class="main-content">
+
+          <div class="content-wrapper">
+
+            <div class="results-header">
+
+              <div>
+                  <button class="btn btn-ghost btn-icon-only"><span class="cm-icon cmico-refresh"></span></button>
+                  <span class="p"><strong>281 Results</strong> | 0 Selected </span>
+                  <button class="btn btn-primary btn-disabled btn-open-selected">Open Selected</button>
+
+              </div>
+                <div>
+                  <div class="toggle-btn-wrapper">
+                  <button class="btn btn-white btn-icon-only"><span class="cm-icon cmico-grid-table"></span></button>
+                  <button class="btn btn-clear btn-icon-only"><span class="cm-icon cmico-pie-chart"></span></button>
+                  <button class="btn btn-clear btn-icon-only"><span class="cm-icon cmico-map"></span></button>
+                </div>
+                  <div class="dropdown-wrapper from-right">
+                  <button class="btn btn-ghost btn-icon-only"><span class="cm-icon cmico-more-options"></span></button>
+
+                  <div class="dropdown-content-wrapper">
+                  
+                      <div class="dd-item"><span class="cm-icon cmico-report"></span>Snapshot Report </div>
+                      <div class="dd-item"><span class="cm-icon cmico-report"></span>CSV Report </div>
+                      <div class="dd-item"><span class="cm-icon cmico-report"></span>Statistics Report </div>
+ 
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+                        <div class="table-wrapper">
+                          
+                          <div class="header-wrapper">
+                            <div class="tr">
+                              <div class="td col-small">Heading Cell</div>
+                              <div class="td">Heading Cell
+                                <div class="options">
+                                  <button class="btn btn-ghost btn-icon-only"><span class="cm-icon cmico-sort"></span></button><button class="btn btn-ghost btn-icon-only"><span class="cm-icon cmico-filter"></span></button></div>
+                            </div>
+                              <div class="td">Heading Cell</div>
+                              <div class="td">Heading Cell</div>
+                              <div class="td">Heading Cell With Long title Content</div>
+                              <div class="td">Heading Cell</div>
+                            </div>
+                          </div>
+                          
+                          <div class="body-wrapper">
+                            <div class="tr">
+                              <div class="td col-small"><input type="checkbox" name=""></div>
+                              <div class="td">Table Cell</div>
+                              <div class="td">Table Cell</div>
+                              <div class="td">Table Cell</div>
+                              <div class="td">Table Cell</div>
+                              <div class="td">Table Cell</div>
+                            </div>
+                            <div class="tr">
+                              <div class="td col-small"><input type="checkbox" name=""></div>
+                              <div class="td">Table Cell</div>
+                              <div class="td">Table Cell</div>
+                              <div class="td">Table Cell</div>
+                              <div class="td">Table Cell</div>
+                              <div class="td">Table Cell</div>
+                            </div>
+                            <div class="tr">
+                              <div class="td col-small"><input type="checkbox" name=""></div>
+                              <div class="td">Table Cell</div>
+                              <div class="td">Table Cell</div>
+                              <div class="td">Table Cell</div>
+                              <div class="td">Table Cell</div>
+                              <div class="td">Table Cell</div>
+                            </div>
+                            <div class="tr">
+                              <div class="td col-small"><input type="checkbox" name=""></div>
+                              <div class="td">Table Cell</div>
+                              <div class="td">Table Cell</div>
+                              <div class="td">Table Cell</div>
+                              <div class="td">Table Cell</div>
+                              <div class="td">Table Cell</div>
+                            </div>
+                            <div class="tr">
+                              <div class="td col-small"><input type="checkbox" name=""></div>
+                              <div class="td">Table Cell</div>
+                              <div class="td">Table Cell</div>
+                              <div class="td">Table Cell</div>
+                              <div class="td">Table Cell</div>
+                              <div class="td">Table Cell</div>
+                            </div>
+                            <div class="tr">
+                              <div class="td col-small"><input type="checkbox" name=""></div>
+                              <div class="td">Table Cell</div>
+                              <div class="td">Table Cell</div>
+                              <div class="td">Table Cell</div>
+                              <div class="td">Table Cell</div>
+                              <div class="td">Table Cell</div>
+                            </div>
+                            <div class="tr">
+                              <div class="td col-small"><input type="checkbox" name=""></div>
+                              <div class="td">Table Cell</div>
+                              <div class="td">Table Cell</div>
+                              <div class="td">Table Cell</div>
+                              <div class="td">Table Cell</div>
+                              <div class="td">Table Cell</div>
+                            </div>
+                            <div class="tr">
+                              <div class="td col-small"><input type="checkbox" name=""></div>
+                              <div class="td">Table Cell</div>
+                              <div class="td">Table Cell</div>
+                              <div class="td">Table Cell</div>
+                              <div class="td">Table Cell</div>
+                              <div class="td">Table Cell</div>
+                            </div>
+                            <div class="tr">
+                              <div class="td col-small"><input type="checkbox" name=""></div>
+                              <div class="td">Table Cell</div>
+                              <div class="td">Table Cell</div>
+                              <div class="td">Table Cell</div>
+                              <div class="td">Table Cell</div>
+                              <div class="td">Table Cell</div>
+                            </div>
+                            <div class="tr">
+                              <div class="td col-small"><input type="checkbox" name=""></div>
+                              <div class="td">Table Cell</div>
+                              <div class="td">Table Cell</div>
+                              <div class="td">Table Cell</div>
+                              <div class="td">Table Cell</div>
+                              <div class="td">Table Cell</div>
+                            </div>
+                            <div class="tr">
+                              <div class="td col-small"><input type="checkbox" name=""></div>
+                              <div class="td">Table Cell</div>
+                              <div class="td">Table Cell</div>
+                              <div class="td">Table Cell</div>
+                              <div class="td">Table Cell</div>
+                              <div class="td">Table Cell</div>
+                            </div>
+                            <div class="tr">
+                              <div class="td col-small"><input type="checkbox" name=""></div>
+                              <div class="td">Table Cell</div>
+                              <div class="td">Table Cell</div>
+                              <div class="td">Table Cell</div>
+                              <div class="td">Table Cell</div>
+                              <div class="td">Table Cell</div>
+                            </div>
+                            <div class="tr">
+                              <div class="td col-small"><input type="checkbox" name=""></div>
+                              <div class="td">Table Cell</div>
+                              <div class="td">Table Cell</div>
+                              <div class="td">Table Cell</div>
+                              <div class="td">Table Cell</div>
+                              <div class="td">Table Cell</div>
+                            </div>
+                            <div class="tr">
+                              <div class="td col-small"><input type="checkbox" name=""></div>
+                              <div class="td">Table Cell</div>
+                              <div class="td">Table Cell</div>
+                              <div class="td">Table Cell</div>
+                              <div class="td">Table Cell</div>
+                              <div class="td">Table Cell</div>
+                            </div>
+                            <div class="tr">
+                              <div class="td col-small"><input type="checkbox" name=""></div>
+                              <div class="td">Table Cell</div>
+                              <div class="td">Table Cell</div>
+                              <div class="td">Table Cell</div>
+                              <div class="td">Table Cell</div>
+                              <div class="td">Table Cell</div>
+                            </div>
+                          </div>
+                          
+                        </div>
+
+                        <span>Add pagination here</span>
+
+          </div>
+
+      </div>
+
+  </div>
+
+</body>
+
+<script type="text/javascript">
+
+
+$(document).ready(function(){
+
+  $(".filter-toggle").click(function(){
+  $(".search-area-wrapper").toggleClass("filter-active");
+  });
+
+  $(".query-toggle").click(function(){
+  $(".search-area-wrapper").toggleClass("query-active");
+  });
+
+  $(".query-modifier").click(function(){
+  $(this).toggleClass("and-active or-active");
+  });
+
+  $(".td input").click(function(){
+  $(".btn-open-selected").toggleClass("btn-disabled");
+  });
+  
+});
+
+
+
+
+</script>
+
+

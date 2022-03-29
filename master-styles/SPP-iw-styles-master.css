@@ -1,0 +1,958 @@
+/*
+  Name: SPP DS PF Master Styles
+  Description: SPP Public Facing Design System master CSS styles
+
+----------------------*/
+
+body
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  height: 100%;
+}
+
+@media screen and (max-width:  600px){
+  body
+  {
+    height: auto;
+  }
+}
+
+.comment-card
+{
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  position: relative;
+  background: white;
+  border-radius: var(--border-radius);
+  border: 2px solid var(--pf-op-light);
+  max-width: 550px;
+  margin: 1%;
+}
+
+.comment-card.layout-2 .image-cover
+{
+  margin-bottom: -2.4rem;
+}
+
+.comment-card.layout-2 .card-content
+{
+  order: 1;
+  margin: 3rem 3rem 0 3rem;
+}
+
+.comment-card.layout-2 .card-header
+{
+  margin: 0 3rem 0.6rem 3rem;
+  order: 3;
+  justify-content: center;
+}
+
+.comment-card.layout-2 .card-options
+{
+  margin: 0 3rem 3rem 3rem;
+  order: 4;
+}
+
+.grid-2 .comment-card
+{
+  width: calc(50% - 2%);
+}
+
+
+.grid-3 .comment-card
+{
+  width: calc(33% - 3%);
+}
+
+.card-header
+{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  margin: 3rem 3rem 0 3rem;
+}
+
+.has-cover .card-header
+{
+  margin: 0 3rem;
+}
+
+.card-header .options
+{
+  display: none;
+}
+
+.info
+{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.cat-icon
+{
+  display: inline-block;
+  padding: 1.2rem;
+  background: var(--pf-text);
+  border-radius: var(--border-radius-rounded);
+  margin-right: 0.6rem;
+  vertical-align: middle;
+  outline: 0px solid var(--theme-primary);
+}
+
+.cat-icon svg
+{
+  fill: white;
+  width: 3.6rem;
+  height: 3.6rem;
+}
+
+.cat-title,
+.meta
+{
+  display: inline-block;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.cat-title
+{
+  font-size: var(--fontSizes-lg);
+  color: var(--pf-text);
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-left: 0.3rem;
+}
+
+.header-meta
+{
+  margin-top: 0.3rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.meta
+{
+  color: var(--pf-text);
+  opacity: 0.66;
+  margin-left: 0.3rem;
+}
+
+.with-user .user
+{
+  display: inline-flex;
+}
+
+.user
+{
+  display: none;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.6rem;
+  border: 1px solid var(--pf-op-medium);
+  border-radius: var(--border-radius-rounded);
+  color: var(--pf-text-light);
+  padding-right: 1.2rem;
+  min-height: 2.6rem;
+}
+
+.avatar
+{
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: var(--border-radius-rounded);
+  background: var(--pf-op-medium);
+  color: var(--fp-text);
+}
+
+.avatar svg
+{
+  object-fit: contain;
+  width: 70%;
+  height: 70%;
+  fill: var(--pf-text);
+}
+
+.admin-comment .user
+{
+  border-radius: var(--border-radius);
+  padding: 0 0.6rem;
+  gap: 0;
+}
+
+.admin-comment .user .avatar
+{
+  display: none;
+}
+
+.admin-comment .user
+{
+  font-size: 0;
+}
+
+.admin-comment .user:before
+{
+  content: 'PROJECT ADMIN';
+  font-weight: bold;
+  font-size: var(--fontSizes-md);
+}
+
+
+
+.card-content
+{
+  cursor: pointer;
+  margin: 0 3rem;
+}
+
+.card-content p
+{
+  position: relative;
+  line-height: var(--line-height-default);
+  font-size: 1.6rem;
+}
+
+.truncate .card-content p:first-of-type
+{
+  max-height: 10.5rem;
+  overflow: hidden;
+}
+
+.truncate p.comment-content:after
+{
+  content: '- View Comment';
+  font-style: italic;
+  position: absolute;
+  bottom: 0.3rem;
+  right: 0;
+  display: inline-block;
+  color: var(--pf-text);
+  background: linear-gradient(90deg, transparent 0%, white 20%);
+  padding: 0 1.2rem 0 4.2rem;
+}
+
+
+.reply-comment p.reply-content:after
+{
+  content: '- More';
+  font-style: italic;
+  position: absolute;
+  bottom: 0.3rem;
+  right: 0;
+  display: inline-block;
+  color: var(--pf-text);
+  background: linear-gradient(90deg, transparent 0%, white 20%);
+  padding: 0 1.8rem 0 3.0rem;
+}
+
+.reply-comment
+{
+  display: none;
+  flex-direction: column;
+  gap: 0.6rem;
+  position: relative;
+  border-radius: var(--border-radius);
+  margin-top: 1.2rem;
+  padding: 1.2rem 1.8rem 1.2rem 3.0rem;
+}
+
+.show-reply .reply-comment
+{
+  display: flex;
+}
+
+.reply-comment p:nth-child(1):after
+{
+  content: '' !important;
+}
+
+.reply-comment p.reply-content
+{
+  max-height: 10.5rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.reply-comment:before
+{
+  content: '';
+  position: absolute;
+  top: 0.6rem;
+  left: 1.2rem;
+  width: 0.4rem;
+  height: calc(100% - 1.2rem);
+  background: var(--theme-primary);
+  border-radius: var(--border-radius-rounded);
+}
+
+.reply-comment svg
+{
+  fill: var(--pf-text-light);
+}
+
+
+.with-image .image-wrapper
+{
+  display: block;
+}
+
+
+.image-wrapper
+{
+  display: none;
+  border: 2px solid var(--pf-op-light);
+  border-radius: var(--border-radius);
+  width: 100%;
+  height: auto;
+  margin-top: 1.2rem;
+  text-align: center;
+}
+
+.image-wrapper img
+{
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 24rem;
+  object-fit: contain;
+  padding: 1.2rem;
+}
+
+.with-gallery .image-controls
+{
+  display: flex;
+}
+
+.image-controls
+{
+  display: none;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 0.6rem 0.6rem 0.6rem;
+}
+
+.image-indicator span
+{
+  display: inline-block;
+  margin: 0 0.6rem;
+  border-radius: var(--border-radius-rounded);
+  width: 1.2rem;
+  height: 1.2rem;
+  border:2px solid var(--pf-op-medium);
+}
+
+.image-indicator span:nth-child(3)
+{
+  background: var(--pf-op-dark);
+  border:  2px solid transparent;
+}
+
+.has-cover .image-cover
+{
+  display: block;
+}
+
+.image-cover
+{
+  display: none;
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
+  overflow: hidden;
+}
+
+.image-cover img
+{
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 24rem;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 500px) {
+
+    .image-cover img
+    {
+      max-height: 12rem;
+    }
+}
+
+
+.card-options
+{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 3rem 3rem 3rem;
+}
+
+
+@media screen and (max-width: 500px) {
+  .card-options
+  {
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+
+  .likedislike-wrapper
+  {
+    width: 100%;
+  }
+
+  .rate .btn
+  {
+    width:  50%;
+  }
+}
+
+
+.comment-card .rate-count
+{
+  display: none;
+  position: absolute;
+  top: -0.6rem;
+  right: 0rem;
+  border-radius: var(--border-radius-rounded);
+  background: var(--pf-text);
+  color: var(--pf-text-inverted);
+  padding: 0.4rem;
+  min-width: 1.8rem;
+  font-size: var(--fontSizes-2xs);
+}
+
+        @media screen and (max-width: 80rem){
+            .comment-card .rate-count
+            {
+              position: relative;
+              top: 0;
+            }
+            #like, #dislike
+            {
+              gap: 0.3rem;
+            }
+        }
+
+.with-rating .rate-count
+{
+  display: block;
+}
+
+.reply .btn
+{
+  position: relative;
+}
+
+.comment-card .discuss-count
+{
+  display: block;
+  position: absolute;
+  top: -0.6rem;
+  right: 0.6rem;
+  border-radius: var(--border-radius-rounded);
+  background: var(--pf-text);
+  color: var(--pf-text-inverted);
+  padding: 0.4rem;
+  min-width: 1.8rem;
+  font-size: var(--fontSizes-2xs);
+}
+
+
+
+/*----  WHITE + ACCENT  -------------------------------------------------------------------------*/
+
+.white-accent.comment-card:before
+{
+  content: '';
+  position: absolute;
+  left: -2px;
+  top: -2px;
+  display: block;
+  width:  calc(100% + 4px);
+  height: 6px;
+  background: var(--theme-primary);
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
+  transition: var(--transition);
+}
+
+.has-cover .white-accent.comment-card:before
+{
+  left: 0px;
+  top: 0px;
+  width: 100%;
+}
+
+.white-accent.comment-card .cat-icon
+{
+  background: var(--theme-primary);
+}
+
+.white-accent.comment-card .cat-icon svg
+{
+  fill: var(--gen-primary-tint);
+}
+
+
+.white-accent.comment-card:hover:before,
+.white-accent.comment-card:focus:before,
+.white-accent.comment-card:focus-within:before
+{
+  height: 8px;
+}
+
+.white-accent.comment-card:hover .cat-icon,
+.white-accent.comment-card:focus .cat-icon,
+.white-accent.comment-card:focus-within .cat-icon
+{
+  margin-right: 1.2rem;
+  outline: 6px solid var(--gen-primary-tint);
+}
+
+
+.white-accent.comment-card .rate-count,
+.white-accent.comment-card .discuss-count
+{
+  background: var(--theme-primary);
+  color: var(--gen-primary-tint);
+}
+
+
+
+
+/*----  FULL COLOUR --------------------------------------------*/
+
+.comment-card.full-colour
+{
+  background: var(--theme-primary);
+  border: none;
+}
+
+
+.comment-card.full-colour .cat-icon
+{
+  background: white;
+}
+
+.comment-card.full-colour .cat-icon svg
+{
+  fill: var(--theme-primary);
+}
+
+.full-colour .reply-comment:before
+{
+  background: var(--pf-op-dark);
+}
+
+.truncate.full-colour p.comment-content:after,
+.full-colour .reply-comment p.reply-content:after
+{
+  background: linear-gradient(90deg, transparent 0%, var(--theme-primary) 20%);
+}
+
+
+.comment-card.full-colour .rate-count,
+.comment-card.full-colour .discuss-count
+{
+  background: var(--gen-primary-shade);
+  color: var(--gen-primary-tint);
+}
+
+
+
+
+/*----  LIGHT STYLE --------------------------------------------*/
+
+.comment-card.light-style
+{
+  background: var(--gen-primary-tint);
+  color: var(--gen-primary-shade);
+  border: 2px solid transparent;
+}
+
+.comment-card.light-style .cat-icon
+{
+  background: var(--theme-primary);
+}
+
+.comment-card.light-style .cat-icon svg
+{
+  fill: var(--gen-primary-tint);
+}
+
+.truncate.light-style p.comment-content:after,
+.light-style .reply-comment p.reply-content:after
+{
+  background: linear-gradient(90deg, transparent 0%, var(--gen-primary-tint) 20%);
+}
+
+
+
+
+/*----  DARK STYLE --------------------------------------------*/
+
+.comment-card.dark-style
+{
+  background: linear-gradient(0deg, black 25%, var(--gen-primary-shade) 100%);
+  color: var(--gen-primary-tint);
+  border: 0px solid transparent;
+}
+
+.comment-card.dark-style .cat-icon
+{
+  background: var(--gen-primary-tint);
+}
+
+.comment-card.dark-style .cat-icon svg
+{
+  fill: var(--gen-primary-shade);
+}
+
+.truncate.dark-style p.comment-content:after,
+.dark-style .reply-comment p.reply-content:after
+{
+  background: linear-gradient(90deg, transparent 0%, var(--gen-primary-tint) 20%);
+}
+
+
+
+
+/*----  PAPER ------------------------------------------------------------------------*/
+
+.comment-card.paper
+{
+  background: linear-gradient(0deg, transparent calc(0% + 13rem), white 0%);
+  position: relative;
+  border: none;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.04)) drop-shadow(0px 6px 12px rgba(0, 0, 0, 0.04));
+  padding-bottom: 1.2rem;
+}
+
+.comment-card.paper .cat-icon
+{
+  background: var(--theme-primary);
+}
+
+.comment-card.paper .cat-icon svg
+{
+  fill: var(--gen-primary-tint);
+}
+
+
+.comment-card.paper .card-header
+{
+  padding-bottom: 1.2rem;
+}
+
+
+.comment-card.paper .card-header:after
+{
+  content: '';
+  position: absolute;
+  bottom: -0.4rem;
+  left: 0;
+  width: 100%;
+  height: 0.4rem;
+  background: var(--theme-primary);
+  border-radius: var(--border-radius-rounded);
+}
+
+.comment-card.paper:after
+{
+  content: '';
+  position: absolute;
+  z-index: -1;
+  bottom: 0;
+  right: 0;
+  display: block;
+  width: 100%;
+  height: 14rem;
+  background: url('https://lukebennis.com/ds-master/ui-assets/tool-comment-paper-corner.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  border-radius: var(--border-radius);
+  transition: var(--transition);
+}
+
+.comment-card.paper:before
+{
+  content: '';
+    position: absolute;
+    z-index: -2;
+    bottom: 1%;
+    right: 3%;
+    display: block;
+    width: 90%;
+    height: 16%;
+    background: black;
+    filter: blur(7px);
+    transform: rotate(2deg);
+    opacity: 0.04;
+    border-radius: 1.8rem;
+    transition: var(--transition);
+}
+
+
+.comment-card.paper:hover:after,
+.comment-card.paper:focus-visible:after
+{
+  background-size: 100% 130% !important;
+}
+
+.comment-card.paper:hover:before,
+.comment-card.paper:focus-visible:before
+{
+  bottom: -1%;
+  border-radius: 6rem;
+}
+
+
+.comment-card.paper .card-options
+{
+  justify-content: flex-start;
+  gap: 1.8rem;
+}
+
+.comment-card.paper .rate-count
+.comment-card.paper .discuss-count
+{
+  background: var(--theme-primary);
+  color: var(--gen-primary-tint);
+}
+
+
+
+
+
+/*----  BORDER  -------------------------------------------------------------------------*/
+
+.border-style.comment-card
+{
+  border: 0.4rem solid var(--theme-primary);
+}
+
+.border-style.comment-card .cat-icon
+{
+  background: var(--theme-primary);
+}
+
+.border-style.comment-card .cat-icon svg
+{
+  fill: var(--gen-primary-tint);
+}
+
+
+
+/*----  CORNER  -------------------------------------------------------------------------*/
+
+.corner-style.comment-card .card-header
+{
+  position: initial;
+  margin-right: 8.4rem;
+}
+
+.corner-style.comment-card .cat-icon
+{
+  background: var(--theme-primary);
+  border-radius: 0 var(--border-radius) 0 90%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  padding: 1.8rem 1.8rem 3.6rem 3.6rem;
+}
+
+.corner-style.comment-card .cat-icon svg
+{
+  fill: var(--gen-primary-tint);
+}
+
+
+
+
+/*----  BANNER TOP  -------------------------------------------------------------------------*/
+
+.banner-top.comment-card
+{
+  border: none;
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.06),
+              0px 0px 9px rgba(0, 0, 0, 0.04),
+              0px 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.banner-top .card-header
+{
+  background: var(--theme-primary);
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
+  margin: 0;
+  padding: 2.4rem 3.0rem 1.8rem 3.0rem;
+}
+
+.banner-top.comment-card .cat-icon
+{
+  background: var(--pf-text);
+}
+
+.banner-top.comment-card .cat-icon svg
+{
+  fill: var(--theme-primary);
+}
+
+
+
+
+/*----  LIKE/DISLIKE  ---------------------------------------------------------------------*/
+
+.likedislike-wrapper
+{
+  display: flex;
+  border-radius: var(--border-radius-rounded);
+}
+
+.likedislike-wrapper .btn
+{
+  position: relative;
+}
+
+.likedislike-wrapper .btn svg
+{
+  transition: cubic-bezier(0.2, -2.0, 0.2, 0.8) 0.3s !important;
+  position: relative;
+}
+
+.likedislike-wrapper.active
+{
+  background: var(--pf-op-light);
+}
+
+.likedislike-wrapper .btn:first-of-type
+{
+  border-radius: var(--border-radius-rounded) 0 0 var(--border-radius-rounded);
+  border: solid var(--pf-op-light);
+  border-width: 2px 0px 2px 2px;
+}
+
+.likedislike-wrapper .btn:hover:first-of-type,
+.likedislike-wrapper .btn:hover:last-of-type
+{
+  border-color: var(--pf-op-medium);
+}
+
+.likedislike-wrapper .btn:last-of-type
+{
+  border-radius: 0 var(--border-radius-rounded) var(--border-radius-rounded) 0;
+  border: solid var(--pf-op-light);
+  border-width: 2px 2px 2px 0px;
+}
+
+.likedislike-wrapper .btn:hover:first-of-type svg
+{
+  margin: -2px 0 2px 0;
+  transform: rotate(-6deg);
+}
+
+.likedislike-wrapper .btn:hover:last-of-type svg
+{
+  margin: 2px 0 -2px 0;
+  transform: rotate(-6deg);
+}
+
+
+.btn.active
+{
+  font-size: 0;
+  background: white;
+  border-radius: 999px !important;
+  border: solid transparent !important;
+  border-width: 2px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+.btn.active svg
+{
+  fill: green;
+}
+
+#dislike.btn.active svg
+{
+  fill: red;
+}
+
+.btn.active .rate-count
+{
+  background: green;
+  color: white;
+}
+
+#dislike.btn.active .rate-count
+{
+  background: red;
+  color: white;
+}
+
+.btn.deactive
+{
+  font-size: 0;
+  border: solid transparent !important;
+  border-width: 2px;
+  pointer-events: none;
+}
+
+.btn.deactive:first-of-type
+{
+  padding-right: 0.6rem;
+}
+
+.btn.deactive:last-of-type
+{
+  padding-left: 0.6rem;
+}
+
+.btn.deactive .rate-count
+{
+  background: var(--pf-text);
+  color: var(--pf-text-inverted);
+  opacity: 1;
+}
+
+.likedislike-wrapper .btn:before
+{
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 1.8rem;
+  transform: translateY(-50%) scale(3.0);
+  width: 2rem;
+  height: 2rem;
+  background: url("https://lukebennis.com/ds-master/icons-master/Icon/light-rays.svg");
+  background-size: contain;
+  opacity: 0;
+}
+
+.likedislike-wrapper .btn.active:before
+{
+  animation: active-accent 0.8s;
+  animation-timing-function: cubic-bezier(0.16, 0.6, 0.8, 0.4);
+  animation-fill-mode: forwards;
+  animation-delay: 0.1s;
+}
+
+@keyframes active-accent 
+{
+  0% {transform: translateY(-50%) scale(0);}
+  60% {transform: translateY(-50%) scale(2.5) rotate(60deg); opacity: 0.6;}
+  100% {transform: translateY(-50%) scale(3.5) rotate(90deg); opacity: 0;}
+}
+
+

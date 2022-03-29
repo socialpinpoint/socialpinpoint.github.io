@@ -1,0 +1,408 @@
+<head>
+
+  <link rel="stylesheet" type="text/css" href="https://lukebennis.com/ds-master/master-styles/SPP-DS-V1-styles-master.css">
+  <link rel="stylesheet" type="text/css" href="https://lukebennis.com/ds-master/master-styles/SPP-DS-PF-styles-master.css">
+  <link rel="stylesheet" type="text/css" href="https://lukebennis.com/ds-master/master-styles/SPP-theme-styles-master.css">
+  <link rel="stylesheet" type="text/css" href="https://lukebennis.com/ds-master/master-styles/SPP-pages-styles-master.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+
+
+<style type="text/css">
+
+body
+{
+  background: var(--grey-200);
+}
+
+
+.btn.active
+{
+  border-color: var(--blue-500);
+  color: var(--blue-500);
+}
+
+.mockup-wrapper
+{
+  width: 60rem;
+  margin: 3rem auto;
+  padding: 3rem;
+  overflow: auto;
+  resize: both;
+  transition: 0s !important;
+}
+
+.cta-wrapper
+{
+  display: flex;
+  background: white;
+  overflow: hidden;
+}
+
+.cta-wrapper.image-left
+{
+  flex-direction: row;
+  align-items: center;
+}
+
+.cta-wrapper.image-right
+{
+  flex-direction: row-reverse;
+  align-items: center;
+}
+
+.cta-wrapper.image-top
+{
+  flex-direction: column;
+  align-items: center;
+}
+
+.cta-wrapper.image-bottom
+{
+  flex-direction: column-reverse;
+  align-items: center;
+}
+
+
+.cta-wrapper.image-left .cta-image-wrapper,
+.cta-wrapper.image-left .cta-content-wrapper,
+.cta-wrapper.image-right .cta-image-wrapper,
+.cta-wrapper.image-right .cta-content-wrapper
+{
+  width: 50%;
+}
+
+    @media screen and (max-width: 40rem){
+      .cta-wrapper
+      {
+        margin: 2.4rem;
+      }
+      .image-left,
+      .image-right
+      {
+        flex-direction: column;
+      }
+      .cta-wrapper.image-left .cta-image-wrapper,
+      .cta-wrapper.image-left .cta-content-wrapper,
+      .cta-wrapper.image-right .cta-image-wrapper,
+      .cta-wrapper.image-right .cta-content-wrapper
+      {
+        width: 100%;
+      }
+    }
+
+.cta-wrapper.align-center
+{
+  text-align: center;
+}
+
+.cta-wrapper.align-center .cta-image-wrapper.crop-circle,
+.cta-wrapper.align-center .cta-image-wrapper.crop-square
+{
+  margin: 0 auto;
+}
+
+.cta-wrapper.space-sml
+{
+  padding: var(--space-sml);
+}
+
+.cta-wrapper.space-med
+{
+  padding: var(--space-med);
+}
+
+.cta-wrapper.space-lrg
+{
+  padding: var(--space-lrg);
+}
+
+.cta-wrapper.with-shadow
+{
+  box-shadow: var(--shadow-med);
+}
+
+.cta-wrapper.border-curved,
+.cta-image-wrapper.border-curved
+{
+  border-radius: var(--radius-curved);
+}
+
+.cta-wrapper.border-rounded,
+.cta-image-wrapper.border-rounded
+{
+  border-radius: var(--radius-curved-lrg);
+}
+
+.cta-image-wrapper
+{
+  position: relative;
+  width: 100%;
+  height: auto;
+  min-height: 10rem;
+  max-height: 80rem;
+  overflow: hidden;
+}
+
+.cta-image-wrapper img
+{
+  width: 100%;
+  height: auto;
+}
+
+.cta-image-wrapper.crop img
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cta-image-wrapper.crop-circle
+{
+  border-radius: 100%;
+}
+
+.cta-image-wrapper.crop-circle,
+.cta-image-wrapper.crop-square
+{
+  width: 50%;
+  height: 0;
+  padding-bottom: 50%;
+  overflow: hidden;
+}
+
+        @media screen and (max-width: 40rem){
+
+            .cta-image-wrapper.crop-circle,
+            .cta-image-wrapper.crop-square
+              {
+                width: 75%;
+                padding-bottom: 75%;
+              }
+        }
+
+.cta-image-wrapper.crop-rec
+{
+  width: 100%;
+  height: 0;
+  padding-bottom: 60%;
+  overflow: hidden;
+}
+
+.image-left .cta-image-wrapper.crop-rec,
+.image-right .cta-image-wrapper.crop-rec
+{
+  padding-bottom: 33%;
+}
+
+.cta-content-wrapper
+{
+  padding: var(--space-med);
+  width: 100%;
+}
+
+.padding-none .cta-content-wrapper
+{
+  padding: 0;
+}
+
+.cta-wrapper.padding-none
+{
+  border-radius: 0 !important;
+  gap: var(--space-med);
+}
+
+.cta-content-wrapper button
+{
+  margin-bottom: var(--space-xsml);
+}
+
+.cta-content-wrapper button:not(:last-child)
+{
+  margin-right: calc(var(--space-xsml) / 2);
+}
+
+        @media screen and (max-width: 40rem){
+
+              .mockup-wrapper
+              {
+                width: 100%;
+              }
+
+              .cta-content-wrapper button:last-child
+              {
+                margin-bottom: 0;
+              }
+
+              .cta-content-wrapper button,
+              .align-center .cta-content-wrapper button
+              {
+                min-width: 100%;
+                margin-right: 0;
+              }
+        }
+
+
+</style>
+
+
+<body class="spp-pf-ui demo-brand-a page-type-default page-spacing-default page-global-styles">
+
+    <p>Pages Widget Mockup - Tabs</p>
+
+  <button class="btn options-image-left">Img Left</button>
+  <button class="btn options-image-right">Img Right</button>
+  <button class="btn options-image-top active">Img Top</button>
+  <button class="btn options-image-bottom">Img Bottom</button>
+
+  <button class="btn options-border-curved">Border Curved</button>
+  <button class="btn options-border-rounded">Border Rounded</button>
+  <button class="btn options-align">Align</button>
+
+  <button class="btn options-crop-circle">Crop Circle</button>
+  <button class="btn options-crop-square">Crop Square</button>
+  <button class="btn options-crop-rec">Crop Rect</button>
+
+  <button class="btn options-shadow active">Shadow</button>
+
+  <button class="btn options-pad-none">Pad None</button>
+  <button class="btn options-pad-sml">Pad Sml</button>
+  <button class="btn options-pad-med active">Pad Med</button>
+  <button class="btn options-pad-lrg">Pad Lrg</button>
+  <br>
+  <hr>
+  <br>
+
+  <div class="mockup-wrapper">
+
+  <article id="cta" class="cta-wrapper with-shadow space-med image-top">
+
+    <div class="cta-image-wrapper">
+      <img src="https://lukebennis.com/ds-master/demo-brand-master/demo-brand-image-3.jpg">
+    </div>
+
+    <div class="cta-content-wrapper">
+      <div class="cta-title"><h3>Call To Action Heading</h3></div>
+      <div class="cta-desc">
+        <p>You really should pay attention to this well designed & exciting call to action.</p>
+        </div>
+      <button class="btn btn-gradient">Learn More</button>
+    </div>
+
+  </article>
+
+  <br>
+  <hr>
+  <p>Example with large content amount.</p>
+  <br>
+
+    <article id="cta" class="cta-wrapper with-shadow space-med image-top">
+
+    <div class="cta-image-wrapper">
+      <img src="https://lukebennis.com/ds-master/demo-brand-master/demo-brand-image-1.jpg">
+    </div>
+
+    <div class="cta-content-wrapper">
+      <div class="cta-title"><h3>Call To Action Heading That Is Much Longer, Like A Lot Longer</h3></div>
+      <div class="cta-desc">
+        <p>You really should pay attention to this well designed & exciting call to action. It's got a lot of description content and really should be shortened, but hey, when you've got something to say, this widget can help you say it.</p>
+        <p>You can even break onto a new line for crying out loud. It can handle a good amount of content.</p>
+        </div>
+      <button class="btn btn-gradient">Get Involved</button>
+      <button class="btn btn-outline">Learn More</button>
+      <button class="btn btn-outline">Go To Main Website</button>
+      <button class="btn btn-outline">Watch Video</button>
+    </div>
+
+  </article>
+
+</div>
+
+</body>
+
+
+
+<script>
+
+$(document).ready(function(){
+
+  $(".btn").click(function(){
+  $(this).toggleClass("active");
+  });
+
+  $(".options-image-left").click(function(){
+  $(".cta-wrapper").removeClass("image-right image-top image-bottom");
+  $(".cta-wrapper").toggleClass("image-left");
+  });
+
+  $(".options-image-right").click(function(){
+  $(".cta-wrapper").removeClass("image-left image-top image-bottom");
+  $(".cta-wrapper").toggleClass("image-right");
+  });
+
+  $(".options-image-top").click(function(){
+  $(".cta-wrapper").removeClass("image-left image-right image-bottom");
+  $(".cta-wrapper").toggleClass("image-top");
+  });
+
+  $(".options-image-bottom").click(function(){
+  $(".cta-wrapper").removeClass("image-left image-right image-top");
+  $(".cta-wrapper").toggleClass("image-bottom");
+  });
+
+  $(".options-align").click(function(){
+  $(".cta-wrapper").toggleClass("align-center");
+  });
+
+  $(".options-crop-circle").click(function(){
+  $(".cta-image-wrapper").toggleClass("crop crop-circle");
+  });
+
+  $(".options-crop-square").click(function(){
+  $(".cta-image-wrapper").toggleClass("crop crop-square");
+  });
+
+  $(".options-crop-rec").click(function(){
+  $(".cta-image-wrapper").toggleClass("crop crop-rec");
+  });
+
+  $(".options-shadow").click(function(){
+  $(".cta-wrapper").toggleClass("with-shadow");
+  });
+
+  $(".options-border-curved").click(function(){
+  $(".cta-wrapper, .cta-image-wrapper").toggleClass("border-curved");
+  });
+
+  $(".options-border-rounded").click(function(){
+  $(".cta-wrapper, .cta-image-wrapper").toggleClass("border-rounded");
+  });
+
+  $(".options-pad-none").click(function(){
+  $(".cta-wrapper").toggleClass("padding-none");
+  $(".cta-wrapper").removeClass("space-sml space-med space-lrg");
+  });
+
+  $(".options-pad-sml").click(function(){
+  $(".cta-wrapper").toggleClass("space-sml");
+  });
+
+  $(".options-pad-med").click(function(){
+  $(".cta-wrapper").toggleClass("space-med");
+  });
+
+  $(".options-pad-lrg").click(function(){
+  $(".cta-wrapper").toggleClass("space-lrg");
+  });
+  
+});
+
+
+</script>
+
+

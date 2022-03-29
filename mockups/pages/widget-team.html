@@ -1,0 +1,387 @@
+<head>
+
+  <link rel="stylesheet" type="text/css" href="https://lukebennis.com/ds-master/master-styles/SPP-DS-V1-styles-master.css">
+  <link rel="stylesheet" type="text/css" href="https://lukebennis.com/ds-master/master-styles/SPP-DS-PF-styles-master.css">
+  <link rel="stylesheet" type="text/css" href="https://lukebennis.com/ds-master/master-styles/SPP-theme-styles-master.css">
+  <link rel="stylesheet" type="text/css" href="https://lukebennis.com/ds-master/master-styles/SPP-pages-styles-master.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+
+
+<style type="text/css">
+
+body
+{
+  background: var(--grey-200);
+}
+
+.btn.active
+{
+  border-color: var(--blue-500);
+  color: var(--blue-500);
+}
+
+.mockup-wrapper
+{
+  width: 80%;
+  margin: 3rem auto;
+  padding: 3rem;
+  overflow: auto;
+  resize: both;
+  transition: 0s !important;
+}
+
+article
+{
+  display: inline-flex !important;
+  max-width: 30%;
+  margin: 1%;
+}
+
+.team-wrapper
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+.team-wrapper.with-bg-colour
+{
+  background: white;
+}
+
+    @media screen and (max-width: 40rem){
+      .team-wrapper
+      {
+        margin: 2.4rem;
+      }
+    }
+
+.team-wrapper.align-center
+{
+  text-align: center;
+}
+
+.team-wrapper.align-center .team-image-wrapper.crop-circle,
+.team-wrapper.align-center .team-image-wrapper.crop-square
+{
+  margin: 0 auto;
+}
+
+.team-wrapper.space-sml
+{
+  padding: var(--space-sml);
+}
+
+.team-wrapper.space-med
+{
+  padding: var(--space-med);
+}
+
+.team-wrapper.space-lrg
+{
+  padding: var(--space-lrg);
+}
+
+.team-wrapper.with-shadow
+{
+  box-shadow: var(--shadow-med);
+}
+
+.team-wrapper.border-curved,
+.team-image-wrapper.border-curved
+{
+  border-radius: var(--radius-curved);
+}
+
+.team-wrapper.border-rounded,
+.team-image-wrapper.border-rounded
+{
+  border-radius: var(--radius-curved-lrg);
+}
+
+.team-image-wrapper
+{
+  position: relative;
+  width: 100%;
+  height: auto;
+  min-height: 10rem;
+  max-height: 80rem;
+  overflow: hidden;
+}
+
+.team-image-wrapper img
+{
+  width: 100%;
+  height: auto;
+}
+
+.team-image-wrapper.crop img
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.team-image-wrapper.crop-circle
+{
+  border-radius: 100%;
+}
+
+.team-image-wrapper.crop-circle,
+.team-image-wrapper.crop-square
+{
+  width: 50%;
+  height: 0;
+  padding-bottom: 50%;
+  overflow: hidden;
+}
+
+        @media screen and (max-width: 40rem){
+
+            .team-image-wrapper.crop-circle,
+            .team-image-wrapper.crop-square
+              {
+                width: 75%;
+                padding-bottom: 75%;
+              }
+        }
+
+.team-image-wrapper.crop-rec
+{
+  width: 100%;
+  height: 0;
+  padding-bottom: 60%;
+  overflow: hidden;
+}
+
+.image-left .team-image-wrapper.crop-rec,
+.image-right .team-image-wrapper.crop-rec
+{
+  padding-bottom: 33%;
+}
+
+.team-content-wrapper
+{
+  padding: var(--space-med);
+  width: 100%;
+}
+
+.padding-none .team-content-wrapper
+{
+  padding: 0;
+}
+
+.team-wrapper.padding-none
+{
+  border-radius: 0 !important;
+  gap: var(--space-med);
+}
+
+.team-content-wrapper button
+{
+  margin-bottom: var(--space-xsml);
+}
+
+.team-content-wrapper button:not(:last-child)
+{
+  margin-right: calc(var(--space-xsml) / 2);
+}
+
+        @media screen and (max-width: 40rem){
+
+              .mockup-wrapper
+              {
+                width: 100%;
+              }
+
+              .team-content-wrapper button:last-child
+              {
+                margin-bottom: 0;
+              }
+
+              .team-content-wrapper button,
+              .align-center .team-content-wrapper button
+              {
+                min-width: 100%;
+                margin-right: 0;
+              }
+        }
+
+.team-content-wrapper .btn
+{
+  --theme-primary: #1371dd !important;
+  --gen-primary-hover: #0d5fbe !important;
+}
+
+
+</style>
+
+
+<body class="spp-pf-ui demo-brand-a page-type-default page-spacing-default page-global-styles">
+
+    <p>Pages Widget Mockup - Tabs</p>
+
+  <button class="btn options-bg-colour">Add Background</button>
+  <button class="btn options-border-curved">Border Curved</button>
+  <button class="btn options-border-rounded">Border Rounded</button>
+  <button class="btn options-align active">Align</button>
+
+  <button class="btn options-crop-circle active">Crop Circle</button>
+  <button class="btn options-crop-square">Crop Square</button>
+  <button class="btn options-crop-rec">Crop Rect</button>
+
+  <button class="btn options-shadow">Shadow</button>
+
+  <button class="btn options-pad-none">Pad None</button>
+  <button class="btn options-pad-sml">Pad Sml</button>
+  <button class="btn options-pad-med active">Pad Med</button>
+  <button class="btn options-pad-lrg">Pad Lrg</button>
+  <br>
+  <hr>
+  <br>
+
+  <div class="mockup-wrapper">
+
+  <article id="cta" class="team-wrapper space-med image-top align-center">
+    <div class="team-image-wrapper crop crop-circle">
+      <img src="https://www.socialpinpoint.com/wp-content/uploads/Get-Started-Social-Pinpoint-Book-Demo.png">
+    </div>
+
+    <div class="team-content-wrapper">
+      <div class="team-title"><h4>Jennifer Clarke</h4></div>
+      <div class="team-desc">
+        <p>CHIEF OPERATION OFFICER</p>
+        <p>This is a small description about Jennifer & what her hobby's are.</p>
+        </div>
+      <button class="btn btn-full">Linkedin</button>
+    </div>
+  </article>
+
+    <article id="cta" class="team-wrapper space-med image-top align-center">
+    <div class="team-image-wrapper crop crop-circle">
+      <img src="https://www.socialpinpoint.com/wp-content/uploads/Get-Started-Social-Pinpoint-Book-Demo.png">
+    </div>
+
+    <div class="team-content-wrapper">
+      <div class="team-title"><h4>Jennifer Clarke</h4></div>
+      <div class="team-desc">
+        <p>CHIEF OPERATION OFFICER</p>
+        <p>This is a small description about Jennifer & what her hobby's are.</p>
+        </div>
+      <button class="btn btn-full">Linkedin</button>
+    </div>
+  </article>
+
+    <article id="cta" class="team-wrapper space-med image-top align-center">
+    <div class="team-image-wrapper crop crop-circle">
+      <img src="https://www.socialpinpoint.com/wp-content/uploads/Get-Started-Social-Pinpoint-Book-Demo.png">
+    </div>
+
+    <div class="team-content-wrapper">
+      <div class="team-title"><h4>Jennifer Clarke</h4></div>
+      <div class="team-desc">
+        <p>CHIEF OPERATION OFFICER</p>
+        <p>This is a small description about Jennifer & what her hobby's are.</p>
+        </div>
+      <button class="btn btn-full">Linkedin</button>
+    </div>
+  </article>
+
+
+</div>
+
+
+</body>
+
+
+
+<script>
+
+$(document).ready(function(){
+
+  $(".btn").click(function(){
+  $(this).toggleClass("active");
+  });
+
+  $(".options-bg-colour").click(function(){
+  $(".team-wrapper").toggleClass("with-bg-colour");
+  });
+
+  $(".options-image-left").click(function(){
+  $(".team-wrapper").removeClass("image-right image-top image-bottom");
+  $(".team-wrapper").toggleClass("image-left");
+  });
+
+  $(".options-image-right").click(function(){
+  $(".team-wrapper").removeClass("image-left image-top image-bottom");
+  $(".team-wrapper").toggleClass("image-right");
+  });
+
+  $(".options-image-top").click(function(){
+  $(".team-wrapper").removeClass("image-left image-right image-bottom");
+  $(".team-wrapper").toggleClass("image-top");
+  });
+
+  $(".options-image-bottom").click(function(){
+  $(".team-wrapper").removeClass("image-left image-right image-top");
+  $(".team-wrapper").toggleClass("image-bottom");
+  });
+
+  $(".options-align").click(function(){
+  $(".team-wrapper").toggleClass("align-center");
+  });
+
+  $(".options-crop-circle").click(function(){
+  $(".team-image-wrapper").toggleClass("crop crop-circle");
+  });
+
+  $(".options-crop-square").click(function(){
+  $(".team-image-wrapper").toggleClass("crop crop-square");
+  });
+
+  $(".options-crop-rec").click(function(){
+  $(".team-image-wrapper").toggleClass("crop crop-rec");
+  });
+
+  $(".options-shadow").click(function(){
+  $(".team-wrapper").toggleClass("with-shadow");
+  });
+
+  $(".options-border-curved").click(function(){
+  $(".team-wrapper, .team-image-wrapper").toggleClass("border-curved");
+  });
+
+  $(".options-border-rounded").click(function(){
+  $(".team-wrapper, .team-image-wrapper").toggleClass("border-rounded");
+  });
+
+  $(".options-pad-none").click(function(){
+  $(".team-wrapper").toggleClass("padding-none");
+  $(".team-wrapper").removeClass("space-sml space-med space-lrg");
+  });
+
+  $(".options-pad-sml").click(function(){
+  $(".team-wrapper").toggleClass("space-sml");
+  });
+
+  $(".options-pad-med").click(function(){
+  $(".team-wrapper").toggleClass("space-med");
+  });
+
+  $(".options-pad-lrg").click(function(){
+  $(".team-wrapper").toggleClass("space-lrg");
+  });
+  
+});
+
+
+</script>
+
+

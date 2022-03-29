@@ -1,0 +1,194 @@
+/*
+  Name: SPP DS PF Master Styles
+  Description: SPP Public Facing Design System master CSS styles
+
+----------------------*/
+
+@import url('https://fonts.googleapis.com/css2?family=Sanchez:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,300;1,700&family=Sanchez:ital@0;1&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
+
+/*----  VARIABLES  --------------------------------------------*/
+
+.demo-brand-a
+{
+  --pri-h: 342deg;
+  --pri-s: 84%;
+  --pri-l: 47%;
+  --theme-primary: hsla(var(--pri-h), var(--pri-s), var(--pri-l), 1);
+
+  --gen-primary-tint: hsla(var(--pri-h), var(--pri-s), 95%, 1);
+  --gen-primary-hover: hsla(var(--pri-h), var(--pri-s), calc(var(--pri-l) - 12%), 1);
+  --gen-primary-shade: hsla(var(--pri-h), var(--pri-s), 12%, 1);
+
+  --sec-h: 206deg;
+  --sec-s: 95%;
+  --sec-l: 16%;
+  --theme-secondary: hsla(var(--sec-h), var(--sec-s), var(--sec-l), 1);
+
+  --gen-secondary-tint: hsla(var(--sec-h), var(--sec-s), 95%, 1);
+  --gen-secondary-hover: hsla(var(--sec-h), var(--sec-s), calc(var(--sec-l) - 12%), 1);
+  --gen-secondary-shade: hsla(var(--sec-h), var(--sec-s), 12%, 1);
+
+  --theme-heading: 'Sanchez', san-serif;
+  --theme-content: 'Roboto', sans-serif !important;
+
+  --border-radius: 0.6rem; /* Depricate this ? */
+  --border-radius-rounded: 999px;  /* Depricate this ? */
+
+  --radius-curved: 0.6rem;
+  --radius-curved-lrg: 1.8rem;
+
+}
+
+.brand-font-b
+{
+  --theme-content: Times New Roman, serif !important;
+}
+
+.brand-font-c
+{
+  --theme-content: 'Atkinson Hyperlegible', sans-serif !important;
+}
+
+.text-theme
+{
+  --pf-text: var(--gen-primary-shade);
+  --pf-text-light: var(--pf-text);
+  --pf-text-inverted: var(--gen-primary-tint);
+
+  --pf-op-darkest: hsla(var(--pri-h), var(--pri-s), 12%, 0.80); 
+  --pf-op-dark:    hsla(var(--pri-h), var(--pri-s), 12%, 0.60); 
+  --pf-op-medium:  hsla(var(--pri-h), var(--pri-s), 12%, 0.30); 
+  --pf-op-light:   hsla(var(--pri-h), var(--pri-s), 12%, 0.15)
+}
+
+
+
+
+
+
+/*----  BASE TYPE  --------------------------------------------*/
+
+s.p
+{
+  font-size: var(--fontSizes-md);
+  font-family: var(--theme-content);
+  line-height: var(--line-height-default);
+}
+
+.p
+{
+    display: block;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+hr
+{
+  border-color: var(--pf-op-light);
+  margin: 2.4rem 0;
+}
+
+.heading
+{
+  font-family: var(--theme-heading);
+}
+
+.content
+{
+  font-family: var(--theme-content);
+}
+
+.p-36,
+.p-30,
+.p-24,
+.p-18,
+.p-16,
+.p-14,
+.p-13,
+.p-12
+{
+  line-height: 1;
+}
+
+
+.p-48
+{
+  font-size: var(--fontSizes-6xl);
+}
+
+.p-42
+{
+  font-size: var(--fontSizes-5xl);
+}
+
+.p-36
+{
+  font-size: var(--fontSizes-4xl);
+}
+
+.p-30
+{
+  font-size: var(--fontSizes-3xl);
+}
+
+.p-24
+{
+  font-size: var(--fontSizes-2xl);
+}
+
+.p-18
+{
+  font-size: var(--fontSizes-xl);
+}
+
+.p-16
+{
+  font-size: var(--fontSizes-lg);
+}
+
+.p-14
+{
+  font-size: var(--fontSizes-md);
+}
+
+.p-13
+{
+  font-size: var(--fontSizes-sm);
+}
+
+.p-12
+{
+  font-size: var(--fontSizes-xs);
+}
+
+.p-11
+{
+  font-size: var(--fontSizes-1xs);
+}
+
+.p-10
+{
+  font-size: var(--fontSizes-2xs);
+}
+
+.line-height
+{
+  line-height: var(--line-height-default);
+  margin-bottom: 0.6rem;
+}
+
+.line-height-sml
+{
+  line-height: var(--line-height-sml);
+  margin-bottom: 0.3rem;
+}
+
+
+

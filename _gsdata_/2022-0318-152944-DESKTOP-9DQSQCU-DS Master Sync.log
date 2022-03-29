@@ -1,0 +1,12 @@
+2022-03-18 15:29:45: FTP: Server rejected UTF-8 that it promised us: Unknown command
+2022-03-18 15:29:45: == Rename Conflict Losing File is On, expect some weirdness in auto-resolving Vertical Conflicts
+2022-03-18 15:29:46: -- Analysis Started by On File Change Incremental
+2022-03-18 15:29:47: R: On disk ftp://ftp.lukebennis.com:21 space required for sync is 0.00, free space is unknown
+2022-03-18 15:29:47: Changes: 2, Conflicts: 0, CopyTime: 0, FixState: 0, Errors: 0, All: 1180
+2022-03-18 15:29:47: Left to Right: Rename/Move File/Folder: 2 
+2022-03-18 15:29:47: == Sync Started by On File Change Incremental
+2022-03-18 15:29:47: Start only 2 threads, limited by tasks to run
+2022-03-18 15:29:47: FTP: Server rejected UTF-8 that it promised us: Unknown command
+2022-03-18 15:29:47: FTP: Server rejected UTF-8 that it promised us: Unknown command
+2022-03-18 15:29:48: Move File ftp://ftp.lukebennis.com:21/public_html/ds-master/master-styles/SPP-colour-generator.html -> ftp://ftp.lukebennis.com:21/public_html/ds-master/master-styles/CM-colour-generator.html
+2022-03-18 15:29:50: == Sync Complete. Time: 00:00:06, Speed: 0.00/s, OK: 2, Errors: 0

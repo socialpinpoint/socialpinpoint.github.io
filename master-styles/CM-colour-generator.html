@@ -1,0 +1,732 @@
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
+
+<link rel="stylesheet" type="text/css" href="https://lukebennis.com/ds-master/master-styles/CM-DS-styles-master.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+
+<style>
+
+  :root
+  {
+
+    --gen-grey-h: 200deg;
+    --gen-grey-s: 11%;
+    --gen-grey-l: 7%;
+    --gen-grey-a: 1;
+
+    --gen-grey-900: hsla(
+                    var(--gen-grey-h), 
+                    var(--gen-grey-s), 
+                    var(--gen-grey-l), 
+                    var(--gen-grey-a)
+                    );
+
+    --gen-grey-800: hsla(
+                    var(--gen-grey-h), 
+                    var(--gen-grey-s), 
+                    calc(var(--gen-grey-l) / 0.3),
+                    var(--gen-grey-a)
+                    );
+
+    --gen-grey-700: hsla(
+                    var(--gen-grey-h), 
+                    var(--gen-grey-s), 
+                    calc(var(--gen-grey-l) / 0.22),
+                    var(--gen-grey-a)
+                    );
+
+    --gen-grey-600: hsla(
+                    var(--gen-grey-h), 
+                    var(--gen-grey-s), 
+                    calc(var(--gen-grey-l) / 0.14),
+                    var(--gen-grey-a)
+                    );
+
+    --gen-grey-500: hsla(
+                    calc(var(--gen-grey-h) * 1.01), 
+                    var(--gen-grey-s), 
+                    calc(var(--gen-grey-l) / 0.12),
+                    var(--gen-grey-a)
+                    );
+
+    --gen-grey-400: hsla(
+                    var(--gen-grey-h), 
+                    var(--gen-grey-s),
+                    calc(var(--gen-grey-l) / 0.095),
+                    var(--gen-grey-a)
+                    );
+
+    --gen-grey-300: hsla(
+                    var(--gen-grey-h), 
+                    var(--gen-grey-s),
+                    calc(var(--gen-grey-l) / 0.085),
+                    var(--gen-grey-a)
+                    );
+
+    --gen-grey-200: hsla(
+                    var(--gen-grey-h),
+                    var(--gen-grey-s),
+                    calc(var(--gen-grey-l) / 0.077),
+                    var(--gen-grey-a)
+                    );
+
+    --gen-grey-100: hsla(
+                    var(--gen-grey-h), 
+                    var(--gen-grey-s),
+                    calc(var(--gen-grey-l) / 0.073),
+                    var(--gen-grey-a)
+                    );
+
+    --gen-blue-h: 201deg;
+    --gen-blue-s: 100%;
+    --gen-blue-l: 32%;
+    --gen-blue-a: 1;
+
+    --gen-blue-900: hsla(
+                    calc(var(--gen-blue-h) * 1.03), 
+                    var(--gen-blue-s),
+                    calc(var(--gen-blue-l) * 0.45),
+                    var(--gen-blue-a)
+                    );
+
+    --gen-blue-800: hsla(
+                    calc(var(--gen-blue-h) * 1.03), 
+                    var(--gen-blue-s), 
+                    calc(var(--gen-blue-l) * 0.65),
+                    var(--gen-blue-a)
+                    );
+
+    --gen-blue-700: hsla(
+                    calc(var(--gen-blue-h) * 1.03), 
+                    var(--gen-blue-s), 
+                    calc(var(--gen-blue-l) * 0.80),
+                    var(--gen-blue-a)
+                    );
+
+    --gen-blue-600: hsla(
+                    calc(var(--gen-blue-h) * 1.01), 
+                    var(--gen-blue-s), 
+                    calc(var(--gen-blue-l) * 0.90),
+                    var(--gen-blue-a)
+                    );
+
+    --gen-blue-500: hsla(
+                    var(--gen-blue-h), 
+                    var(--gen-blue-s), 
+                    var(--gen-blue-l), 
+                    var(--gen-blue-a)
+                    );
+
+    --gen-blue-450: hsla(
+                    var(--gen-blue-h), 
+                    calc(var(--gen-blue-s) * 0.75),
+                    calc(var(--gen-blue-l) * 1.2),
+                    var(--gen-blue-a)
+                    );
+
+    --gen-blue-400: hsla(
+                    var(--gen-blue-h), 
+                    calc(var(--gen-blue-s) * 0.75),
+                    calc(var(--gen-blue-l) * 1.33),
+                    var(--gen-blue-a)
+                    );
+
+    --gen-blue-350: hsla(
+                    var(--gen-blue-h), 
+                    calc(var(--gen-blue-s) * 0.70),
+                    calc(var(--gen-blue-l) * 1.66),
+                    var(--gen-blue-a)
+                    );
+
+    --gen-blue-300: hsla(
+                    var(--gen-blue-h), 
+                    calc(var(--gen-blue-s) * 0.70),
+                    calc(var(--gen-blue-l) * 2.0),
+                    var(--gen-blue-a)
+                    );
+
+    --gen-blue-250: hsla(
+                    var(--gen-blue-h), 
+                    calc(var(--gen-blue-s) * 0.70),
+                    calc(var(--gen-blue-l) * 2.33),
+                    var(--gen-blue-a)
+                    );
+
+    --gen-blue-200: hsla(
+                    var(--gen-blue-h), 
+                    calc(var(--gen-blue-s) * 0.70),
+                    calc(var(--gen-blue-l) * 2.66),
+                    var(--gen-blue-a)
+                    );
+
+    --gen-blue-150: hsla(
+                    var(--gen-blue-h), 
+                    calc(var(--gen-blue-s) * 0.90),
+                    calc(var(--gen-blue-l) * 2.88),
+                    var(--gen-blue-a)
+                    );
+
+    --gen-blue-100: hsla(
+                    var(--gen-blue-h), 
+                    calc(var(--gen-blue-s) * 0.90),
+                    calc(var(--gen-blue-l) * 2.92),
+                    var(--gen-blue-a)
+                    );
+
+    --gen-blue-50: hsla(
+                    var(--gen-blue-h), 
+                    calc(var(--gen-blue-s) * 0.98),
+                    calc(var(--gen-blue-l) * 2.98),
+                    var(--gen-blue-a)
+                    );
+
+
+    --gen-green-h: 176deg;
+    --gen-green-s: 80%;
+    --gen-green-l: 44%;
+    --gen-green-a: 1;
+
+    --gen-green-900: hsla( 
+                    calc(var(--gen-green-h) * 1.03), 
+                    var(--gen-green-s),
+                    calc(var(--gen-green-l) * 0.45),
+                    var(--gen-green-a)
+                    );
+
+    --gen-green-800: hsla(
+                    calc(var(--gen-green-h) * 1.03), 
+                    var(--gen-green-s), 
+                    calc(var(--gen-green-l) * 0.65),
+                    var(--gen-green-a)
+                    );
+
+    --gen-green-700: hsla(
+                    calc(var(--gen-green-h) * 1.03), 
+                    var(--gen-green-s), 
+                    calc(var(--gen-green-l) * 0.80),
+                    var(--gen-green-a)
+                    );
+
+    --gen-green-600: hsla(
+                    calc(var(--gen-green-h) * 1.01), 
+                    var(--gen-green-s), 
+                    calc(var(--gen-green-l) * 0.90),
+                    var(--gen-green-a)
+                    );
+
+    --gen-green-500: hsla(
+                    var(--gen-green-h), 
+                    var(--gen-green-s), 
+                    var(--gen-green-l), 
+                    var(--gen-green-a)
+                    );
+
+    --gen-green-400: hsla(
+                    var(--gen-green-h), 
+                    calc(var(--gen-green-s) * 0.90),
+                    calc(var(--gen-green-l) * 1.5),
+                    var(--gen-green-a)
+                    );
+
+    --gen-green-300: hsla(
+                    var(--gen-green-h), 
+                    calc(var(--gen-green-s) * 0.90),
+                    calc(var(--gen-green-l) * 1.75),
+                    var(--gen-green-a)
+                    );
+
+    --gen-green-200: hsla(
+                    var(--gen-green-h), 
+                    var(--gen-green-s),
+                    calc(var(--gen-green-l) * 1.9),
+                    var(--gen-green-a)
+                    );
+
+    --gen-green-100: hsla(
+                    var(--gen-green-h), 
+                    var(--gen-green-s),
+                    calc(var(--gen-green-l) * 2.1),
+                    var(--gen-green-a)
+                    );
+
+
+    --gen-orange-h: 13deg;
+    --gen-orange-s: 87%;
+    --gen-orange-l: 60%;
+    --gen-orange-a: 1;
+
+    --gen-orange-900: hsla( 
+                      calc(var(--gen-orange-h) * 1.03), 
+                      var(--gen-orange-s),
+                      calc(var(--gen-orange-l) * 0.33),
+                      var(--gen-orange-a)
+                      );
+
+    --gen-orange-800: hsla(
+                      calc(var(--gen-orange-h) * 1.03), 
+                      var(--gen-orange-s), 
+                      calc(var(--gen-orange-l) * 0.65),
+                      var(--gen-orange-a)
+                      );
+
+    --gen-orange-700: hsla(
+                      calc(var(--gen-orange-h) * 1.03), 
+                      var(--gen-orange-s), 
+                      calc(var(--gen-orange-l) * 0.80),
+                      var(--gen-orange-a)
+                      );
+
+    --gen-orange-600: hsla(
+                      calc(var(--gen-orange-h) * 1.01), 
+                      var(--gen-orange-s), 
+                      calc(var(--gen-orange-l) * 0.90),
+                      var(--gen-orange-a)
+                      );
+
+    --gen-orange-500: hsla(
+                      var(--gen-orange-h), 
+                      var(--gen-orange-s), 
+                      var(--gen-orange-l), 
+                      var(--gen-orange-a)
+                      );
+
+    --gen-orange-400: hsla(
+                      var(--gen-orange-h), 
+                      calc(var(--gen-orange-s) * 0.90),
+                      calc(var(--gen-orange-l) * 1.1),
+                      var(--gen-orange-a)
+                      );
+
+    --gen-orange-300: hsla(
+                      var(--gen-orange-h), 
+                      calc(var(--gen-orange-s) * 0.90),
+                      calc(var(--gen-orange-l) * 1.25),
+                      var(--gen-orange-a)
+                      );
+
+    --gen-orange-200: hsla(
+                      var(--gen-orange-h), 
+                      calc(var(--gen-orange-s) * 0.80),
+                      calc(var(--gen-orange-l) * 1.45),
+                      var(--gen-orange-a)
+                      );
+
+    --gen-orange-100: hsla(
+                      var(--gen-orange-h), 
+                      calc(var(--gen-orange-s) * 0.90),
+                      calc(var(--gen-orange-l) * 1.60),
+                      var(--gen-orange-a)
+                      );
+
+
+    --gen-red-h: 345deg;
+    --gen-red-s: 70%;
+    --gen-red-l: 39%;
+    --gen-red-a: 1;
+
+    --gen-red-900: hsla( 
+                  calc(var(--gen-red-h) * 1.01), 
+                  var(--gen-red-s),
+                  calc(var(--gen-red-l) * 0.40),
+                  var(--gen-red-a)
+                  );
+
+    --gen-red-800: hsla(
+                  calc(var(--gen-red-h) * 1.01), 
+                  var(--gen-red-s), 
+                  calc(var(--gen-red-l) * 0.60),
+                  var(--gen-red-a)
+                  );
+
+    --gen-red-700: hsla(
+                  calc(var(--gen-red-h) * 1.01), 
+                  var(--gen-red-s), 
+                  calc(var(--gen-red-l) * 0.80), 
+                  var(--gen-red-a) 
+                  );
+
+    --gen-red-600: hsla(
+                  calc(var(--gen-red-h) * 1.01), 
+                  var(--gen-red-s), 
+                  calc(var(--gen-red-l) * 0.90),
+                  var(--gen-red-a)
+                  );
+
+    --gen-red-500: hsla(
+                  var(--gen-red-h), 
+                  var(--gen-red-s), 
+                  var(--gen-red-l), 
+                  var(--gen-red-a)
+                  );
+
+    --gen-red-400: hsla(
+                  var(--gen-red-h), 
+                  calc(var(--gen-red-s) * 0.80),
+                  calc(var(--gen-red-l) * 1.33),
+                  var(--gen-red-a)
+                  );
+
+    --gen-red-300: hsla(
+                  var(--gen-red-h), 
+                  calc(var(--gen-red-s) * 0.80),
+                  calc(var(--gen-red-l) * 1.75),
+                  var(--gen-red-a)
+                  );
+
+    --gen-red-200: hsla(
+                  var(--gen-red-h), 
+                  calc(var(--gen-red-s) * 0.80),
+                  calc(var(--gen-red-l) * 2.25),
+                  var(--gen-red-a)
+                  );
+
+    --gen-red-100: hsla(
+                  var(--gen-red-h), 
+                  calc(var(--gen-red-s) * 0.80),
+                  calc(var(--gen-red-l) * 2.40),
+                  var(--gen-red-a)
+                  );
+
+
+    --gen-yellow-h: 45deg;
+    --gen-yellow-s: 100%;
+    --gen-yellow-l: 51%;
+    --gen-yellow-a: 1;
+
+    --gen-yellow-900: hsla( 
+                      calc(var(--gen-yellow-h) * 1.01), 
+                      var(--gen-yellow-s),
+                      calc(var(--gen-yellow-l) * 0.33),
+                      var(--gen-yellow-a)
+                      );
+
+    --gen-yellow-800: hsla(
+                      calc(var(--gen-yellow-h) * 1.03), 
+                      var(--gen-yellow-s), 
+                      calc(var(--gen-yellow-l) * 0.5),
+                      var(--gen-yellow-a)
+                      );
+
+    --gen-yellow-700: hsla(
+                      calc(var(--gen-yellow-h) * 1.03), 
+                      var(--gen-yellow-s), 
+                      calc(var(--gen-yellow-l) * 0.66),
+                      var(--gen-yellow-a)
+                      );
+
+    --gen-yellow-600: hsla(
+                      calc(var(--gen-yellow-h) * 1.01), 
+                      var(--gen-yellow-s), 
+                      calc(var(--gen-yellow-l) * 0.85),
+                      var(--gen-yellow-a)
+                      );
+
+    --gen-yellow-500: hsla(
+                      var(--gen-yellow-h), 
+                      var(--gen-yellow-s), 
+                      var(--gen-yellow-l), 
+                      var(--gen-yellow-a)
+                      );
+
+    --gen-yellow-400: hsla( 
+                      var(--gen-yellow-h), 
+                      calc(var(--gen-yellow-s) * 1.0), 
+                      calc(var(--gen-yellow-l) * 1.1), 
+                      var(--gen-yellow-a) 
+                      ); 
+
+    --gen-yellow-300: hsla(
+                      var(--gen-yellow-h), 
+                      calc(var(--gen-yellow-s) * 1.0),
+                      calc(var(--gen-yellow-l) * 1.33),
+                      var(--gen-yellow-a)
+                      );
+
+    --gen-yellow-200: hsla(
+                      var(--gen-yellow-h), 
+                      calc(var(--gen-yellow-s) * 1.0),
+                      calc(var(--gen-yellow-l) * 1.66),
+                      var(--gen-yellow-a)
+                      );
+
+    --gen-yellow-100: hsla( 
+                      var(--gen-yellow-h), 
+                      calc(var(--gen-yellow-s) * 1.0), 
+                      calc(var(--gen-yellow-l) * 1.8), 
+                      var(--gen-yellow-a) 
+                      );
+
+    --gen-purple-h: 279deg;
+    --gen-purple-s: 46%;
+    --gen-purple-l: 26%;
+    --gen-purple-a: 1;
+
+    --gen-purple-900: hsla( 
+                      calc(var(--gen-purple-h) * 1.03), 
+                      var(--gen-purple-s),
+                      calc(var(--gen-purple-l) * 0.45),
+                      var(--gen-purple-a)
+                      );
+
+    --gen-purple-800: hsla(
+                      calc(var(--gen-purple-h) * 1.03), 
+                      var(--gen-purple-s), 
+                      calc(var(--gen-purple-l) * 0.65),
+                      var(--gen-purple-a)
+                      );
+
+    --gen-purple-700: hsla(
+                      calc(var(--gen-purple-h) * 1.03), 
+                      var(--gen-purple-s), 
+                      calc(var(--gen-purple-l) * 0.80),
+                      var(--gen-purple-a)
+                      );
+
+    --gen-purple-600: hsla(
+                      calc(var(--gen-purple-h) * 1.01), 
+                      var(--gen-purple-s), 
+                      calc(var(--gen-purple-l) * 0.90),
+                      var(--gen-purple-a)
+                      );
+
+    --gen-purple-500: hsla(
+                      var(--gen-purple-h), 
+                      var(--gen-purple-s), 
+                      var(--gen-purple-l), 
+                      var(--gen-purple-a)
+                      );
+
+    --gen-purple-400: hsla(
+                      var(--gen-purple-h), 
+                      calc(var(--gen-purple-s) * 0.80),
+                      calc(var(--gen-purple-l) * 2.2),
+                      var(--gen-purple-a)
+                      );
+
+    --gen-purple-300: hsla(
+                      var(--gen-purple-h), 
+                      calc(var(--gen-purple-s) * 0.80),
+                      calc(var(--gen-purple-l) * 2.8),
+                      var(--gen-purple-a)
+                      );
+
+    --gen-purple-200: hsla(
+                      var(--gen-purple-h), 
+                      calc(var(--gen-purple-s) * 0.70),
+                      calc(var(--gen-purple-l) * 3.33),
+                      var(--gen-purple-a)
+                      );
+
+    --gen-purple-100: hsla(
+                      var(--gen-purple-h), 
+                      calc(var(--gen-purple-s) * 0.70),
+                      calc(var(--gen-purple-l) * 3.66),
+                      var(--gen-purple-a)
+                      );
+
+    --light-opaque-blue: hsla(
+                      var(--gen-blue-h), 
+                      calc(var(--gen-blue-s) * 0.9),
+                      var(--gen-blue-l),
+                      calc(var(--gen-blue-a) / 18)
+                      );
+
+    --medium-opaque-blue: hsla(
+                      var(--gen-blue-h), 
+                      calc(var(--gen-blue-s) * 0.9),
+                      var(--gen-blue-l),
+                      calc(var(--gen-blue-a) / 10)
+                      );
+
+    --dark-opaque-blue: hsla(
+                      var(--gen-blue-h), 
+                      calc(var(--gen-blue-s) * 0.9),
+                      var(--gen-blue-l),
+                      calc(var(--gen-blue-a) / 6)
+                      );
+
+    --light-opaque-white: hsla(0deg, 0%, 100%, 0.35);
+
+    --medium-opaque-white: hsla(0deg, 0%, 100%, 0.50);
+
+    --dark-opaque-white: hsla(0deg, 0%, 100%, 0.70);
+
+  }
+
+
+
+*
+{
+  box-sizing: border-box;
+}
+
+
+body
+{
+  margin: 5%;
+  max-width: 85%;
+}
+
+
+.colour 
+{
+  display: inline-block;
+  width: 18%;
+  padding: 3rem 2rem;
+  margin: 0 -0.2rem;
+  border-radius: var(--radius-sml);
+  color: white;
+  cursor: pointer;
+  position: relative;
+}
+
+.invert
+{
+  color: var(--grey-800);
+}
+
+.opaque-swatch
+{
+    position: relative;
+}
+
+.opaque-swatch:after
+{
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 0px;
+    width: 50%;
+    height: 50%;
+    background: var(--blue-200);    
+    z-index: -1;
+}
+
+
+</style>
+
+
+
+
+</head>
+<body>
+
+  <h3>Generated Opaque Colours</h3>
+
+  <p><strong>Opaque Blue's</strong></p>
+  <br>
+
+  <div class="colour opaque-swatch invert" style="background: var(--light-opaque-blue);"><span>Opaque Blue - Light</span></div>
+  <div class="colour opaque-swatch invert" style="background: var(--medium-opaque-blue);"><span>Opaque Blue - Medium</span></div>
+  <div class="colour opaque-swatch invert" style="background: var(--dark-opaque-blue);"><span>Opaque Blue - Dark</span></div>
+
+  <br><br>
+  <div style="padding: var(--spacing-md); background: var(--blue-100);">
+  <p><strong>Opaque White's</strong></p>
+
+  <div class="colour invert" style="background: var(--light-opaque-white);"><span>Opaque White - Light</span></div>
+  <div class="colour invert" style="background: var(--medium-opaque-white);"><span>Opaque White - Medium</span></div>
+  <div class="colour invert" style="background: var(--dark-opaque-white);"><span>Opaque White - Dark</span></div>
+  </div>
+
+ <h3>Generated Grey Palette</h3>
+
+  <div class="colour" style="background: var(--gen-grey-900);"><span>grey 900</span></div>
+  <div class="colour" style="background: var(--gen-grey-800);"><span>grey 800</span></div>
+  <div class="colour" style="background: var(--gen-grey-700);"><span>grey 700</span></div>
+  <div class="colour" style="background: var(--gen-grey-600);"><span>grey 600</span></div>
+  <div class="colour" style="background: var(--gen-grey-500);"><span>grey 500</span></div>
+  <div class="colour" style="background: var(--gen-grey-400);"><span>grey 400</span></div>
+  <div class="colour invert" style="background: var(--gen-grey-300);"><span>grey 300</span></div>
+  <div class="colour invert" style="background: var(--gen-grey-200);"><span>grey 200</span></div>
+  <div class="colour invert" style="background: var(--gen-grey-100);"><span>grey 100</span></div>
+
+<h3>Generated Blue Palette</h3>
+
+  <div class="colour" style="background: var(--gen-blue-900);"><span>blue 900</span></div>
+  <div class="colour" style="background: var(--gen-blue-800);"><span>blue 800</span></div>
+  <div class="colour" style="background: var(--gen-blue-700);"><span>blue 700</span></div>
+  <div class="colour" style="background: var(--gen-blue-600);"><span>blue 600</span></div>
+  <div class="colour" style="background: var(--gen-blue-500);"><span>blue 500</span></div>
+  <div class="colour" style="background: var(--gen-blue-450);"><span>blue 450</span></div>
+  <div class="colour" style="background: var(--gen-blue-400);"><span>blue 400</span></div>
+  <div class="colour" style="background: var(--gen-blue-350);"><span>blue 350</span></div>
+  <div class="colour invert" style="background: var(--gen-blue-300);"><span>blue 300</span></div>
+  <div class="colour invert" style="background: var(--gen-blue-250);"><span>blue 250</span></div>
+  <div class="colour invert" style="background: var(--gen-blue-200);"><span>blue 200</span></div>
+  <div class="colour invert" style="background: var(--gen-blue-150);"><span>blue 150</span></div>
+  <div class="colour invert" style="background: var(--gen-blue-50);"><span>blue 50</span></div>
+
+<h3>Generated Green Palette</h3>
+
+  <div class="colour" style="background: var(--gen-green-900);"><span>green 900</span></div>
+  <div class="colour" style="background: var(--gen-green-800);"><span>green 800</span></div>
+  <div class="colour" style="background: var(--gen-green-700);"><span>green 700</span></div>
+  <div class="colour" style="background: var(--gen-green-600);"><span>green 600</span></div>
+  <div class="colour" style="background: var(--gen-green-500);"><span>green 500</span></div>
+  <div class="colour" style="background: var(--gen-green-400);"><span>green 400</span></div>
+  <div class="colour invert" style="background: var(--gen-green-300);"><span>green 300</span></div>
+  <div class="colour invert" style="background: var(--gen-green-200);"><span>green 200</span></div>
+  <div class="colour invert" style="background: var(--gen-green-100);"><span>green 100</span></div>
+
+<h3>Generated Purple Palette</h3>
+
+  <div class="colour" style="background: var(--gen-purple-900);"><span>purple 900</span></div>
+  <div class="colour" style="background: var(--gen-purple-800);"><span>purple 800</span></div>
+  <div class="colour" style="background: var(--gen-purple-700);"><span>purple 700</span></div>
+  <div class="colour" style="background: var(--gen-purple-600);"><span>purple 600</span></div>
+  <div class="colour" style="background: var(--gen-purple-500);"><span>purple 500</span></div>
+  <div class="colour" style="background: var(--gen-purple-400);"><span>purple 400</span></div>
+  <div class="colour" style="background: var(--gen-purple-300);"><span>purple 300</span></div>
+  <div class="colour invert" style="background: var(--gen-purple-200);"><span>purple 200</span></div>
+  <div class="colour invert" style="background: var(--gen-purple-100);"><span>purple 100</span></div>
+
+<h3>Generated Red Palette</h3>
+
+  <div class="colour" style="background: var(--gen-red-900);"><span>red 900</span></div>
+  <div class="colour" style="background: var(--gen-red-800);"><span>red 800</span></div>
+  <div class="colour" style="background: var(--gen-red-700);"><span>red 700</span></div>
+  <div class="colour" style="background: var(--gen-red-600);"><span>red 600</span></div>
+  <div class="colour" style="background: var(--gen-red-500);"><span>red 500</span></div>
+  <div class="colour" style="background: var(--gen-red-400);"><span>red 400</span></div>
+  <div class="colour" style="background: var(--gen-red-300);"><span>red 300</span></div>
+  <div class="colour invert" style="background: var(--gen-red-200);"><span>red 200</span></div>
+  <div class="colour invert" style="background: var(--gen-red-100);"><span>red 100</span></div>
+
+<h3>Generated Orange Palette</h3>
+
+  <div class="colour" style="background: var(--gen-orange-900);"><span>orange 900</span></div>
+  <div class="colour" style="background: var(--gen-orange-800);"><span>orange 800</span></div>
+  <div class="colour" style="background: var(--gen-orange-700);"><span>orange 700</span></div>
+  <div class="colour" style="background: var(--gen-orange-600);"><span>orange 600</span></div>
+  <div class="colour" style="background: var(--gen-orange-500);"><span>orange 500</span></div>
+  <div class="colour" style="background: var(--gen-orange-400);"><span>orange 400</span></div>
+  <div class="colour" style="background: var(--gen-orange-300);"><span>orange 300</span></div>
+  <div class="colour invert" style="background: var(--gen-orange-200);"><span>orange 200</span></div>
+  <div class="colour invert" style="background: var(--gen-orange-100);"><span>orange 100</span></div>
+
+<h3>Generated Yellow Palette</h3>
+
+  <div class="colour" style="background: var(--gen-yellow-900);"><span>yellow 900</span></div>
+  <div class="colour" style="background: var(--gen-yellow-800);"><span>yellow 800</span></div>
+  <div class="colour" style="background: var(--gen-yellow-700);"><span>yellow 700</span></div>
+  <div class="colour" style="background: var(--gen-yellow-600);"><span>yellow 600</span></div>
+  <div class="colour" style="background: var(--gen-yellow-500);"><span>yellow 500</span></div>
+  <div class="colour" style="background: var(--gen-yellow-400);"><span>yellow 400</span></div>
+  <div class="colour" style="background: var(--gen-yellow-300);"><span>yellow 300</span></div>
+  <div class="colour invert" style="background: var(--gen-yellow-200);"><span>yellow 200</span></div>
+  <div class="colour invert" style="background: var(--gen-yellow-100);"><span>yellow 100</span></div>
+
+</body>
+
+<script type="text/javascript">
+
+
+</script>
+
+</html>
+
+
+

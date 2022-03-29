@@ -1,0 +1,301 @@
+<head>
+
+  <link rel="stylesheet" type="text/css" href="https://lukebennis.com/ds-master/master-styles/SPP-DS-PF-styles-master.css">
+  <link rel="stylesheet" type="text/css" href="https://lukebennis.com/ds-master/master-styles/SPP-theme-styles-master.css">
+  <link rel="stylesheet" type="text/css" href="https://lukebennis.com/ds-master/master-styles/SPP-pages-styles-master.css">
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+
+
+<style type="text/css">
+
+body
+{
+  --accent: var(--theme-primary);
+}
+
+body
+{
+  max-width: 120rem;
+  margin: 3rem auto;
+  background: #f7f7f7;
+}
+
+.btn.active
+{
+  border-color: var(--blue-500);
+  color: var(--blue-500);
+}
+
+
+
+.doc-set-wrapper
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: stretch;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+}
+
+        @media screen and (max-width: 120rem){
+            .doc-set-wrapper
+            {
+              padding: var(--space-lrg);
+            }
+        }
+
+
+.doc-card
+{
+  display: flex;
+  height: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.8rem;
+  padding: var(--space-med);
+  border-radius: var(--radius-curved);
+  background: white;
+  box-shadow: var(--shadow-med);
+  overflow: hidden;
+}
+
+.col-1 .doc-card
+{
+  width: 100%;
+}
+
+.col-2 .doc-set-wrapper
+{
+  display: grid;
+  grid-gap: 1.2rem;
+  grid-template-columns: 50% 50%;
+}
+
+.col-3 .doc-set-wrapper
+{
+  display: grid;
+  grid-gap: 1.2rem;
+  grid-template-columns: 33% 33% 33%;
+}
+
+
+        @media screen and (max-width: 800px){
+            .col-2 .doc-set-wrapper,
+            .col-3 .doc-set-wrapper
+            {
+              width: 100%;
+              grid-template-columns: 100%;
+            }
+        }
+
+.layout-stacked .doc-card
+{
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.layout-side .doc-card
+{
+  flex-direction: row;
+}
+
+.doc-icon
+{
+  padding: var(--space-med);
+  border-radius: 999rem;
+  border:  2px solid var(--pf-op-medium);
+  margin: 0 1.2rem;
+}
+
+.doc-icon svg
+{
+  width: 3.6rem;
+  height: 3.6rem;
+  fill: var(--accent);
+}
+
+
+.style-compact .doc-card
+{
+  gap: 1.2rem;
+  padding: var(--space-sml);
+}
+
+.style-compact .doc-card .doc-icon-wrapper
+{
+  display: none;
+}
+
+
+.style-compact .no-desc .doc-card .doc-title
+{
+  margin-right: 1.8rem !important;
+}
+
+.no-desc .doc-card .doc-desc
+{
+  display: none;
+}
+
+.no-icon .doc-card .doc-icon-wrapper
+{
+  display: none;
+}
+
+
+</style>
+
+
+<body class="spp-pf-ui demo-brand-a page-global-styles page-type-default page-spacing-default page-border-curved">
+
+  <p>Pages Widget Mockup - Tabs</p>
+
+  <button class="btn options-col1">Col 1</button>
+  <button class="btn options-col2">Col 2</button>
+  <button class="btn options-col3">Col 3</button>
+  <button class="btn options-ori">Stack / Side-by-side</button>
+  <button class="btn options-compact" type="button" onclick="changeHTMLTag()">Compact</button>
+  <button class="btn options-desc">No Desc</button>
+  <button class="btn options-icon">No Icon</button>
+  <br>
+  <hr>
+  <br>
+
+
+  <div id="documents" class="col-1 layout-side">
+
+    <div class="doc-set-wrapper">
+
+    <div class="doc-card">
+      <div class="doc-icon-wrapper">
+        <div class="doc-icon">
+          <svg viewBox="0 0 384 512" xmlns="http://www.w3.org/2000/svg"><path d="M224 136V0H24C10.7 0 0 10.7 0 24v464c0 13.3 10.7 24 24 24h336c13.3 0 24-10.7 24-24V160H248c-13.2 0-24-10.8-24-24zm160-14.1v6.1H256V0h6.1c6.4 0 12.5 2.5 17 7l97.9 98c4.5 4.5 7 10.6 7 16.9z"></path></svg>
+        </div>
+      </div>
+      <div class="doc-content-wrapper">
+        <h4 class="doc-title">Funding And Grand Submission Form</h4>
+        <p class="doc-desc">This is a short description for this document download. It should be about this long to help out but not get too long.</p>
+        <a hred="#">
+        <button class="btn btn-full">
+          <svg viewBox="0 0 640 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path d="M537.6 226.6c4.1-10.7 6.4-22.4 6.4-34.6 0-53-43-96-96-96-19.7 0-38.1 6-53.3 16.2C367 64.2 315.3 32 256 32c-88.4 0-160 71.6-160 160 0 2.7.1 5.4.2 8.1C40.2 219.8 0 273.2 0 336c0 79.5 64.5 144 144 144h368c70.7 0 128-57.3 128-128 0-61.9-44-113.6-102.4-125.4zm-132.9 88.7L299.3 420.7c-6.2 6.2-16.4 6.2-22.6 0L171.3 315.3c-10.1-10.1-2.9-27.3 11.3-27.3H248V176c0-8.8 7.2-16 16-16h48c8.8 0 16 7.2 16 16v112h65.4c14.2 0 21.4 17.2 11.3 27.3z"></path></svg>
+        Download</button>
+      </a>
+      </div>
+    </div>
+
+        <div class="doc-card">
+      <div class="doc-icon-wrapper">
+        <div class="doc-icon">
+          <svg viewBox="0 0 384 512" xmlns="http://www.w3.org/2000/svg"><path d="M224 136V0H24C10.7 0 0 10.7 0 24v464c0 13.3 10.7 24 24 24h336c13.3 0 24-10.7 24-24V160H248c-13.2 0-24-10.8-24-24zm160-14.1v6.1H256V0h6.1c6.4 0 12.5 2.5 17 7l97.9 98c4.5 4.5 7 10.6 7 16.9z"></path></svg>
+        </div>
+      </div>
+      <div class="doc-content-wrapper">
+        <h4 class="doc-title">Scoping Survey Results & Outcomes Report</h4>
+        <p class="doc-desc">This is a short description for this document download. It should be about this long to help out but not get too long.</p>
+        <a hred="#">
+        <button class="btn btn-full">
+          <svg viewBox="0 0 640 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path d="M537.6 226.6c4.1-10.7 6.4-22.4 6.4-34.6 0-53-43-96-96-96-19.7 0-38.1 6-53.3 16.2C367 64.2 315.3 32 256 32c-88.4 0-160 71.6-160 160 0 2.7.1 5.4.2 8.1C40.2 219.8 0 273.2 0 336c0 79.5 64.5 144 144 144h368c70.7 0 128-57.3 128-128 0-61.9-44-113.6-102.4-125.4zm-132.9 88.7L299.3 420.7c-6.2 6.2-16.4 6.2-22.6 0L171.3 315.3c-10.1-10.1-2.9-27.3 11.3-27.3H248V176c0-8.8 7.2-16 16-16h48c8.8 0 16 7.2 16 16v112h65.4c14.2 0 21.4 17.2 11.3 27.3z"></path></svg>
+        Download</button>
+      </a>
+      </div>
+    </div>
+
+        <div class="doc-card">
+      <div class="doc-icon-wrapper">
+        <div class="doc-icon">
+          <svg viewBox="0 0 384 512" xmlns="http://www.w3.org/2000/svg"><path d="M224 136V0H24C10.7 0 0 10.7 0 24v464c0 13.3 10.7 24 24 24h336c13.3 0 24-10.7 24-24V160H248c-13.2 0-24-10.8-24-24zm160-14.1v6.1H256V0h6.1c6.4 0 12.5 2.5 17 7l97.9 98c4.5 4.5 7 10.6 7 16.9z"></path></svg>
+        </div>
+      </div>
+      <div class="doc-content-wrapper">
+        <h4 class="doc-title">Proposed Site Designs & Proposals</h4>
+        <p class="doc-desc">This is a short description for this document download. It should be about this long to help out but not get too long.</p>
+        <a hred="#">
+        <button class="btn btn-full">
+          <svg viewBox="0 0 640 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path d="M537.6 226.6c4.1-10.7 6.4-22.4 6.4-34.6 0-53-43-96-96-96-19.7 0-38.1 6-53.3 16.2C367 64.2 315.3 32 256 32c-88.4 0-160 71.6-160 160 0 2.7.1 5.4.2 8.1C40.2 219.8 0 273.2 0 336c0 79.5 64.5 144 144 144h368c70.7 0 128-57.3 128-128 0-61.9-44-113.6-102.4-125.4zm-132.9 88.7L299.3 420.7c-6.2 6.2-16.4 6.2-22.6 0L171.3 315.3c-10.1-10.1-2.9-27.3 11.3-27.3H248V176c0-8.8 7.2-16 16-16h48c8.8 0 16 7.2 16 16v112h65.4c14.2 0 21.4 17.2 11.3 27.3z"></path></svg>
+        Download</button>
+      </a>
+      </div>
+    </div>
+
+        <div class="doc-card">
+      <div class="doc-icon-wrapper">
+        <div class="doc-icon">
+          <svg viewBox="0 0 384 512" xmlns="http://www.w3.org/2000/svg"><path d="M224 136V0H24C10.7 0 0 10.7 0 24v464c0 13.3 10.7 24 24 24h336c13.3 0 24-10.7 24-24V160H248c-13.2 0-24-10.8-24-24zm160-14.1v6.1H256V0h6.1c6.4 0 12.5 2.5 17 7l97.9 98c4.5 4.5 7 10.6 7 16.9z"></path></svg>
+        </div>
+      </div>
+      <div class="doc-content-wrapper">
+        <h4 class="doc-title">Annual Grand Renewal & Update Submission Form</h4>
+        <p class="doc-desc">This is a short description for this document download. It should be about this long to help out but not get too long.</p>
+        <a hred="#">
+        <button class="btn btn-full">
+          <svg viewBox="0 0 640 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path d="M537.6 226.6c4.1-10.7 6.4-22.4 6.4-34.6 0-53-43-96-96-96-19.7 0-38.1 6-53.3 16.2C367 64.2 315.3 32 256 32c-88.4 0-160 71.6-160 160 0 2.7.1 5.4.2 8.1C40.2 219.8 0 273.2 0 336c0 79.5 64.5 144 144 144h368c70.7 0 128-57.3 128-128 0-61.9-44-113.6-102.4-125.4zm-132.9 88.7L299.3 420.7c-6.2 6.2-16.4 6.2-22.6 0L171.3 315.3c-10.1-10.1-2.9-27.3 11.3-27.3H248V176c0-8.8 7.2-16 16-16h48c8.8 0 16 7.2 16 16v112h65.4c14.2 0 21.4 17.2 11.3 27.3z"></path></svg>
+        Download</button>
+      </a>
+      </div>
+    </div>
+
+  </div>
+
+  </div>
+
+</body>
+
+
+
+
+<script>
+
+$(document).ready(function(){
+
+    $(".btn").click(function(){
+  $(this).toggleClass("active");
+  });
+
+  $(".options-ori").click(function(){
+  $("#documents").toggleClass("layout-stacked layout-side");
+  });
+
+  $(".options-compact").click(function(){
+  $("#documents").toggleClass("style-compact");
+  $('.doc-title').replaceWith(function () {
+    return "<p>" + $(this).text() + "</p>"; });
+  $(".doc-content-wrapper p").addClass("doc-title");
+  });
+
+  $(".options-desc").click(function(){
+  $("#documents").toggleClass("no-desc");
+  });
+
+  $(".options-icon").click(function(){
+  $("#documents").toggleClass("no-icon");
+  });
+
+  $(".options-col1").click(function(){
+  $("#documents").addClass("col-1").removeClass("col-2 col-3");
+  });
+
+  $(".options-col2").click(function(){
+  $("#documents").addClass("col-2").removeClass("col-1 col-3");
+  });
+
+  $(".options-col3").click(function(){
+  $("#documents").addClass("col-3").removeClass("col-2 col-1");
+  });
+
+
+
+  
+});
+
+
+</script>
+
+

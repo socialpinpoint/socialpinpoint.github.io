@@ -1,0 +1,302 @@
+<head>
+
+  <link rel="stylesheet" type="text/css" href="https://lukebennis.com/ds-master/master-styles/SPP-DS-PF-styles-master.css">
+  <link rel="stylesheet" type="text/css" href="https://lukebennis.com/ds-master/master-styles/SPP-theme-styles-master.css">
+  <link rel="stylesheet" type="text/css" href="https://lukebennis.com/ds-master/master-styles/SPP-pages-styles-master.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+
+
+<style type="text/css">
+
+body
+{
+  --accent: var(--theme-primary);
+  --divider-height: 6rem;
+}
+
+body
+{
+  margin: 0;
+  background: #f7f7f7;
+}
+
+.btn.active
+{
+  border-color: var(--blue-500);
+  color: var(--blue-500);
+}
+
+
+section
+{
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  background: var(--accent);
+  position: relative;
+  padding-left: 2.4rem !important;
+  padding-right: 2.4rem !important;
+}
+
+section .shape
+{
+  width: 100%;
+  height: 0;
+  display: block;
+  background: var(--accent);
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+
+
+section.top .shape-top,
+section.bottom .shape-bottom
+{
+  height: var(--divider-height);
+}
+
+section .shape-top
+{
+  top: 50%;
+}
+
+section .shape-bottom
+{
+  bottom: 50%;
+}
+
+section.top .shape-top
+{
+  top: calc(var(--divider-height) * -0.96);
+}
+
+section.bottom .shape-bottom
+{
+  bottom: calc(var(--divider-height) * -0.96);
+}
+
+
+section.top.divider-point .shape-top
+{
+  clip-path: polygon(50% 0, 100% 88%, 100% 100%, 0 100%, 0 88%);
+}
+
+section.bottom.divider-point .shape-bottom
+{
+  clip-path: polygon(100% 0, 100% 12%, 50% 100%, 0 12%, 0 0);
+}
+
+section.top.divider-offset .shape-top
+{
+  clip-path: polygon(80% 0, 100% 88%, 100% 100%, 0 100%, 0 88%);
+}
+
+section.bottom.divider-offset .shape-bottom
+{
+  clip-path: polygon(100% 0, 100% 12%, 20% 100%, 0 12%, 0 0);
+}
+
+section.top.divider-angle .shape-top
+{
+  clip-path: polygon(0 90%, 100% 0, 100% 100%, 0 100%);
+}
+
+section.bottom.divider-angle .shape-bottom
+{
+  clip-path: polygon(0 0, 100% 0, 100% 10%, 0 100%);
+}
+
+section.divider-curve .shape
+{
+  background: transparent;
+  overflow: hidden;
+}
+
+section.top.divider-curve .shape-top:before,
+section.bottom.divider-curve .shape-bottom:before
+{
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 110%;
+  height: calc(var(--divider-height) * 2);
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+        @media screen and (max-width: 80rem){
+          body
+            {
+              --divider-height: 3rem;
+            }
+        }
+
+section.top.divider-curve .shape-top:before
+{
+  bottom: -120%;
+}
+
+section.bottom.divider-curve .shape-bottom:before
+{
+  top: -120%;
+}
+
+.content-wrapper div
+{
+  padding: 2ch;
+}
+
+
+</style>
+
+
+<body class="spp-pf-ui demo-brand-a page-type-default page-spacing-default page-border-curved">
+
+  <div style="margin: 3rem;">
+
+  <p>Pages Widget Mockup - Tabs</p>
+
+  <button class="btn options-top">Top</button>
+  <button class="btn options-bottom">Bottom</button>
+  <button class="btn options-point">Point</button>
+  <button class="btn options-offset">Offset</button>
+  <button class="btn options-angle">Angle</button>
+  <button class="btn options-curve">Curve</button>
+  <button class="btn options-pad-sml">Pad Sml</button>
+  <button class="btn options-pad-med">Pad Med</button>
+  <button class="btn options-pad-lrg">Pad Lrg</button>
+  <button class="btn options-pad-xlrg">Pad xLrg</button>
+  <br>
+  <br>
+  Note: As these dividers are masks it means background images won't be supported. It is possible to clip a dive into these shapes with an image however this poses more responsive issues & is porbably a conession we can make as our user technical experience is low.
+  <br>
+  <hr>
+  <br>
+
+  </div>
+
+    <div class="padding-med" style="background: var(--gen-primary-tint);  padding-left: 1.2rem !important; padding-right: 1.2rem !important;">
+    <div class="content-wrapper col-2">
+      <div>
+            <h1>I'm the first section</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent lacus libero, commodo non nibh in, dignissim varius turpis. Sed id lacus vitae nulla congue rhoncus. Sed vel accumsan ante. Aliquam congue ligula et eleifend rutrum. </p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent lacus libero, commodo non nibh in, dignissim varius turpis. Sed id lacus vitae nulla congue rhoncus. Sed vel accumsan ante. Aliquam congue ligula et eleifend rutrum. Quisque ipsum lacus, aliquet non massa sed, pharetra pharetra lectus. Integer ac maximus sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed lobortis mi a lorem finibus consectetur. </p>
+      </div>
+      <div>
+            <h3>I'm a heading</h3>
+            <img src="https://lukebennis.com/ds-master/demo-brand-master/demo-brand-image-9.jpg">
+      </div>
+
+    </div>
+  </div>
+
+  <section class="padding-med text-white">
+    <span class="shape shape-top"></span>
+    <div class="content-wrapper">
+      <h2>I section, therefore I am... a section</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent lacus libero, commodo non nibh in, dignissim varius turpis. Sed id lacus vitae nulla congue rhoncus. Sed vel accumsan ante. Aliquam congue ligula et eleifend rutrum. Quisque ipsum lacus, aliquet non massa sed, pharetra pharetra lectus. Integer ac maximus sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed lobortis mi a lorem finibus consectetur. </p>
+      <p>Pellentesque risus lacus, elementum vel fringilla fringilla, semper et diam. Integer mollis, velit non vestibulum sollicitudin, dolor metus hendrerit nibh, at semper arcu ante vel sapien. Curabitur dolor purus, fringilla et mattis sit amet, dictum ut massa. Fusce ac porta nibh. Aenean at nunc pulvinar, cursus tellus quis, porttitor nunc. Vestibulum tristique nulla nisi, vitae elementum ipsum faucibus nec.</p>
+    </div>
+    <span class="shape shape-bottom"></span>
+  </section>
+
+  <div class="padding-med text-white" style="background: coral;  padding-left: 1.2rem !important; padding-right: 1.2rem !important;">
+    <div class="content-wrapper col-3">
+      <div>
+            <h2>I'm the next section</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent lacus libero, commodo non nibh in, dignissim varius turpis. Sed id lacus vitae nulla congue rhoncus. Sed vel accumsan ante. Aliquam congue ligula et eleifend rutrum. Quisque ipsum lacus, aliquet non massa sed, pharetra pharetra lectus. Integer ac maximus sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed lobortis mi a lorem finibus consectetur. </p>
+      </div>
+      <div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent lacus libero, commodo non nibh in, dignissim varius turpis. Sed id lacus vitae nulla congue rhoncus. Sed vel accumsan ante. Aliquam congue ligula et eleifend rutrum. </p>
+            <img src="https://lukebennis.com/ds-master/demo-brand-master/demo-brand-image-1.jpg">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent lacus libero, commodo non nibh in, dignissim varius turpis. Sed id lacus vitae nulla congue rhoncus. Sed vel accumsan ante. Aliquam congue ligula et eleifend rutrum. Quisque ipsum lacus, aliquet non massa sed, pharetra pharetra lectus. Integer ac maximus sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed lobortis mi a lorem finibus consectetur. </p>
+      </div>
+      <div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent lacus libero, commodo non nibh in, dignissim varius turpis. Sed id lacus vitae nulla congue rhoncus. Sed vel accumsan ante. Aliquam congue ligula et eleifend rutrum. Quisque ipsum lacus, aliquet non massa sed, pharetra pharetra lectus. Integer ac maximus sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed lobortis mi a lorem finibus consectetur. </p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent lacus libero, commodo non nibh in, dignissim varius turpis. Sed id lacus vitae nulla congue rhoncus. Sed vel accumsan ante. Aliquam congue ligula et eleifend rutrum. Quisque ipsum lacus, aliquet non massa sed, pharetra pharetra lectus. Integer ac maximus sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed lobortis mi a lorem finibus consectetur. </p>
+        
+      </div>
+    </div>
+  </div>
+
+    <div class="padding-med text-white" style="background: lightcoral;  padding-left: 1.2rem !important; padding-right: 1.2rem !important;">
+    <div class="content-wrapper col-sidebar-right">
+      <div>
+            <h2>I'm the sidebar section</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent lacus libero, commodo non nibh in, dignissim varius turpis. Sed id lacus vitae nulla congue rhoncus. Sed vel accumsan ante. Aliquam congue ligula et eleifend rutrum. Quisque ipsum lacus, aliquet non massa sed, pharetra pharetra lectus. Integer ac maximus sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed lobortis mi a lorem finibus consectetur. </p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent lacus libero, commodo non nibh in, dignissim varius turpis. Sed id lacus vitae nulla congue rhoncus. Sed vel accumsan ante. Aliquam congue ligula et eleifend rutrum. Quisque ipsum lacus, aliquet non massa sed, pharetra pharetra lectus. Integer ac maximus sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed lobortis mi a lorem finibus consectetur. </p>
+      </div>
+      <div>
+            <img src="https://lukebennis.com/ds-master/demo-brand-master/demo-brand-image-4.jpg">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent lacus libero, commodo non nibh in, dignissim varius turpis. Sed id lacus vitae nulla congue rhoncus. Sed vel accumsan ante. Aliquam congue ligula et eleifend rutrum. Quisque ipsum lacus, aliquet non massa sed, pharetra pharetra lectus. Integer ac maximus sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed lobortis mi a lorem finibus consectetur. </p>
+      </div>
+    </div>
+  </div>
+
+
+</body>
+
+
+
+<script>
+
+$(document).ready(function(){
+
+    $(".btn").click(function(){
+  $(this).toggleClass("active");
+  });
+
+  $(".options-top").click(function(){
+  $("section").toggleClass("top");
+  });
+
+  $(".options-bottom").click(function(){
+  $("section").toggleClass("bottom");
+  });
+
+  $(".options-point").click(function(){
+  $("section").toggleClass("divider-point");
+  });
+
+  $(".options-offset").click(function(){
+  $("section").toggleClass("divider-offset");
+  });
+
+  $(".options-angle").click(function(){
+  $("section").toggleClass("divider-angle");
+  });
+
+  $(".options-curve").click(function(){
+  $("section").toggleClass("divider-curve");
+  });
+
+  $(".options-pad-sml").click(function(){
+  $("section").toggleClass("padding-sml");
+  });
+
+  $(".options-pad-med").click(function(){
+  $("section").toggleClass("padding-med");
+  });
+
+  $(".options-pad-lrg").click(function(){
+  $("section").toggleClass("padding-lrg");
+  });
+
+  $(".options-pad-xlrg").click(function(){
+  $("section").toggleClass("padding-xlrg");
+  });
+
+
+  
+});
+
+
+</script>
+
+

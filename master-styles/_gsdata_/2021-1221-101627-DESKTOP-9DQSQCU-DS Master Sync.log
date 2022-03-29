@@ -1,0 +1,194 @@
+2021-12-21 10:17:16: FTP: Server rejected UTF-8 that it promised us: Unknown command
+2021-12-21 10:17:16: == Sync Started by User Command
+2021-12-21 10:17:18: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/color-picker-ui.png
+2021-12-21 10:17:18: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/comment-paper-corner.png
+2021-12-21 10:17:18: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Demo Brand Master/demo-brand-image-1.jpg
+2021-12-21 10:17:18: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Demo Brand Master/demo-brand-image-10.jpg
+2021-12-21 10:17:19: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Demo Brand Master/demo-brand-image-2.jpg
+2021-12-21 10:17:19: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Demo Brand Master/demo-brand-image-3.jpg
+2021-12-21 10:17:19: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Demo Brand Master/demo-brand-image-4.jpg
+2021-12-21 10:17:19: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Demo Brand Master/demo-brand-image-5.jpg
+2021-12-21 10:17:19: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Demo Brand Master/demo-brand-image-6.jpg
+2021-12-21 10:17:19: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Demo Brand Master/demo-brand-image-7.jpg
+2021-12-21 10:17:19: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Demo Brand Master/demo-brand-image-8.jpg
+2021-12-21 10:17:19: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Demo Brand Master/demo-brand-image-9.jpg
+2021-12-21 10:17:19: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Demo Brand Master/demo-brand-logo-landscape-reversed.png
+2021-12-21 10:17:20: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Demo Brand Master/demo-brand-logo-landscape.png
+2021-12-21 10:17:20: Delete Folder ftp://ftp.lukebennis.com:21/public_html/ds-master/Demo Brand Master
+2021-12-21 10:17:20: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Group 311.svg
+2021-12-21 10:17:20: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Group 315.svg
+2021-12-21 10:17:21: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/account.svg
+2021-12-21 10:17:21: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/Add.svg
+2021-12-21 10:17:21: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/align-center.svg
+2021-12-21 10:17:21: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/align-left.svg
+2021-12-21 10:17:21: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/align-right.svg
+2021-12-21 10:17:21: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/az.svg
+2021-12-21 10:17:22: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/banner-split.svg
+2021-12-21 10:17:22: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/banner-stacked.svg
+2021-12-21 10:17:22: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/banner-standard.svg
+2021-12-21 10:17:23: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/brand/android.svg
+2021-12-21 10:17:23: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/brand/apple.svg
+2021-12-21 10:17:23: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/brand/chrome.svg
+2021-12-21 10:17:23: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/brand/edge.svg
+2021-12-21 10:17:23: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/brand/firefox.svg
+2021-12-21 10:17:23: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/brand/ie.svg
+2021-12-21 10:17:24: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/brand/linux.svg
+2021-12-21 10:17:24: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/brand/opera.svg
+2021-12-21 10:17:24: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/brand/safari.svg
+2021-12-21 10:17:24: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/brand/spp-small.svg
+2021-12-21 10:17:24: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/brand/spp.svg
+2021-12-21 10:17:25: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/brand/ubunto.svg
+2021-12-21 10:17:25: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/brand/windows.svg
+2021-12-21 10:17:25: Delete Folder ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/brand
+2021-12-21 10:17:25: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/breadcrumb.svg
+2021-12-21 10:17:25: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/budget.svg
+2021-12-21 10:17:26: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/button.svg
+2021-12-21 10:17:26: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/Calendar.svg
+2021-12-21 10:17:26: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/checkbox-false.svg
+2021-12-21 10:17:26: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/checkbox-true.svg
+2021-12-21 10:17:27: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/chevron-down.svg
+2021-12-21 10:17:27: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/chevron-left.svg
+2021-12-21 10:17:27: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/chevron-right.svg
+2021-12-21 10:17:27: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/chevron-up-down.svg
+2021-12-21 10:17:27: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/chevron-up.svg
+2021-12-21 10:17:28: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/clock.svg
+2021-12-21 10:17:28: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/collaps-close.svg
+2021-12-21 10:17:28: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/collaps-open.svg
+2021-12-21 10:17:28: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/Color.svg
+2021-12-21 10:17:28: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/columns-one.svg
+2021-12-21 10:17:28: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/columns-sidebar-left.svg
+2021-12-21 10:17:28: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/columns-sidebar-right.svg
+2021-12-21 10:17:29: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/columns-three.svg
+2021-12-21 10:17:29: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/columns-two.svg
+2021-12-21 10:17:29: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/comment.svg
+2021-12-21 10:17:29: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/copy.svg
+2021-12-21 10:17:29: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/cross.svg
+2021-12-21 10:17:29: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/cta.svg
+2021-12-21 10:17:29: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/dashboard.svg
+2021-12-21 10:17:29: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/delete.svg
+2021-12-21 10:17:29: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/desktop.svg
+2021-12-21 10:17:29: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/discuss.svg
+2021-12-21 10:17:30: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/dislike-accent.svg
+2021-12-21 10:17:30: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/dislike.svg
+2021-12-21 10:17:30: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/download.svg
+2021-12-21 10:17:30: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/downloads.svg
+2021-12-21 10:17:30: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/drag-drop.svg
+2021-12-21 10:17:30: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/Edit.svg
+2021-12-21 10:17:30: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/engagements.svg
+2021-12-21 10:17:30: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/event.svg
+2021-12-21 10:17:31: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/expand.svg
+2021-12-21 10:17:31: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/export.svg
+2021-12-21 10:17:31: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/external-link.svg
+2021-12-21 10:17:31: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/faq.svg
+2021-12-21 10:17:31: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/filter.svg
+2021-12-21 10:17:31: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/follow-us.svg
+2021-12-21 10:17:31: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/forum.svg
+2021-12-21 10:17:31: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/gallery-grid.svg
+2021-12-21 10:17:31: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/gallery-slider.svg
+2021-12-21 10:17:32: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/hand-right.svg
+2021-12-21 10:17:32: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/home.svg
+2021-12-21 10:17:32: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/idea-wall.svg
+2021-12-21 10:17:32: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/image.svg
+2021-12-21 10:17:32: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/import.svg
+2021-12-21 10:17:32: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/Info.svg
+2021-12-21 10:17:32: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/layer.svg
+2021-12-21 10:17:32: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/light-rays.svg
+2021-12-21 10:17:32: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/like-accent.svg
+2021-12-21 10:17:33: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/like.svg
+2021-12-21 10:17:33: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/line.svg
+2021-12-21 10:17:33: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/link.svg
+2021-12-21 10:17:33: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/location.svg
+2021-12-21 10:17:33: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/lock.svg
+2021-12-21 10:17:33: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/map-1.svg
+2021-12-21 10:17:33: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/map-marker.svg
+2021-12-21 10:17:33: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/map.svg
+2021-12-21 10:17:34: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/menu.svg
+2021-12-21 10:17:34: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/mobile.svg
+2021-12-21 10:17:34: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/money.svg
+2021-12-21 10:17:34: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/move.svg
+2021-12-21 10:17:34: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/news.svg
+2021-12-21 10:17:34: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/Notification.svg
+2021-12-21 10:17:34: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/options-horizontal.svg
+2021-12-21 10:17:34: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/options-vertical.svg
+2021-12-21 10:17:34: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/page.svg
+2021-12-21 10:17:35: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/phases.svg
+2021-12-21 10:17:35: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/pin.svg
+2021-12-21 10:17:35: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/polygon.svg
+2021-12-21 10:17:35: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/project-list.svg
+2021-12-21 10:17:35: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/project-stats.svg
+2021-12-21 10:17:35: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/project.svg
+2021-12-21 10:17:35: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/qr-code.svg
+2021-12-21 10:17:35: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/Question.svg
+2021-12-21 10:17:35: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/radio-false.svg
+2021-12-21 10:17:36: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/radio-true.svg
+2021-12-21 10:17:36: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/refresh.svg
+2021-12-21 10:17:36: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/rotate.svg
+2021-12-21 10:17:36: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/save.svg
+2021-12-21 10:17:36: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/search.svg
+2021-12-21 10:17:36: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/section.svg
+2021-12-21 10:17:36: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/Send.svg
+2021-12-21 10:17:36: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/settings.svg
+2021-12-21 10:17:36: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/Share.svg
+2021-12-21 10:17:37: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/slider.svg
+2021-12-21 10:17:37: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/sort.svg
+2021-12-21 10:17:37: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/square.svg
+2021-12-21 10:17:37: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/star-solid.svg
+2021-12-21 10:17:37: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/star.svg
+2021-12-21 10:17:37: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/survey.svg
+2021-12-21 10:17:37: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/tablet.svg
+2021-12-21 10:17:37: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/tag.svg
+2021-12-21 10:17:37: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/text.svg
+2021-12-21 10:17:38: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/tick.svg
+2021-12-21 10:17:38: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/ticket.svg
+2021-12-21 10:17:38: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/unlock.svg
+2021-12-21 10:17:38: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/upload.svg
+2021-12-21 10:17:38: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/url.svg
+2021-12-21 10:17:38: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/user-circled.svg
+2021-12-21 10:17:38: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/user.svg
+2021-12-21 10:17:38: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/utm.svg
+2021-12-21 10:17:38: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/vertical-space.svg
+2021-12-21 10:17:39: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/video.svg
+2021-12-21 10:17:39: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/virtual-townhall.svg
+2021-12-21 10:17:39: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/visible-false.svg
+2021-12-21 10:17:39: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/visible-true.svg
+2021-12-21 10:17:39: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/wand.svg
+2021-12-21 10:17:39: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/warning.svg
+2021-12-21 10:17:39: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon/widget.svg
+2021-12-21 10:17:39: Delete Folder ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Icon
+2021-12-21 10:17:39: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Rectangle 58.svg
+2021-12-21 10:17:39: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Rectangle 61.svg
+2021-12-21 10:17:40: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Rectangle 62.svg
+2021-12-21 10:17:40: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Rectangle 63.svg
+2021-12-21 10:17:40: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Vector 14.svg
+2021-12-21 10:17:40: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Vector 16.svg
+2021-12-21 10:17:40: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Vector 18.svg
+2021-12-21 10:17:40: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Vector 19.svg
+2021-12-21 10:17:40: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master/Vector 31.svg
+2021-12-21 10:17:40: Delete Folder ftp://ftp.lukebennis.com:21/public_html/ds-master/Icons Master
+2021-12-21 10:17:41: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/live/test-content-a.html
+2021-12-21 10:17:41: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/live/test-content-b.html
+2021-12-21 10:17:41: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/live/test-load.html
+2021-12-21 10:17:41: Delete Folder ftp://ftp.lukebennis.com:21/public_html/ds-master/live
+2021-12-21 10:17:41: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Master Styles/SPP-DS-PF-styles-master.css
+2021-12-21 10:17:41: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Master Styles/SPP-DS-V1-styles-master.css
+2021-12-21 10:17:42: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/Master Styles/SPP-iw-master-styles.css
+2021-12-21 10:17:42: Delete Folder ftp://ftp.lukebennis.com:21/public_html/ds-master/Master Styles
+2021-12-21 10:17:42: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/master-js.js
+2021-12-21 10:17:42: Delete Folder ftp://ftp.lukebennis.com:21/public_html/ds-master/mockups/Admin
+2021-12-21 10:17:42: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/mockups/Components/assets/saved-widget-preview-img.png
+2021-12-21 10:17:43: Delete Folder ftp://ftp.lukebennis.com:21/public_html/ds-master/mockups/Components/assets
+2021-12-21 10:17:43: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/mockups/Components/Sketch-modal.html
+2021-12-21 10:17:43: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/mockups/Components/Sketch-pages-widget-sidebar.html
+2021-12-21 10:17:43: Delete Folder ftp://ftp.lukebennis.com:21/public_html/ds-master/mockups/Components
+2021-12-21 10:17:43: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/mockups/misc/hybrid-surveys.html
+2021-12-21 10:17:43: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/mockups/misc/pf-ui-elements.html
+2021-12-21 10:17:44: Delete Folder ftp://ftp.lukebennis.com:21/public_html/ds-master/mockups/misc
+2021-12-21 10:17:44: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/mockups/Tools/idea-wall/iw-add-comment-2.html
+2021-12-21 10:17:44: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/mockups/Tools/idea-wall/iw-add-comment.html
+2021-12-21 10:17:44: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/mockups/Tools/idea-wall/iw-comment-card.html
+2021-12-21 10:17:44: Delete Folder ftp://ftp.lukebennis.com:21/public_html/ds-master/mockups/Tools/idea-wall
+2021-12-21 10:17:45: Delete Folder ftp://ftp.lukebennis.com:21/public_html/ds-master/mockups/Tools
+2021-12-21 10:17:45: Delete Folder ftp://ftp.lukebennis.com:21/public_html/ds-master/mockups
+2021-12-21 10:17:45: Start only 1 threads, limited by tasks to run
+2021-12-21 10:17:46: Copy Over 'G:/My Drive/Social Pinpoint/Product/Design System/DS Master/master-styles/SPP-DS-PF-styles-master.css' -> 'ftp://ftp.lukebennis.com:21/public_html/ds-master/SPP-DS-PF-styles-master.css' (20,729)
+2021-12-21 10:17:47: == Sync Complete. Time: 00:00:32, Speed: 413.57 KB/s, OK: 190, Errors: 0

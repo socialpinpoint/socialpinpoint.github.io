@@ -1,0 +1,110 @@
+<head> 
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" type="text/css" href="https://lukebennis.com/ds-master/master-styles/SPP-DS-PF-styles-master.css">
+	<link rel="stylesheet" type="text/css" href="https://lukebennis.com/ds-master/master-styles/SPP-iw-styles-master.css">
+	<link rel="stylesheet" type="text/css" href="https://lukebennis.com/ds-master/master-styles/SPP-theme-styles-master.css">
+
+
+</head> 
+
+
+<style> 
+
+	body 
+	{ 
+		display: flex; flex-direction: column; justify-content: center; align-items: center; align-content: center; background: white; height: 100%; 
+	} 
+
+	.question-intro 
+	{ 
+		font-size: 20px; font-family: 'Sanchez', serif; color: var(--theme-secondary); opacity: 0.5; margin-bottom: 40px; text-transform: uppercase; 
+	} 
+
+	.question-text 
+	{ 
+		font-size: 28px; font-family: 'Sanchez', serif; color: var(--theme-secondary); max-width: 800px; width: 80%; text-align: center; margin-bottom: 6rem; 
+	} 
+
+	.inline-input 
+	{ 
+		position: relative; 
+		display: inline-block; 
+		padding: 12px; 
+		padding-left: 18px; border: 2px solid transparent; 
+		border-bottom: 2px solid telelel; vertical-align: middle; min-width: 12ch; 
+		outline: none; 
+		color: var(--theme-primary); 
+		border-radius: 6px; transition: ease ls; 
+		margin-bottom: 12px; 
+	} 
+
+	.inline-input:before 
+	{  
+		content: ''; 
+		position: absolute; 
+		top: 50%; 
+		left: 0; 
+		transform: translateY(-50%); 
+		font-size: 14px; 
+		opacity: 0.6; transition: ease 0.4s; 
+	}
+
+	.inline-input:nth-child(2):before 
+	{ 
+		content: '2'; 
+	} 
+
+	.inline-input:nth-child(3):before 
+	{ 
+		content: '3'; 
+	} 
+
+	.inline-input:nth-child(4):before 
+	{ 
+		content: '4'; 
+	} 
+
+	.inline-input:focus:before 
+	{ 
+		opacity: 0; 
+	} 
+
+	.inline-input:hover 
+	{ 
+
+	} 
+
+	.btn 
+	{  
+		border: 2px solid $f2f2f2; 
+		font-size: 20px; 
+	}
+
+	img.logo 
+	{ 
+		width: 200px; position: absolute; top: 6rem; 
+	}
+
+		@media only screen and (max-width: 600px) {
+			.question-text 
+			{
+				font-size: 24px; width: 85%; margin-bottom: 6rem; 
+				padding: Spx; padding-left: 12px; margin-bottom: 6px; 
+			}
+		}
+
+</style> 
+
+<body class="spp-pf-ui demo-brand-a"> 
+
+	<img src="http://lukebennis.com/ds-master/demo-brand-master/demo-brand-logo-landscape.png" class="logo"> 
+
+	<div class="question-intro">City Center Travel</div> 
+
+	<div class="question-text"> I travel to the city centre every <div class="inline-input" contenteditable="true"></div> & I usually park <div class="inline-input" contenteditable="true"></div>. I find the parking situation to be <div class="inline-input" contenteditable="true"></div> & it would be easier if <div class="inline-input" contenteditable="true"></div>. </div> 
+
+	<button class="btn btn-primary">Submit</button> 
+
+</body> 

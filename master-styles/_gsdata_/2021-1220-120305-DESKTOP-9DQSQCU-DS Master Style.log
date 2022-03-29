@@ -1,0 +1,10 @@
+2021-12-20 12:03:05: FTP: Server rejected UTF-8 that it promised us: Unknown command
+2021-12-20 12:03:05: Turning Off Copy Attributes, as one of file systems does not support it
+2021-12-20 12:03:05: Turning Off Copy Symbolic Links, as one of file systems does not support it. You may want to consider using Job -> Options -> Advanced -> Links -> Drill Down, if you need to copy folder to which the link points
+2021-12-20 12:03:05: == Rename Conflict Losing File is On, expect some weirdness in auto-resolving Vertical Conflicts
+2021-12-20 12:03:06: -- Analysis Started by User Command
+2021-12-20 12:03:06: L: State file does not exist: G:/My Drive/Social Pinpoint/Product/Design System/Master Styles/_gsdata_/_file_state_v4._gs
+2021-12-20 12:03:06: R: State file does not exist: ftp://ftp.lukebennis.com:21/public_html/sppdsv1/master-styles/_gsdata_/_file_state_v4._gs
+2021-12-20 12:03:07: R: On disk ftp://ftp.lukebennis.com:21 space required for sync is 0.00, free space is unknown
+2021-12-20 12:03:07: Changes: 0, Conflicts: 0, CopyTime: 0, FixState: 0, Errors: 0, All: 1
+2021-12-20 12:03:07: -- Analysis Complete. Time 00:00:02, Speed: 0 files/s
