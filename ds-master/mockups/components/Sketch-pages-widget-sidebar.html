@@ -61,6 +61,7 @@ label
   flex-basis: calc(50% - 0.3rem);
   margin-bottom: 0.6rem;
   cursor: move;
+  transition: 0.6s;
 }
 
 .deafult .widget-card
@@ -126,11 +127,14 @@ label
   padding: 1.8rem;
   visibility: hidden;
   overflow: hidden;
+  transition: 0.6s;
 }
 
 .preview-render
 {
-  
+  min-width: 300px;
+  height: 200px;
+  transition: 0.6s;
 }
 
 .preview-render img
@@ -175,7 +179,7 @@ label
           <div class="preview-wrapper shadow-med border-med transition">
             <label>preview</label>
             <div class="preview-render">
-              <img src="assets/saved-widget-preview-img.png">
+              Preview render of widget goes here
             </div>
           </div>
       </div>
@@ -232,7 +236,7 @@ label
                       <div class="preview-wrapper shadow-med border-med transition">
             <label>preview</label>
             <div class="preview-render">
-              <img src="assets/saved-widget-preview-img.png">
+              Preview of widget goes here.
             </div>
           </div>
       </div>

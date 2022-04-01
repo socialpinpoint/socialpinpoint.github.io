@@ -1,0 +1,13 @@
+2022-03-31 12:12:19: FTP: Server rejected UTF-8 that it promised us: Unknown command
+2022-03-31 12:12:19: == Rename Conflict Losing File is On, expect some weirdness in auto-resolving Vertical Conflicts
+2022-03-31 12:12:20: -- Analysis Started by On File Change Incremental
+2022-03-31 12:12:20: R: On disk ftp://ftp.lukebennis.com:21 space required for sync is 0.00, free space is unknown
+2022-03-31 12:12:20: Changes: 2, Conflicts: 0, CopyTime: 0, FixState: 0, Errors: 0, All: 1180
+2022-03-31 12:12:20: Left to Right: Copy File: 2 
+2022-03-31 12:12:20: == Sync Started by On File Change Incremental
+2022-03-31 12:12:20: Start only 2 threads, limited by tasks to run
+2022-03-31 12:12:20: FTP: Server rejected UTF-8 that it promised us: Unknown command
+2022-03-31 12:12:20: FTP: Server rejected UTF-8 that it promised us: Unknown command
+2022-03-31 12:12:21: Copy Over 'G:/My Drive/Social Pinpoint/Product/Design System/DS Master/mockups/tools/idea-wall/iw-add-comment.html' -> 'ftp://ftp.lukebennis.com:21/public_html/ds-master/mockups/tools/idea-wall/iw-add-comment.html' (11,997)
+2022-03-31 12:12:22: Copy Over 'G:/My Drive/Social Pinpoint/Product/Design System/DS Master/mockups/tools/idea-wall/iw-comment-card.html' -> 'ftp://ftp.lukebennis.com:21/public_html/ds-master/mockups/tools/idea-wall/iw-comment-card.html' (19,362)
+2022-03-31 12:12:22: == Sync Complete. Time: 00:00:04, Speed: 10.45 KB/s, OK: 2, Errors: 0

@@ -1,0 +1,10 @@
+2022-03-31 10:26:43: FTP: Server rejected UTF-8 that it promised us: Unknown command
+2022-03-31 10:26:43: == Rename Conflict Losing File is On, expect some weirdness in auto-resolving Vertical Conflicts
+2022-03-31 10:26:43: -- Analysis Started by On File Change Incremental
+2022-03-31 10:26:44: R: On disk ftp://ftp.lukebennis.com:21 space required for sync is 0.00, free space is unknown
+2022-03-31 10:26:44: Changes: 1, Conflicts: 0, CopyTime: 0, FixState: 0, Errors: 0, All: 1180
+2022-03-31 10:26:44: Left to Right: Delete File: 1 
+2022-03-31 10:26:44: == Sync Started by On File Change Incremental
+2022-03-31 10:26:44: Delete Folder ftp://ftp.lukebennis.com:21/public_html/ds-master/mockups/admin
+2022-03-31 10:26:44: Start only 0 threads, limited by tasks to run
+2022-03-31 10:26:44: == Sync Complete. Time: 00:00:02, Speed: 0.00/s, OK: 1, Errors: 0

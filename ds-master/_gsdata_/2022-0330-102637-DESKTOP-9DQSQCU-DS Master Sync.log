@@ -1,0 +1,214 @@
+2022-03-30 10:26:39: FTP: Server rejected UTF-8 that it promised us: Unknown command
+2022-03-30 10:26:39: == Rename Conflict Losing File is On, expect some weirdness in auto-resolving Vertical Conflicts
+2022-03-30 10:26:39: -- Analysis Started by On File Change First Full Analyze Upon Folder Connect
+2022-03-30 10:26:56: R: On disk ftp://ftp.lukebennis.com:21 space required for sync is -6.14 KB, free space is unknown
+2022-03-30 10:26:56: Changes: 7, Conflicts: 0, CopyTime: 0, FixState: 0, Errors: 0, All: 1180
+2022-03-30 10:26:56: Left to Right: Copy File: 1 Delete File: 6 
+2022-03-30 10:26:56: == Sync Started by On File Change First Full Analyze Upon Folder Connect
+2022-03-30 10:26:57: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/live/test-content-a.html
+2022-03-30 10:26:57: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/live/test-content-b.html
+2022-03-30 10:26:57: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/live/test-load.html
+2022-03-30 10:26:57: Delete Folder ftp://ftp.lukebennis.com:21/public_html/ds-master/live
+2022-03-30 10:26:57: Delete Folder ftp://ftp.lukebennis.com:21/public_html/ds-master/mockups/components/assets
+2022-03-30 10:26:57: Delete File ftp://ftp.lukebennis.com:21/public_html/ds-master/mockups/pages/test.html
+2022-03-30 10:26:57: Start only 1 threads, limited by tasks to run
+2022-03-30 10:26:58: Copy Over 'G:/My Drive/Social Pinpoint/Product/Design System/DS Master/master-styles/CM-DS-styles-master.css' -> 'ftp://ftp.lukebennis.com:21/public_html/ds-master/master-styles/CM-DS-styles-master.css' (49,442)
+2022-03-30 10:27:00: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Figma Export/Icon/Tick.svg
+2022-03-30 10:27:00: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Figma Export/Icon/alert.svg
+2022-03-30 10:27:00: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Figma Export/Icon/arrow-down.svg
+2022-03-30 10:27:00: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Figma Export/Icon/arrow-left.svg
+2022-03-30 10:27:00: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Figma Export/Icon/arrow-right-double.svg
+2022-03-30 10:27:00: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Figma Export/Icon/arrow-right.svg
+2022-03-30 10:27:00: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Figma Export/Icon/arrow-up.svg
+2022-03-30 10:27:00: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Figma Export/Icon/bounce.svg
+2022-03-30 10:27:00: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Figma Export/Icon/check-false.svg
+2022-03-30 10:27:01: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Figma Export/Icon/check-true.svg
+2022-03-30 10:27:01: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Figma Export/Icon/chevron-down.svg
+2022-03-30 10:27:01: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Figma Export/Icon/chevron-left.svg
+2022-03-30 10:27:01: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Figma Export/Icon/chevron-right.svg
+2022-03-30 10:27:01: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Figma Export/Icon/chevron-up.svg
+2022-03-30 10:27:01: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Figma Export/Icon/cog.svg
+2022-03-30 10:27:01: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Figma Export/Icon/comms.svg
+2022-03-30 10:27:01: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Figma Export/Icon/compress.svg
+2022-03-30 10:27:01: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Figma Export/Icon/copy.svg
+2022-03-30 10:27:01: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Figma Export/Icon/cross-square.svg
+2022-03-30 10:27:01: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Figma Export/Icon/cross.svg
+2022-03-30 10:27:01: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Figma Export/Icon/delete.svg
+2022-03-30 10:27:01: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Figma Export/Icon/document.svg
+2022-03-30 10:27:01: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Figma Export/Icon/download-cloud.svg
+2022-03-30 10:27:01: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Figma Export/Icon/duplicate.svg
+2022-03-30 10:27:01: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Figma Export/Icon/edit.svg
+2022-03-30 10:27:01: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Figma Export/Icon/email.svg
+2022-03-30 10:27:01: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Figma Export/Icon/etreet-view.svg
+2022-03-30 10:27:01: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Figma Export/Icon/exclamation-mark.svg
+2022-03-30 10:27:02: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Figma Export/Icon/expand-verticle.svg
+2022-03-30 10:27:02: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Figma Export/Icon/filter.svg
+2022-03-30 10:27:02: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Figma Export/Icon/grid-table.svg
+2022-03-30 10:27:02: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Figma Export/Icon/history.svg
+2022-03-30 10:27:02: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Figma Export/Icon/inbox.svg
+2022-03-30 10:27:02: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Figma Export/Icon/info.svg
+2022-03-30 10:27:02: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Figma Export/Icon/interactions.svg
+2022-03-30 10:27:02: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Figma Export/Icon/link.svg
+2022-03-30 10:27:02: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Figma Export/Icon/male.svg
+2022-03-30 10:27:02: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Figma Export/Icon/map.svg
+2022-03-30 10:27:02: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Figma Export/Icon/merge.svg
+2022-03-30 10:27:02: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Figma Export/Icon/more-options.svg
+2022-03-30 10:27:02: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Figma Export/Icon/mouse-opens.svg
+2022-03-30 10:27:02: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Figma Export/Icon/mouse-unique.svg
+2022-03-30 10:27:02: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Figma Export/Icon/mouse.svg
+2022-03-30 10:27:02: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Figma Export/Icon/open-internally.svg
+2022-03-30 10:27:02: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Figma Export/Icon/opened-unique.svg
+2022-03-30 10:27:02: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Figma Export/Icon/opened.svg
+2022-03-30 10:27:03: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Figma Export/Icon/options.svg
+2022-03-30 10:27:03: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Figma Export/Icon/organisation.svg
+2022-03-30 10:27:03: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Figma Export/Icon/person.svg
+2022-03-30 10:27:03: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Figma Export/Icon/phone.svg
+2022-03-30 10:27:03: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Figma Export/Icon/pie-chart.svg
+2022-03-30 10:27:03: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Figma Export/Icon/pin.svg
+2022-03-30 10:27:03: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Figma Export/Icon/plus.svg
+2022-03-30 10:27:03: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Figma Export/Icon/property.svg
+2022-03-30 10:27:03: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Figma Export/Icon/question.svg
+2022-03-30 10:27:03: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Figma Export/Icon/radio-false.svg
+2022-03-30 10:27:03: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Figma Export/Icon/radio-true.svg
+2022-03-30 10:27:03: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Figma Export/Icon/refresh.svg
+2022-03-30 10:27:03: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Figma Export/Icon/report.svg
+2022-03-30 10:27:03: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Figma Export/Icon/search.svg
+2022-03-30 10:27:03: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Figma Export/Icon/send.svg
+2022-03-30 10:27:03: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Figma Export/Icon/share.svg
+2022-03-30 10:27:03: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Figma Export/Icon/sms.svg
+2022-03-30 10:27:03: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Figma Export/Icon/sort.svg
+2022-03-30 10:27:03: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Figma Export/Icon/tags.svg
+2022-03-30 10:27:04: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Figma Export/Icon/time.svg
+2022-03-30 10:27:04: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Figma Export/Icon/tools.svg
+2022-03-30 10:27:04: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Figma Export/Icon/unlink.svg
+2022-03-30 10:27:04: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Figma Export/Icon/unsubscribe.svg
+2022-03-30 10:27:04: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Figma Export/Icon/workspace.svg
+2022-03-30 10:27:04: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Icon/Arrow Right.svg
+2022-03-30 10:27:04: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Icon/Check.svg
+2022-03-30 10:27:04: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Icon/Chevron Down.svg
+2022-03-30 10:27:04: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Icon/Chevron Right.svg
+2022-03-30 10:27:05: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Icon/Close Cross.svg
+2022-03-30 10:27:05: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Icon/Cog.svg
+2022-03-30 10:27:05: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Icon/Comms.svg
+2022-03-30 10:27:05: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Icon/Compress.svg
+2022-03-30 10:27:05: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Icon/Copy.svg
+2022-03-30 10:27:05: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Icon/Delete.svg
+2022-03-30 10:27:05: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Icon/Document.svg
+2022-03-30 10:27:06: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Icon/Double Right Arrow.svg
+2022-03-30 10:27:06: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Icon/Download Cloud.svg
+2022-03-30 10:27:06: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Icon/Duplicate.svg
+2022-03-30 10:27:06: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Icon/Edit.svg
+2022-03-30 10:27:06: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Icon/Email.svg
+2022-03-30 10:27:06: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Icon/Exclamation Mark.svg
+2022-03-30 10:27:07: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Icon/Expand Verticle.svg
+2022-03-30 10:27:07: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Icon/Grid Table.svg
+2022-03-30 10:27:07: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Icon/History.svg
+2022-03-30 10:27:07: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Icon/Icon/Tick.svg
+2022-03-30 10:27:07: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Icon/Icon/alert.svg
+2022-03-30 10:27:07: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Icon/Icon/arrow-down.svg
+2022-03-30 10:27:07: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Icon/Icon/arrow-left.svg
+2022-03-30 10:27:07: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Icon/Icon/arrow-right-double.svg
+2022-03-30 10:27:07: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Icon/Icon/arrow-right.svg
+2022-03-30 10:27:07: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Icon/Icon/arrow-up.svg
+2022-03-30 10:27:07: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Icon/Icon/bounce.svg
+2022-03-30 10:27:07: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Icon/Icon/check-false.svg
+2022-03-30 10:27:07: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Icon/Icon/check-true.svg
+2022-03-30 10:27:07: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Icon/Icon/chevron-down.svg
+2022-03-30 10:27:07: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Icon/Icon/chevron-left.svg
+2022-03-30 10:27:07: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Icon/Icon/chevron-right.svg
+2022-03-30 10:27:07: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Icon/Icon/chevron-up.svg
+2022-03-30 10:27:08: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Icon/Icon/cog.svg
+2022-03-30 10:27:08: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Icon/Icon/comms.svg
+2022-03-30 10:27:08: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Icon/Icon/compress.svg
+2022-03-30 10:27:08: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Icon/Icon/copy.svg
+2022-03-30 10:27:08: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Icon/Icon/cross-square.svg
+2022-03-30 10:27:08: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Icon/Icon/cross.svg
+2022-03-30 10:27:08: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Icon/Icon/delete.svg
+2022-03-30 10:27:08: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Icon/Icon/document.svg
+2022-03-30 10:27:08: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Icon/Icon/download-cloud.svg
+2022-03-30 10:27:08: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Icon/Icon/duplicate.svg
+2022-03-30 10:27:08: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Icon/Icon/edit.svg
+2022-03-30 10:27:08: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Icon/Icon/email.svg
+2022-03-30 10:27:08: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Icon/Icon/etreet-view.svg
+2022-03-30 10:27:08: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Icon/Icon/exclamation-mark.svg
+2022-03-30 10:27:08: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Icon/Icon/expand-verticle.svg
+2022-03-30 10:27:08: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Icon/Icon/filter.svg
+2022-03-30 10:27:08: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Icon/Icon/grid-table.svg
+2022-03-30 10:27:08: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Icon/Icon/history.svg
+2022-03-30 10:27:08: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Icon/Icon/inbox.svg
+2022-03-30 10:27:09: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Icon/Icon/info.svg
+2022-03-30 10:27:09: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Icon/Icon/interactions.svg
+2022-03-30 10:27:09: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Icon/Icon/link.svg
+2022-03-30 10:27:09: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Icon/Icon/male.svg
+2022-03-30 10:27:09: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Icon/Icon/map.svg
+2022-03-30 10:27:09: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Icon/Icon/merge.svg
+2022-03-30 10:27:09: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Icon/Icon/more-options.svg
+2022-03-30 10:27:09: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Icon/Icon/mouse-opens.svg
+2022-03-30 10:27:09: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Icon/Icon/mouse-unique.svg
+2022-03-30 10:27:09: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Icon/Icon/mouse.svg
+2022-03-30 10:27:09: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Icon/Icon/open-internally.svg
+2022-03-30 10:27:09: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Icon/Icon/opened-unique.svg
+2022-03-30 10:27:09: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Icon/Icon/opened.svg
+2022-03-30 10:27:09: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Icon/Icon/options.svg
+2022-03-30 10:27:09: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Icon/Icon/organisation.svg
+2022-03-30 10:27:09: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Icon/Icon/person.svg
+2022-03-30 10:27:10: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Icon/Icon/phone.svg
+2022-03-30 10:27:10: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Icon/Icon/pie-chart.svg
+2022-03-30 10:27:10: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Icon/Icon/pin.svg
+2022-03-30 10:27:10: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Icon/Icon/plus.svg
+2022-03-30 10:27:10: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Icon/Icon/property.svg
+2022-03-30 10:27:10: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Icon/Icon/question.svg
+2022-03-30 10:27:10: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Icon/Icon/radio-false.svg
+2022-03-30 10:27:10: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Icon/Icon/radio-true.svg
+2022-03-30 10:27:10: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Icon/Icon/refresh.svg
+2022-03-30 10:27:10: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Icon/Icon/report.svg
+2022-03-30 10:27:10: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Icon/Icon/search.svg
+2022-03-30 10:27:10: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Icon/Icon/send.svg
+2022-03-30 10:27:10: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Icon/Icon/share.svg
+2022-03-30 10:27:10: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Icon/Icon/sms.svg
+2022-03-30 10:27:11: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Icon/Icon/sort.svg
+2022-03-30 10:27:11: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Icon/Icon/tags.svg
+2022-03-30 10:27:11: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Icon/Icon/time.svg
+2022-03-30 10:27:11: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Icon/Icon/tools.svg
+2022-03-30 10:27:11: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Icon/Icon/unlink.svg
+2022-03-30 10:27:11: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Icon/Icon/unsubscribe.svg
+2022-03-30 10:27:11: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Icon/Icon/workspace.svg
+2022-03-30 10:27:11: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Icon/Interactions.svg
+2022-03-30 10:27:11: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Icon/Link.svg
+2022-03-30 10:27:11: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Icon/Male.svg
+2022-03-30 10:27:11: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Icon/Map.svg
+2022-03-30 10:27:11: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Icon/Merge.svg
+2022-03-30 10:27:11: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Icon/More Options.svg
+2022-03-30 10:27:11: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Icon/Open Internally.svg
+2022-03-30 10:27:11: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Icon/Options.svg
+2022-03-30 10:27:11: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Icon/Organisation.svg
+2022-03-30 10:27:11: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Icon/Person Solid.svg
+2022-03-30 10:27:11: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Icon/Person.svg
+2022-03-30 10:27:12: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Icon/Phone.svg
+2022-03-30 10:27:12: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Icon/Pie Chart.svg
+2022-03-30 10:27:12: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Icon/Pin.svg
+2022-03-30 10:27:12: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Icon/Plus.svg
+2022-03-30 10:27:12: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Icon/Property.svg
+2022-03-30 10:27:12: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Icon/Question.svg
+2022-03-30 10:27:12: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Icon/Refresh.svg
+2022-03-30 10:27:12: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Icon/Report.svg
+2022-03-30 10:27:12: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Icon/SMS.svg
+2022-03-30 10:27:12: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Icon/Search.svg
+2022-03-30 10:27:12: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Icon/Send.svg
+2022-03-30 10:27:12: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Icon/Share.svg
+2022-03-30 10:27:12: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Icon/Street View.svg
+2022-03-30 10:27:12: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Icon/Tags.svg
+2022-03-30 10:27:12: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Icon/Tick.svg
+2022-03-30 10:27:12: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Icon/Time.svg
+2022-03-30 10:27:12: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Icon/Tools.svg
+2022-03-30 10:27:13: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Icon/Unlink.svg
+2022-03-30 10:27:13: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/CM/Icon/Workspace.svg
+2022-03-30 10:27:13: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/Group 311.svg
+2022-03-30 10:27:13: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/Group 315.svg
+2022-03-30 10:27:13: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/Rectangle 58.svg
+2022-03-30 10:27:13: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/Vector 14.svg
+2022-03-30 10:27:13: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/Vector 16.svg
+2022-03-30 10:27:13: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/Vector 18.svg
+2022-03-30 10:27:13: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/Vector 19.svg
+2022-03-30 10:27:13: Deleted Recycled: ftp://ftp.lukebennis.com:21/public_html/ds-master/_gsdata_/_saved_/icons-master/Vector 31.svg
+2022-03-30 10:27:34: == Sync Complete. Time: 00:00:55, Speed: 24.14 KB/s, OK: 7, Errors: 0
